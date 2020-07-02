@@ -2,7 +2,6 @@ extends Actor
 
 const UIDeathMessage = preload("res://src/UI/DeathMessage.tscn")
 
-#base 128 block size, val/8
 const ACCELERATION: = 64
 const MAX_SPEED: = 512
 const FRICTION: = 80

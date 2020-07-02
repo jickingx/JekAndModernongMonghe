@@ -10,10 +10,11 @@ onready var current_scene = root.get_child(root.get_child_count() - 1)
 
 func _ready():
 	setup_fade_transition()
-	print_debug(current_scene.get_node_and_resource(current_scene.get_path()))
+
 
 func restart_scene():
 	switch_scene(current_scene_path)
+
 
 func switch_scene(path: String):
 	current_scene_path = path
