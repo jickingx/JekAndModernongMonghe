@@ -31,6 +31,7 @@ func _physics_process(delta):
 			
 		if Input.is_action_just_pressed("ui_up"):
 			motion.y = -JUMP_FORCE
+			$Sounds/Jump.play()
 	else:
 		animatedSprite.play("walk")
 		
