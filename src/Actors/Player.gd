@@ -1,5 +1,7 @@
 extends Actor
 
+const UIDeathMessage = preload("res://src/UI/DeathMessage.tscn")
+
 #base 128 block size, val/8
 const ACCELERATION: = 64
 const MAX_SPEED: = 512
@@ -55,6 +57,10 @@ func _on_HazardDetector_body_entered(body):
 		ex.position = self.position
 		Global.current_scene.add_child(ex)
 		ex.emitting = true
+		
+		var dm = UIDeathMessage.instance()
+		Global.current_scene.add_child(dm)
+		
 		$Camera2D.shake()
 		disable()
 		$Sounds/Dead.play()

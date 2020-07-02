@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/Tiles/Tileset01.tres" type="TileSet" id=1]
 [ext_resource path="res://src/Actors/PlayerModernongMonghe.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/Tiles/spikes1.png" type="Texture" id=3]
+[ext_resource path="res://assets/Fonts/score.tres" type="DynamicFont" id=4]
 [ext_resource path="res://src/Actors/PlayerJekengkoy.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/Levels/SwitchPlayerControl.gd" type="Script" id=6]
 
@@ -59,11 +60,13 @@ position = Vector2( -248, 552 )
 position = Vector2( 2048, 544 )
 
 [node name="Label" type="Label" parent="."]
-margin_left = 696.0
-margin_top = 536.0
-margin_right = 856.0
-margin_bottom = 550.0
+margin_left = 592.0
+margin_top = 553.0
+margin_right = 940.0
+margin_bottom = 589.0
+custom_fonts/font = ExtResource( 4 )
 text = "PRESS SPACE TO SWITCH "
+align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
