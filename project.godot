@@ -21,8 +21,12 @@ _global_script_class_icons={
 [application]
 
 config/name="JekAndModdernongMonghe01"
-run/main_scene="res://src/Levels/Level00.tscn"
+run/main_scene="res://src/Screens/Start.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Global="*res://src/Global.gd"
 
 [display]
 

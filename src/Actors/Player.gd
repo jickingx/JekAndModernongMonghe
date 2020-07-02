@@ -1,5 +1,6 @@
 extends Actor
 
+const ParticlesExplosion = preload("res://src/Particles/Explosion.tscn")
 
 const ACCELERATION: = 64
 const MAX_SPEED: = 384
@@ -7,6 +8,8 @@ const FRICTION: = 10
 const AIR_RESISTANCE: = 1
 const GRAVITY: = 10
 const JUMP_FORCE: = 384
+
+export var death_restart_delay: float = .8
 
 var motion: = Vector2.ZERO
 
@@ -42,3 +45,15 @@ func _physics_process(delta):
 			motion.x = lerp(motion.x, 0, AIR_RESISTANCE * delta)
 	
 	motion = move_and_slide(motion, Vector2.UP)
+
+
+func _on_HazardDetector_body_entered(body):
+	if body.is_in_group("hazards"):
+		print_debug("kill")
+		var ex = ParticlesExplosion.instance()
+		ex.position = self.position
+		Global.current_scene.add_child(ex)
+		ex.emitting = true
+		hide()
+		yield(get_tree().create_timer(death_restart_delay), "timeout")
+		Global.restart_scene()
