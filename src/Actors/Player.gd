@@ -60,3 +60,12 @@ func _on_HazardDetector_body_entered(body):
 		$Sounds/Dead.play()
 		yield(get_tree().create_timer(death_restart_delay), "timeout")
 		Global.restart_scene()
+
+
+func enable_control():
+	$Camera2D.current = true
+	is_disabled = false
+
+func disable_control():
+	$Camera2D.current = false
+	is_disabled = true

@@ -31,11 +31,11 @@ margin_left = -183.0
 margin_top = 64.0
 margin_right = 183.0
 margin_bottom = 148.0
-text = "DEMO LEVELS"
+text = "DEMO PLAYER SWITCH"
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-next_scene = "res://src/Levels/Level00.tscn"
+next_scene = "res://src/Levels/DemoLevel00.tscn"
 [connection signal="button_up" from="CanvasLayer/Button" to="CanvasLayer/Button" method="_on_Button_button_up"]
 [connection signal="button_up" from="CanvasLayer/Button2" to="CanvasLayer/Button2" method="_on_Button_button_up"]
