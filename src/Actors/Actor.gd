@@ -9,6 +9,12 @@ const FLOOR_NORMAL: = Vector2.UP
 export var is_disabled := false
 var motion: = Vector2.ZERO
 
+
 func disable():
 	is_disabled = true
 	hide()
+
+
+func enable():
+	is_disabled = false
+	show()
