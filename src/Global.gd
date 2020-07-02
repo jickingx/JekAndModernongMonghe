@@ -21,6 +21,9 @@ func switch_scene(path: String):
 
 
 func _deferred_goto_scene(path: String):
+	if path.length() == 0:
+		path = "res://src/Screens/Start.tscn"
+	
 	# It is now safe to remove the current scene
 	current_scene.free()
 	

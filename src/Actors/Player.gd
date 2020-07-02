@@ -1,7 +1,5 @@
 extends Actor
 
-const ParticlesExplosion = preload("res://src/Particles/Explosion.tscn")
-
 #base 128 block size, val/8
 const ACCELERATION: = 64
 const MAX_SPEED: = 512
@@ -11,14 +9,12 @@ const GRAVITY: = 32
 const JUMP_FORCE: = 1024
 
 export var death_restart_delay: float = .8
-var motion: = Vector2.ZERO
-
 onready var animatedSprite = $AnimatedSprite
 
 func _physics_process(delta):
 	var x_input = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	
-	if x_input != 0:
+	if not is_disabled && x_input != 0:
 		motion.x += x_input * ACCELERATION * delta * TARGET_FPS
 		motion.x = clamp(motion.x, -MAX_SPEED, MAX_SPEED)
 	
@@ -28,11 +24,11 @@ func _physics_process(delta):
 		if x_input == 0:
 			motion.x = lerp(motion.x, 0, FRICTION * delta)
 			
-		if Input.is_action_just_pressed("ui_up"):
+		if not is_disabled && Input.is_action_just_pressed("ui_up"):
 			motion.y = -JUMP_FORCE
 			$Sounds/Jump.play()
 	else:
-		if Input.is_action_just_released("ui_up") and motion.y < -JUMP_FORCE/2:
+		if not is_disabled &&  Input.is_action_just_released("ui_up") and motion.y < -JUMP_FORCE/2:
 			motion.y = -JUMP_FORCE/2
 		
 		if x_input == 0:
@@ -58,7 +54,7 @@ func _on_HazardDetector_body_entered(body):
 		ex.position = self.position
 		Global.current_scene.add_child(ex)
 		ex.emitting = true
-		hide()
+		disable()
 		$Sounds/Dead.play()
 		yield(get_tree().create_timer(death_restart_delay), "timeout")
 		Global.restart_scene()
