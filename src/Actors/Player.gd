@@ -19,12 +19,8 @@ func _physics_process(delta):
 	var x_input = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	
 	if x_input != 0:
-		animatedSprite.play("walk")
 		motion.x += x_input * ACCELERATION * delta * TARGET_FPS
 		motion.x = clamp(motion.x, -MAX_SPEED, MAX_SPEED)
-		animatedSprite.flip_h = x_input < 0
-	else:
-		animatedSprite.play("idle")
 	
 	motion.y += GRAVITY * delta * TARGET_FPS
 	
@@ -36,8 +32,6 @@ func _physics_process(delta):
 			motion.y = -JUMP_FORCE
 			$Sounds/Jump.play()
 	else:
-		animatedSprite.play("walk")
-		
 		if Input.is_action_just_released("ui_up") and motion.y < -JUMP_FORCE/2:
 			motion.y = -JUMP_FORCE/2
 		
@@ -45,6 +39,17 @@ func _physics_process(delta):
 			motion.x = lerp(motion.x, 0, AIR_RESISTANCE * delta)
 	
 	motion = move_and_slide(motion, Vector2.UP)
+	
+	#UPDATE SPRITE HERE
+	if not is_on_floor():
+		animatedSprite.play("jump")
+	elif x_input != 0 && is_on_floor():
+		animatedSprite.play("walk")
+	else:
+		animatedSprite.play("idle")
+	#flip
+	if x_input != 0:
+		animatedSprite.flip_h = x_input < 0
 
 
 func _on_HazardDetector_body_entered(body):
