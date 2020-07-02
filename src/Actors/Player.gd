@@ -11,6 +11,7 @@ const JUMP_FORCE: = 1024
 export var death_restart_delay: float = .8
 onready var animatedSprite = $AnimatedSprite
 
+
 func _physics_process(delta):
 	var x_input = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	
@@ -54,6 +55,7 @@ func _on_HazardDetector_body_entered(body):
 		ex.position = self.position
 		Global.current_scene.add_child(ex)
 		ex.emitting = true
+		$Camera2D.shake()
 		disable()
 		$Sounds/Dead.play()
 		yield(get_tree().create_timer(death_restart_delay), "timeout")
