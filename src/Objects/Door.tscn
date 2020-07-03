@@ -1,18 +1,15 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/Objects/Door.gd" type="Script" id=2]
 [ext_resource path="res://assets/Sounds/start.wav" type="AudioStream" id=3]
-[ext_resource path="res://assets/Tiles/portal4.png" type="Texture" id=4]
 [ext_resource path="res://assets/Tiles/portal1.png" type="Texture" id=5]
-[ext_resource path="res://assets/Tiles/portal3.png" type="Texture" id=6]
-[ext_resource path="res://assets/Tiles/portal2.png" type="Texture" id=7]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 5 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 4 ) ],
+"frames": [ ExtResource( 5 ) ],
 "loop": true,
 "name": "default",
-"speed": 7.0
+"speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
