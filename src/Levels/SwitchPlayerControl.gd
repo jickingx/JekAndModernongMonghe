@@ -12,9 +12,9 @@ func _process(delta):
 		switch_player()
 
 func switch_player():
-	if jek.is_disabled :
+	if not monghe.is_disabled && jek.is_disabled:
 		monghe.disable_control()
 		jek.enable_control()
-	else:
+	elif not jek.is_disabled && monghe.is_disabled:
 		jek.disable_control()
 		monghe.enable_control()

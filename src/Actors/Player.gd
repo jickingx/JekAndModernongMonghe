@@ -9,8 +9,8 @@ const AIR_RESISTANCE: = 8
 const GRAVITY: = 32
 const JUMP_FORCE: = 1024
 
-export var death_restart_delay: float = .8
-onready var animatedSprite = $AnimatedSprite
+export var death_restart_delay:= 0.8
+onready var animatedSprite:= $AnimatedSprite
 
 
 func _physics_process(delta):
@@ -60,7 +60,9 @@ func _on_HazardDetector_body_entered(body):
 		var dm = UIDeathMessage.instance()
 		Global.current_scene.add_child(dm)
 		
-		$Camera2D.shake()
+		if $Camera2D.has_method("shake"):
+			$Camera2D.shake()
+		
 		disable()
 		$Sounds/Dead.play()
 		yield(get_tree().create_timer(death_restart_delay), "timeout")
@@ -74,3 +76,4 @@ func enable_control():
 func disable_control():
 	$Camera2D.current = false
 	is_disabled = true
+	motion = Vector2.ZERO
