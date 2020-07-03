@@ -1,21 +1,21 @@
 extends Actor
 
-const ACCELERATION: = 64
-const MAX_SPEED: = 512
-const FRICTION: = 80
-
 var movement_direction:= -1
 
+
 func _ready():
+	acceleration = 64
+	speed_max = 512
+	friction = 80
 	disable()
 
 func _physics_process(delta):
 	if is_disabled:
 		return
 	
-	motion.x += movement_direction * ACCELERATION * delta * TARGET_FPS
-	motion.x = clamp(motion.x, -MAX_SPEED, MAX_SPEED)
-	motion = move_and_slide(motion, Vector2.UP)
+	_velocity.x += movement_direction * acceleration * delta * TARGET_FPS
+	_velocity.x = clamp(_velocity.x, -speed_max, speed_max)
+	_velocity = move_and_slide(_velocity, Vector2.UP)
 
 
 func _on_VisibilityNotifier2D_screen_entered():
