@@ -1,12 +1,15 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
+[ext_resource path="res://assets/Tiles/portal4.png" type="Texture" id=1]
 [ext_resource path="res://src/Objects/Door.gd" type="Script" id=2]
 [ext_resource path="res://assets/Sounds/start.wav" type="AudioStream" id=3]
+[ext_resource path="res://assets/Tiles/portal2.png" type="Texture" id=4]
 [ext_resource path="res://assets/Tiles/portal1.png" type="Texture" id=5]
+[ext_resource path="res://assets/Tiles/portal3.png" type="Texture" id=6]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 5 ) ],
+"frames": [ ExtResource( 5 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 1 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -20,6 +23,7 @@ script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
