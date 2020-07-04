@@ -46,11 +46,6 @@ func _physics_process(delta):
 	_velocity = move_and_slide(_velocity, Vector2.UP)
 
 
-func _on_HazardDetector_body_entered(body):
-	if body.is_in_group("hazards"):
-		die()
-
-
 func die():
 	var ex = ParticlesExplosion.instance()
 	ex.position = self.position
@@ -79,4 +74,14 @@ func disable_control():
 	is_disabled = true
 	_velocity = Vector2.ZERO
 
+
+func _on_ObjectDetector_body_entered(body):
+	if body.is_in_group("hazards"):
+		die()
+
+
+func _on_ObjectDetector_area_entered(area):
+	if area.is_in_group("coins") && area.has_method("kill") :
+		$Sounds/Pickup.play()
+		area.kill()
 

@@ -14,14 +14,14 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 8 ) ],
-"loop": true,
-"name": "jump",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 1 ), ExtResource( 8 ) ],
 "loop": true,
 "name": "walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "jump",
 "speed": 5.0
 } ]
 
@@ -57,9 +57,10 @@ stream = ExtResource( 6 )
 [node name="Dead" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = ExtResource( 5 )
 
-[node name="HazardDetector" type="Area2D" parent="."]
+[node name="ObjectDetector" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HazardDetector"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectDetector"]
 position = Vector2( 2, 8 )
 shape = SubResource( 3 )
-[connection signal="body_entered" from="HazardDetector" to="." method="_on_HazardDetector_body_entered"]
+[connection signal="area_entered" from="ObjectDetector" to="." method="_on_ObjectDetector_area_entered"]
+[connection signal="body_entered" from="ObjectDetector" to="." method="_on_ObjectDetector_body_entered"]

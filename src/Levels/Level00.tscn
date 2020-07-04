@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/Tiles/Tileset01.tres" type="TileSet" id=1]
 [ext_resource path="res://src/Actors/PlayerModernongMonghe.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/Tiles/spikes1.png" type="Texture" id=3]
 [ext_resource path="res://src/Objects/Door.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/Objects/Coin.tscn" type="PackedScene" id=5]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 128, 128, 0, 128, -3, 84, 126, 87 )
@@ -57,3 +58,6 @@ next_scene = "res://src/Levels/Level01.tscn"
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( -400, 280 )
+
+[node name="Coin" parent="." instance=ExtResource( 5 )]
+position = Vector2( -256, 321 )
