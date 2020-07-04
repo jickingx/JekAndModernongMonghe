@@ -1,7 +1,7 @@
 extends Node
 
-const ScreenOverlay: PackedScene = preload("res://src/Ui/Fx/ScreenOverlay.tscn")
-const OverlayCameraLens: PackedScene = preload("res://src/Ui/Fx/OverlayCamera.tscn")
+const ScreenOverlay: PackedScene = preload("res://src/UI/FX/ScreenOverlay.tscn")
+const OverlayCameraLens: PackedScene = preload("res://src/UI/FX/OverlayCamera.tscn")
 
 var current_scene_path:= ""
 
