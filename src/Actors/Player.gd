@@ -1,5 +1,7 @@
 extends Actor
 
+signal coin_collected
+
 const UIDeathMessage = preload("res://src/UI/DeathMessage.tscn")
 
 export var death_restart_delay:= 0.8
@@ -83,5 +85,6 @@ func _on_ObjectDetector_body_entered(body):
 func _on_ObjectDetector_area_entered(area):
 	if area.is_in_group("coins") && area.has_method("kill") :
 		$Sounds/Pickup.play()
+		emit_signal("coin_collected")
 		area.kill()
 

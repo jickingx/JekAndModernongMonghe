@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/Tiles/Tileset01.tres" type="TileSet" id=1]
 [ext_resource path="res://src/Actors/PlayerModernongMonghe.tscn" type="PackedScene" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://src/Actors/EnemyWalking.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/Objects/Pickups/Key.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Objects/Button.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/Levels/LevelManager.gd" type="Script" id=8]
+[ext_resource path="res://src/Objects/Coin.tscn" type="PackedScene" id=9]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 128, 128, 0, 128, -3, 84, 126, 87 )
@@ -35,6 +37,7 @@ points = PoolVector2Array( 128, 128, 0, 128, -3, 84, 126, 87 )
 0/z_index = 0
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 8 )
 
 [node name="Door" parent="." instance=ExtResource( 4 )]
 position = Vector2( 2496, 192 )
@@ -71,5 +74,8 @@ position = Vector2( -376, 296 )
 
 [node name="Button" parent="." instance=ExtResource( 7 )]
 position = Vector2( 2688, -64 )
+
+[node name="Coin" parent="." instance=ExtResource( 9 )]
+position = Vector2( -40, 320 )
 [connection signal="picked" from="Key" to="Door" method="_on_Key_picked"]
 [connection signal="pressed" from="Button" to="Door" method="_on_Button_pressed"]
