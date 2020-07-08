@@ -45,13 +45,14 @@ next_scene = "res://src/Levels/DemoLevel00.tscn"
 [node name="Label" type="Label" parent="CanvasLayer"]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -161.493
-margin_top = 136.154
-margin_right = -80.493
-margin_bottom = 172.154
+margin_left = -659.493
+margin_top = 66.154
+margin_right = -329.493
+margin_bottom = 141.154
 rect_scale = Vector2( 4, 4 )
 custom_fonts/font = ExtResource( 2 )
-text = "TITLE"
+text = "JEK & MM: 
+PORTAL MAZE"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
