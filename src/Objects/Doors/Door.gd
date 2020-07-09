@@ -36,7 +36,5 @@ func _on_Key_picked():
 	unlock()
 
 
-func _on_Button_pressed():
+func _on_DoorButton_pressed():
 	unlock()
-
-

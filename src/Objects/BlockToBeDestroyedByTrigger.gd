@@ -13,5 +13,5 @@ func destroy_self():
 	queue_free()
 
 
-func _on_Button_pressed():
+func _on_DestroyerButton_pressed():
 	destroy_self()

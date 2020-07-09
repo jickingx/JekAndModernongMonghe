@@ -68,7 +68,7 @@ position = Vector2( 64, 320 )
 [node name="BlockToBeDestroyedByTrigger2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 64, 192 )
 
-[node name="Button" parent="." instance=ExtResource( 7 )]
+[node name="DestroyerButton" parent="." instance=ExtResource( 7 )]
 position = Vector2( -192, 320 )
-[connection signal="pressed" from="Button" to="BlockToBeDestroyedByTrigger" method="_on_Button_pressed"]
-[connection signal="pressed" from="Button" to="BlockToBeDestroyedByTrigger2" method="_on_Button_pressed"]
+[connection signal="pressed" from="DestroyerButton" to="BlockToBeDestroyedByTrigger" method="_on_DestroyerButton_pressed"]
+[connection signal="pressed" from="DestroyerButton" to="BlockToBeDestroyedByTrigger2" method="_on_DestroyerButton_pressed"]
