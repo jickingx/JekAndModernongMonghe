@@ -1,56 +1,92 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/Fonts/score.tres" type="DynamicFont" id=1]
-[ext_resource path="res://assets/Sprites/coin.png" type="Texture" id=2]
+[ext_resource path="res://assets/Sprites/mmcoin00.png" type="Texture" id=2]
 [ext_resource path="res://src/UI/Hud.gd" type="Script" id=3]
+[ext_resource path="res://assets/Sprites/headmm.png" type="Texture" id=4]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 25
+corner_radius_top_right = 20
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+expand_margin_left = 25.0
+expand_margin_right = 20.0
+expand_margin_top = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.0862745, 0.0666667, 0.0666667, 1 )
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
 
 [node name="Hud" type="CanvasLayer"]
 layer = 2
 script = ExtResource( 3 )
 
-[node name="LabelCoins" type="Label" parent="."]
+[node name="CoinCounter" type="Label" parent="."]
+modulate = Color( 1, 1, 1, 0.823529 )
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -48.0
-margin_right = 24.0
-margin_bottom = 36.0
+margin_left = 442.0
+margin_top = 16.0
+margin_right = 508.0
+margin_bottom = 52.0
 rect_scale = Vector2( 2, 2 )
+custom_styles/normal = SubResource( 1 )
 custom_fonts/font = ExtResource( 1 )
-text = " X 00"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Coin Icon" type="Sprite" parent="LabelCoins"]
-position = Vector2( -8.8035, 21.1075 )
-scale = Vector2( 0.25, 0.25 )
-texture = ExtResource( 2 )
-
-[node name="Player1 and Points" type="Label" parent="."]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -576.0
-margin_right = -468.0
-margin_bottom = 75.0
-rect_scale = Vector2( 2, 2 )
-custom_fonts/font = ExtResource( 1 )
-text = "MM
-000000"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Player2 and Points" type="Label" parent="."]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = 360.0
-margin_right = 468.0
-margin_bottom = 75.0
-rect_scale = Vector2( 2, 2 )
-custom_fonts/font = ExtResource( 1 )
-text = "JEK
-000000"
+text = "0"
 align = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Coin Sprite" type="Sprite" parent="CoinCounter"]
+position = Vector2( -3.66406, 18.8438 )
+scale = Vector2( 0.239154, 0.218006 )
+texture = ExtResource( 2 )
+
+[node name="LifeCounter" type="Label" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.823529 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -608.0
+margin_top = 24.0
+margin_right = -448.0
+margin_bottom = 60.0
+rect_scale = Vector2( 2, 2 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = ExtResource( 1 )
+text = " "
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="1" type="Sprite" parent="LifeCounter"]
+position = Vector2( 32, 20 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 4 )
+
+[node name="2" type="Sprite" parent="LifeCounter"]
+position = Vector2( 64, 20 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 4 )
+
+[node name="3" type="Sprite" parent="LifeCounter"]
+position = Vector2( 96, 20 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 4 )
+
+[node name="4" type="Sprite" parent="LifeCounter"]
+position = Vector2( 128, 20 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 4 )
