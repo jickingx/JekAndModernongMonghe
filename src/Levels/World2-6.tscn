@@ -1,10 +1,13 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/Tiles/Tileset01.tres" type="TileSet" id=1]
 [ext_resource path="res://src/Actors/PlayerModernongMonghe.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/Tiles/spikes1.png" type="Texture" id=3]
 [ext_resource path="res://src/Objects/Door.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Actors/EnemyWalking.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/Objects/BlockToBeDestroyedByTrigger.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/Objects/Button.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/Levels/LevelManager.gd" type="Script" id=8]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 128, 128, 0, 128, -3, 84, 126, 87 )
@@ -32,7 +35,8 @@ points = PoolVector2Array( 128, 128, 0, 128, -3, 84, 126, 87 )
 } ]
 0/z_index = 0
 
-[node name="Node2D" type="Node2D"]
+[node name="World2-6" type="Node2D"]
+script = ExtResource( 8 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
@@ -52,10 +56,21 @@ __meta__ = {
 
 [node name="Door" parent="." instance=ExtResource( 4 )]
 position = Vector2( 2112, 320 )
-next_scene = "res://src/Screens/Start.tscn"
+next_scene = "res://src/Levels/Level06.tscn"
 
 [node name="EnemyWalking" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1536, 704 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( -376, 296 )
+position = Vector2( -448, 296 )
+
+[node name="BlockToBeDestroyedByTrigger" parent="." instance=ExtResource( 6 )]
+position = Vector2( 64, 320 )
+
+[node name="BlockToBeDestroyedByTrigger2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 64, 192 )
+
+[node name="DestroyerButton" parent="." instance=ExtResource( 7 )]
+position = Vector2( -192, 320 )
+[connection signal="pressed" from="DestroyerButton" to="BlockToBeDestroyedByTrigger" method="_on_DestroyerButton_pressed"]
+[connection signal="pressed" from="DestroyerButton" to="BlockToBeDestroyedByTrigger2" method="_on_DestroyerButton_pressed"]

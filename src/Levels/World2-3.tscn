@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/Tiles/Tileset01.tres" type="TileSet" id=1]
 [ext_resource path="res://src/Actors/PlayerModernongMonghe.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://src/Objects/Door.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Actors/EnemyWalking.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/Objects/Hazards/FallingSpike.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/Levels/LevelManager.gd" type="Script" id=7]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 128, 128, 0, 128, -3, 84, 126, 87 )
@@ -33,7 +34,8 @@ points = PoolVector2Array( 128, 128, 0, 128, -3, 84, 126, 87 )
 } ]
 0/z_index = 0
 
-[node name="Node2D" type="Node2D"]
+[node name="World2-3" type="Node2D"]
+script = ExtResource( 7 )
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2( -3, 0 )
@@ -55,7 +57,7 @@ __meta__ = {
 
 [node name="Door" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1981.89, 320 )
-next_scene = "res://src/Levels/Level03.tscn"
+next_scene = "res://src/Levels/World2-4.tscn"
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( -376, 296 )

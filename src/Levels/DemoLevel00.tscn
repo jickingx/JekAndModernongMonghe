@@ -33,7 +33,7 @@ points = PoolVector2Array( 128, 128, 0, 128, -3, 84, 126, 87 )
 } ]
 0/z_index = 0
 
-[node name="Node2D" type="Node2D"]
+[node name="DemoWorld" type="Node2D"]
 script = ExtResource( 6 )
 
 [node name="TileMap" type="TileMap" parent="."]

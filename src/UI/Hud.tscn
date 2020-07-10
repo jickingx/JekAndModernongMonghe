@@ -11,8 +11,8 @@ script = ExtResource( 3 )
 [node name="LabelCoins" type="Label" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -36.0
-margin_right = 36.0
+margin_left = -48.0
+margin_right = 24.0
 margin_bottom = 36.0
 rect_scale = Vector2( 2, 2 )
 custom_fonts/font = ExtResource( 1 )
@@ -21,7 +21,36 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 586.393, 42.215 )
-scale = Vector2( 0.5, 0.5 )
+[node name="Coin Icon" type="Sprite" parent="LabelCoins"]
+position = Vector2( -8.8035, 21.1075 )
+scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 2 )
+
+[node name="Player1 and Points" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -576.0
+margin_right = -468.0
+margin_bottom = 75.0
+rect_scale = Vector2( 2, 2 )
+custom_fonts/font = ExtResource( 1 )
+text = "MM
+000000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Player2 and Points" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 360.0
+margin_right = 468.0
+margin_bottom = 75.0
+rect_scale = Vector2( 2, 2 )
+custom_fonts/font = ExtResource( 1 )
+text = "JEK
+000000"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
