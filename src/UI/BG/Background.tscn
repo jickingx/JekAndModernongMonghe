@@ -1,0 +1,224 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://assets/Sprites/Parallax BG/background.png" type="Texture" id=1]
+[ext_resource path="res://assets/Sprites/Parallax BG/cloud_01.png" type="Texture" id=2]
+[ext_resource path="res://assets/Sprites/Parallax BG/cloud_03.png" type="Texture" id=3]
+[ext_resource path="res://assets/Sprites/Parallax BG/cloud_02.png" type="Texture" id=4]
+[ext_resource path="res://assets/Sprites/Parallax BG/foreground_2.png" type="Texture" id=5]
+[ext_resource path="res://assets/Sprites/Parallax BG/foreground_1.png" type="Texture" id=6]
+[ext_resource path="res://src/UI/BG/BGCamera.gd" type="Script" id=7]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 4 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "clouds",
+"speed": 0.5
+} ]
+
+[node name="Background" type="ParallaxBackground"]
+
+[node name="BGCamera" type="Camera2D" parent="."]
+script = ExtResource( 7 )
+
+[node name="BackgroundLayer" type="ParallaxLayer" parent="."]
+modulate = Color( 1, 1, 1, 0.588235 )
+self_modulate = Color( 1, 1, 1, 0.588235 )
+motion_scale = Vector2( 0.1, 1 )
+motion_mirroring = Vector2( 2980, 1295 )
+
+[node name="Sprite" type="Sprite" parent="BackgroundLayer"]
+modulate = Color( 0.427451, 0.705882, 0.580392, 1 )
+self_modulate = Color( 0.658824, 0, 0, 1 )
+show_behind_parent = true
+light_mask = -2147222273
+position = Vector2( 588, 168 )
+scale = Vector2( -5.82316, 2.15874 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="BackgroundLayer2" type="ParallaxLayer" parent="."]
+modulate = Color( 1, 1, 1, 0.588235 )
+self_modulate = Color( 1, 1, 1, 0.588235 )
+motion_scale = Vector2( 0.1, 1 )
+motion_mirroring = Vector2( 2980, 1300 )
+
+[node name="Sprite" type="Sprite" parent="BackgroundLayer2"]
+modulate = Color( 0.427451, 0.705882, 0.580392, 1 )
+self_modulate = Color( 0.658824, 0, 0, 1 )
+show_behind_parent = true
+light_mask = -2147222273
+position = Vector2( 588, 168 )
+scale = Vector2( -5.82316, 2.15874 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="ForegroundLayer1" type="ParallaxLayer" parent="."]
+visible = false
+motion_scale = Vector2( 0.4, 1 )
+
+[node name="Sprite" type="Sprite" parent="ForegroundLayer1"]
+modulate = Color( 0.427451, 0.705882, 0.580392, 1 )
+self_modulate = Color( 0.658824, 0, 0, 1 )
+show_behind_parent = true
+light_mask = -2147222273
+position = Vector2( 1187.63, 156.686 )
+rotation = 3.14159
+scale = Vector2( 14.8232, -2.15874 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="ForegroundLayer2" type="ParallaxLayer" parent="."]
+visible = false
+motion_scale = Vector2( 0.8, 1 )
+
+[node name="Sprite" type="Sprite" parent="ForegroundLayer2"]
+modulate = Color( 0.427451, 0.705882, 0.580392, 1 )
+self_modulate = Color( 0.658824, 0, 0, 1 )
+show_behind_parent = true
+light_mask = -2147222273
+position = Vector2( 1210.25, 846.822 )
+rotation = -3.14159
+scale = Vector2( 14.8232, -2.15874 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Clouds" type="ParallaxLayer" parent="."]
+modulate = Color( 0.8, 0.254902, 0.560784, 0.588235 )
+self_modulate = Color( 1, 1, 1, 0.588235 )
+motion_mirroring = Vector2( 2250, 0 )
+
+[node name="Cloud00" type="AnimatedSprite" parent="Clouds"]
+frames = SubResource( 1 )
+animation = "clouds"
+frame = 2
+playing = true
+
+[node name="Cloud01" type="AnimatedSprite" parent="Clouds"]
+position = Vector2( -526.087, -197.99 )
+frames = SubResource( 1 )
+animation = "clouds"
+frame = 2
+playing = true
+
+[node name="Cloud02" type="AnimatedSprite" parent="Clouds"]
+position = Vector2( -356.382, 214.961 )
+frames = SubResource( 1 )
+animation = "clouds"
+frame = 2
+playing = true
+
+[node name="Cloud03" type="AnimatedSprite" parent="Clouds"]
+position = Vector2( -588.313, 565.685 )
+frames = SubResource( 1 )
+animation = "clouds"
+frame = 1
+playing = true
+
+[node name="Cloud04" type="AnimatedSprite" parent="Clouds"]
+position = Vector2( 22.6274, 463.862 )
+frames = SubResource( 1 )
+animation = "clouds"
+frame = 1
+playing = true
+
+[node name="Cloud05" type="AnimatedSprite" parent="Clouds"]
+position = Vector2( 441.235, 79.196 )
+frames = SubResource( 1 )
+animation = "clouds"
+frame = 1
+playing = true
+
+[node name="Cloud06" type="AnimatedSprite" parent="Clouds"]
+position = Vector2( 509.117, 458.205 )
+frames = SubResource( 1 )
+animation = "clouds"
+playing = true
+
+[node name="Cloud07" type="AnimatedSprite" parent="Clouds"]
+position = Vector2( 435.578, -248.902 )
+frames = SubResource( 1 )
+animation = "clouds"
+playing = true
+
+[node name="Cloud08" type="AnimatedSprite" parent="Clouds"]
+position = Vector2( 995.606, 181.019 )
+frames = SubResource( 1 )
+animation = "clouds"
+playing = true
+
+[node name="Cloud09" type="AnimatedSprite" parent="Clouds"]
+position = Vector2( 950.351, -181.019 )
+frames = SubResource( 1 )
+animation = "clouds"
+frame = 2
+playing = true
+
+[node name="Cloud10" type="AnimatedSprite" parent="Clouds"]
+position = Vector2( 1086.12, 684.479 )
+frames = SubResource( 1 )
+animation = "clouds"
+frame = 2
+playing = true
+
+[node name="Cloud11" type="AnimatedSprite" parent="Clouds"]
+position = Vector2( 328.097, 871.156 )
+frames = SubResource( 1 )
+animation = "clouds"
+frame = 2
+playing = true
+
+[node name="Cloud12" type="AnimatedSprite" parent="Clouds"]
+position = Vector2( -282.843, 972.979 )
+frames = SubResource( 1 )
+animation = "clouds"
+frame = 2
+playing = true
+
+[node name="Cloud13" type="AnimatedSprite" parent="Clouds"]
+position = Vector2( 752.361, 1103.09 )
+frames = SubResource( 1 )
+animation = "clouds"
+frame = 1
+playing = true
+
+[node name="Cloud14" type="AnimatedSprite" parent="Clouds"]
+position = Vector2( 197.99, 1306.73 )
+frames = SubResource( 1 )
+animation = "clouds"
+frame = 1
+playing = true
+
+[node name="Cloud15" type="AnimatedSprite" parent="Clouds"]
+position = Vector2( -169.706, 1408.56 )
+frames = SubResource( 1 )
+animation = "clouds"
+playing = true
+
+[node name="Cloud16" type="AnimatedSprite" parent="Clouds"]
+position = Vector2( -582.656, 1255.82 )
+frames = SubResource( 1 )
+animation = "clouds"
+playing = true
+
+[node name="Cloud17" type="AnimatedSprite" parent="Clouds"]
+position = Vector2( 848.528, 1453.81 )
+frames = SubResource( 1 )
+animation = "clouds"
+frame = 2
+playing = true
+
+[node name="Cloud18" type="AnimatedSprite" parent="Clouds"]
+position = Vector2( 1261.48, 1306.73 )
+frames = SubResource( 1 )
+animation = "clouds"
+frame = 2
+playing = true

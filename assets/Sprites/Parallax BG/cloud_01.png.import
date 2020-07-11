@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/portal2.png-e7ec0d09b6fbe581f3fc38ad3aa358d1.stex"
+path="res://.import/cloud_01.png-fe3f58389135d0c6a1938ceb75ac3ec4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiles/portal2.png"
-dest_files=[ "res://.import/portal2.png-e7ec0d09b6fbe581f3fc38ad3aa358d1.stex" ]
+source_file="res://assets/Sprites/Parallax BG/cloud_01.png"
+dest_files=[ "res://.import/cloud_01.png-fe3f58389135d0c6a1938ceb75ac3ec4.stex" ]
 
 [params]
 

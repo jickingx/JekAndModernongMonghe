@@ -42,7 +42,7 @@ margin_bottom = 52.0
 rect_scale = Vector2( 2, 2 )
 custom_styles/normal = SubResource( 1 )
 custom_fonts/font = ExtResource( 1 )
-text = "0"
+text = "000"
 align = 2
 __meta__ = {
 "_edit_use_anchors_": false

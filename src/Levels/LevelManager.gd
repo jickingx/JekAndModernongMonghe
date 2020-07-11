@@ -5,8 +5,7 @@ var hud
 
 
 func _ready():
-	setup_hud()
-
+	setup_hud()		
 
 func _on_Player_coin_collected():
 	if not hud:

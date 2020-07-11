@@ -5,7 +5,7 @@ onready var monghe = $Monghe
 
 func _ready():
 	jek.is_disabled = true
-
+	
 func _process(delta):
 	if Input.is_action_just_released("ui_accept"):
 		print_debug("Switch player")

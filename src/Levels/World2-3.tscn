@@ -1,12 +1,13 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/Tiles/Tileset01.tres" type="TileSet" id=1]
 [ext_resource path="res://src/Actors/PlayerModernongMonghe.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/Tiles/spikes1.png" type="Texture" id=3]
-[ext_resource path="res://src/Objects/Door.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/Objects/Doors/Door.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Actors/EnemyWalking.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/Objects/Hazards/FallingSpike.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Levels/LevelManager.gd" type="Script" id=7]
+[ext_resource path="res://src/UI/BG/Background.tscn" type="PackedScene" id=8]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 128, 128, 0, 128, -3, 84, 126, 87 )
@@ -36,6 +37,8 @@ points = PoolVector2Array( 128, 128, 0, 128, -3, 84, 126, 87 )
 
 [node name="World2-3" type="Node2D"]
 script = ExtResource( 7 )
+
+[node name="Background" parent="." instance=ExtResource( 8 )]
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2( -3, 0 )

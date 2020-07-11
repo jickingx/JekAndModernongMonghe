@@ -12,6 +12,20 @@ func destroy_self():
 	yield(get_tree().create_timer(.4), "timeout")
 	queue_free()
 
-
 func _on_DestroyerButton_pressed():
+	destroy_self()
+
+func _on_DestroyerButton00_pressed():
+	destroy_self()
+	
+func _on_DestroyerButton01_pressed():
+	destroy_self()
+
+func _on_DestroyerButton02_pressed():
+	destroy_self()
+
+func _on_DestroyerButton03_pressed():
+	destroy_self()
+
+func _on_DestroyerButton04_pressed():
 	destroy_self()

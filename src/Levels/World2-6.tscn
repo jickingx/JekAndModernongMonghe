@@ -3,7 +3,7 @@
 [ext_resource path="res://assets/Tiles/Tileset01.tres" type="TileSet" id=1]
 [ext_resource path="res://src/Actors/PlayerModernongMonghe.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/Tiles/spikes1.png" type="Texture" id=3]
-[ext_resource path="res://src/Objects/Door.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/Objects/Doors/Door.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Actors/EnemyWalking.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/Objects/BlockToBeDestroyedByTrigger.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Objects/Button.tscn" type="PackedScene" id=7]
@@ -56,7 +56,7 @@ __meta__ = {
 
 [node name="Door" parent="." instance=ExtResource( 4 )]
 position = Vector2( 2112, 320 )
-next_scene = "res://src/Levels/Level06.tscn"
+next_scene = "res://src/Levels/World2-7.tscn"
 
 [node name="EnemyWalking" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1536, 704 )
