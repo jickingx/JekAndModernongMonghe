@@ -29,3 +29,9 @@ func _on_DestroyerButton03_pressed():
 
 func _on_DestroyerButton04_pressed():
 	destroy_self()
+
+func _on_DestroyerButton05_pressed():
+	destroy_self()
+
+func _on_DestroyerButton06_pressed():
+	destroy_self()

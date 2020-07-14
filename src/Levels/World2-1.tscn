@@ -139,7 +139,7 @@ __meta__ = {
 [node name="Door" parent="." instance=ExtResource( 4 )]
 position = Vector2( 2048, 256 )
 is_locked = true
-next_scene = "res://src/Levels/World2-2.tscn"
+next_scene = "res://src/Levels/World0-1.tscn"
 
 [node name="Player2" parent="." instance=ExtResource( 8 )]
 position = Vector2( -496, 312 )
@@ -162,10 +162,10 @@ position = Vector2( 4608, -2376 )
 position = Vector2( -368, -1216 )
 
 [node name="DestroyerButton03" parent="Buttons" instance=ExtResource( 12 )]
-position = Vector2( 704, -832 )
+position = Vector2( 832, -832 )
 
 [node name="DestroyerButton04" parent="Buttons" instance=ExtResource( 12 )]
-position = Vector2( 3328, 832 )
+position = Vector2( 3264, 832 )
 
 [node name="DoorButton" parent="Buttons" instance=ExtResource( 12 )]
 position = Vector2( -576, 832 )
@@ -591,11 +591,11 @@ __meta__ = {
 }
 [connection signal="pressed" from="Buttons/DestroyerButton00" to="DetroyableBlocks/BlockToBeDestroyedByTrigger02" method="_on_DestroyerButton00_pressed"]
 [connection signal="pressed" from="Buttons/DestroyerButton00" to="DetroyableBlocks/BlockToBeDestroyedByTrigger03" method="_on_DestroyerButton00_pressed"]
-[connection signal="pressed" from="Buttons/DestroyerButton01" to="DetroyableBlocks/BlockToBeDestroyedByTrigger01" method="_on_DestroyerButton01_pressed"]
 [connection signal="pressed" from="Buttons/DestroyerButton01" to="DetroyableBlocks/BlockToBeDestroyedByTrigger00" method="_on_DestroyerButton01_pressed"]
+[connection signal="pressed" from="Buttons/DestroyerButton01" to="DetroyableBlocks/BlockToBeDestroyedByTrigger01" method="_on_DestroyerButton01_pressed"]
 [connection signal="pressed" from="Buttons/DestroyerButton02" to="DetroyableBlocks/BlockToBeDestroyedByTrigger04" method="_on_DestroyerButton02_pressed"]
-[connection signal="pressed" from="Buttons/DestroyerButton03" to="DetroyableBlocks/BlockToBeDestroyedByTrigger05" method="_on_DestroyerButton03_pressed"]
 [connection signal="pressed" from="Buttons/DestroyerButton03" to="DetroyableBlocks/BlockToBeDestroyedByTrigger06" method="_on_DestroyerButton03_pressed"]
+[connection signal="pressed" from="Buttons/DestroyerButton03" to="DetroyableBlocks/BlockToBeDestroyedByTrigger05" method="_on_DestroyerButton03_pressed"]
 [connection signal="pressed" from="Buttons/DestroyerButton04" to="DetroyableBlocks/BlockToBeDestroyedByTrigger07" method="_on_DestroyerButton04_pressed"]
 [connection signal="pressed" from="Buttons/DestroyerButton04" to="DetroyableBlocks/BlockToBeDestroyedByTrigger08" method="_on_DestroyerButton04_pressed"]
 [connection signal="pressed" from="Buttons/DoorButton" to="Door" method="_on_DoorButton_pressed"]

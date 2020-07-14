@@ -1,0 +1,314 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://src/Levels/LevelManager.gd" type="Script" id=1]
+[ext_resource path="res://src/Objects/Doors/Door.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/Actors/PlayerModernongMonghe.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/Fonts/score.tres" type="DynamicFont" id=4]
+[ext_resource path="res://assets/Tiles/Tileset01.tres" type="TileSet" id=5]
+[ext_resource path="res://src/Objects/Button.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/Objects/Pickups/Key.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/Actors/PlayerJekengkoy.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/UI/BG/Background.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/Objects/BlockToBeDestroyedByTrigger.tscn" type="PackedScene" id=10]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.137255, 0.129412, 0.196078, 1 )
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[node name="World0-0" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Background" parent="." instance=ExtResource( 9 )]
+
+[node name="DestroyerButton" parent="." instance=ExtResource( 6 )]
+visible = false
+position = Vector2( 65.388, 370.784 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 5 )
+cell_size = Vector2( 128, 128 )
+format = 1
+tile_data = PoolIntArray( -262151, 1610612740, 0, -262150, 1610612740, 0, -262149, 1610612740, 0, -262148, 1610612740, 0, -262147, 1610612740, 0, -262146, 1610612740, 0, -262145, 1610612740, 0, -327680, 1610612740, 0, -327679, 1610612740, 0, -327678, 1610612740, 0, -327677, 1610612740, 0, -327676, 1610612740, 0, -327675, 1610612740, 0, -327674, 1610612740, 0, -327673, 1610612740, 0, -327672, 1610612740, 0, -327671, 1610612740, 0, -327670, 1610612740, 0, -327669, 1610612740, 0, -327668, 1610612740, 0, -327667, 1610612740, 0, -327666, 1610612740, 0, -327665, 1610612740, 0, -327664, 1610612740, 0, -327663, 1610612740, 0, -327662, 1073741828, 0, -327661, 1073741828, 0, -327660, 1073741828, 0, -327659, 1073741828, 0, -327658, 1073741828, 0, -327657, 1073741828, 0, -327656, 1073741828, 0, -327655, 1073741828, 0, -327654, 1073741828, 0, -327653, 1073741828, 0, -196616, -536870908, 0, -196615, 3, 0, -196614, 536870915, 0, -196613, 3, 0, -196612, 3, 0, -196611, 3, 0, -196610, 3, 0, -196609, 3, 0, -262144, 3, 0, -262143, 3, 0, -262142, 3, 0, -262141, 3, 0, -262140, 3, 0, -262139, 3, 0, -262138, 3, 0, -262137, 3, 0, -262136, 3, 0, -262135, 3, 0, -262134, 3, 0, -262133, 3, 0, -262132, 3, 0, -262131, 3, 0, -262130, 3, 0, -262129, 3, 0, -262128, 3, 0, -262127, 3, 0, -262126, 536870915, 0, -262125, 536870915, 0, -262124, 536870915, 0, -262123, 536870915, 0, -262122, 536870915, 0, -262121, 536870915, 0, -262120, 536870915, 0, -262119, 536870915, 0, -262118, 536870915, 0, -262117, 536870915, 0, -262116, -2147483644, 0, -131080, -536870908, 0, -131079, 3, 0, -131078, 536870915, 0, -131077, 536870915, 0, -131076, 536870915, 0, -131075, 536870915, 0, -131074, 536870915, 0, -131073, 536870915, 0, -196608, 536870915, 0, -196607, 536870915, 0, -196606, 536870915, 0, -196605, 536870915, 0, -196604, 536870915, 0, -196603, 536870915, 0, -196602, 536870915, 0, -196601, 536870915, 0, -196600, 536870915, 0, -196599, 536870915, 0, -196598, 536870915, 0, -196597, 536870915, 0, -196596, 536870915, 0, -196595, 536870915, 0, -196594, 536870915, 0, -196593, 536870915, 0, -196592, 536870915, 0, -196591, 536870915, 0, -196590, 536870915, 0, -196589, 536870915, 0, -196588, 536870915, 0, -196587, 536870915, 0, -196586, 536870915, 0, -196585, 536870915, 0, -196584, 536870915, 0, -196583, 536870915, 0, -196582, 536870915, 0, -196581, 536870915, 0, -196580, -2147483644, 0, -65544, -536870908, 0, -65543, 3, 0, -65542, 3, 0, -65541, 536870915, 0, -65540, 536870915, 0, -65539, 536870915, 0, -65538, 536870915, 0, -65537, 536870915, 0, -131072, 536870915, 0, -131071, 536870915, 0, -131070, 536870915, 0, -131069, 536870915, 0, -131068, 536870915, 0, -131067, 536870915, 0, -131066, 536870915, 0, -131065, 536870915, 0, -131064, 536870915, 0, -131063, 536870915, 0, -131062, 536870915, 0, -131061, 536870915, 0, -131060, 536870915, 0, -131059, 536870915, 0, -131058, 536870915, 0, -131057, 536870915, 0, -131056, 536870915, 0, -131055, 536870915, 0, -131054, 536870915, 0, -131053, 536870915, 0, -131052, 536870915, 0, -131051, 536870915, 0, -131050, 536870915, 0, -131049, 536870915, 0, -131048, 536870915, 0, -131047, 536870915, 0, -131046, 536870915, 0, -131045, 536870915, 0, -131044, -2147483644, 0, -8, -536870908, 0, -7, 3, 0, -6, 3, 0, -5, 3, 0, -2, 536870915, 0, -65535, 536870915, 0, -65532, 536870915, 0, -65529, 3, 0, -65526, 3, 0, -65523, 3, 0, -65520, 3, 0, -65517, 536870915, 0, -65514, 536870915, 0, -65511, 536870915, 0, -65510, 536870915, 0, -65509, 536870915, 0, -65508, -2147483644, 0, 65528, -536870908, 0, 65529, 3, 0, 65530, 3, 0, 65531, 3, 0, 65534, 536870915, 0, 1, 536870915, 0, 4, 536870915, 0, 7, 536870915, 0, 10, 536870915, 0, 13, 3, 0, 16, 3, 0, 19, 536870915, 0, 22, 536870915, 0, 25, 536870915, 0, 26, 536870915, 0, 27, 536870915, 0, 28, -2147483644, 0, 131064, -536870908, 0, 131065, 3, 0, 131066, 3, 0, 131067, 3, 0, 65561, 536870915, 0, 65562, 536870915, 0, 65563, 536870915, 0, 65564, -2147483644, 0, 196600, -536870908, 0, 196601, 3, 0, 196602, 3, 0, 196603, 3, 0, 131097, 536870915, 0, 131098, 536870915, 0, 131099, 536870915, 0, 131100, -2147483644, 0, 262136, -536870908, 0, 262137, 3, 0, 262138, 3, 0, 262139, 3, 0, 262140, 1, 0, 262141, 1, 0, 262142, 1, 0, 262143, 1, 0, 196608, 536870913, 0, 196609, 1, 0, 196610, 1, 0, 196611, 1, 0, 196612, 1, 0, 196613, 1, 0, 196614, 1, 0, 196615, 1, 0, 196616, 1, 0, 196617, 1, 0, 196618, 1, 0, 196619, 1, 0, 196620, 1, 0, 196621, 536870913, 0, 196622, 536870913, 0, 196623, 536870913, 0, 196624, 536870913, 0, 196625, 536870913, 0, 196626, 536870913, 0, 196627, 536870913, 0, 196628, 536870913, 0, 196629, 536870913, 0, 196630, 536870913, 0, 196631, 536870913, 0, 196632, 536870913, 0, 196633, 536870915, 0, 196634, 536870915, 0, 196635, 536870915, 0, 196636, -2147483644, 0, 327672, -536870908, 0, 327673, 3, 0, 327674, 3, 0, 327675, 3, 0, 327676, 3, 0, 327677, 3, 0, 327678, 3, 0, 327679, 3, 0, 262144, 3, 0, 262145, 3, 0, 262146, 3, 0, 262147, 3, 0, 262148, 3, 0, 262149, 3, 0, 262150, 3, 0, 262151, 3, 0, 262152, 3, 0, 262153, 3, 0, 262154, 3, 0, 262155, 3, 0, 262156, 3, 0, 262157, 3, 0, 262158, 3, 0, 262159, 3, 0, 262160, 3, 0, 262161, 3, 0, 262162, 536870915, 0, 262163, 536870915, 0, 262164, 536870915, 0, 262165, 536870915, 0, 262166, 536870915, 0, 262167, 536870915, 0, 262168, 536870915, 0, 262169, 536870915, 0, 262170, 536870915, 0, 262171, 536870915, 0, 262172, -2147483644, 0, 393208, -536870908, 0, 393209, 3, 0, 393210, 3, 0, 393211, 3, 0, 393212, 3, 0, 393213, 3, 0, 393214, 3, 0, 393215, 3, 0, 327680, 3, 0, 327681, 3, 0, 327682, 3, 0, 327683, 3, 0, 327684, 3, 0, 327685, 3, 0, 327686, 3, 0, 327687, 3, 0, 327688, 3, 0, 327689, 3, 0, 327690, 3, 0, 327691, 3, 0, 327692, 3, 0, 327693, 3, 0, 327694, 3, 0, 327695, 3, 0, 327696, 3, 0, 327697, 3, 0, 327698, 536870915, 0, 327699, 536870915, 0, 327700, 536870915, 0, 327701, 536870915, 0, 327702, 536870915, 0, 327703, 536870915, 0, 327704, 536870915, 0, 327705, 536870915, 0, 327706, 536870915, 0, 327707, 536870915, 0, 327708, -2147483644, 0, 458745, 536870916, 0, 458746, 536870916, 0, 458747, 536870916, 0, 458748, 536870916, 0, 458749, 536870916, 0, 458750, 536870916, 0, 458751, 536870916, 0, 393216, 536870916, 0, 393217, 536870916, 0, 393218, 536870916, 0, 393219, 536870916, 0, 393220, 536870916, 0, 393221, 536870916, 0, 393222, 536870916, 0, 393223, 536870916, 0, 393224, 536870916, 0, 393225, 536870916, 0, 393226, 536870916, 0, 393227, 536870916, 0, 393228, 536870916, 0, 393229, 536870916, 0, 393230, 536870916, 0, 393231, 536870916, 0, 393232, 536870916, 0, 393233, 536870916, 0, 393234, 536870916, 0, 393235, 536870916, 0, 393236, 536870916, 0, 393237, 536870916, 0, 393238, 536870916, 0, 393239, 536870916, 0, 393240, 536870916, 0, 393241, 536870916, 0, 393242, 536870916, 0, 393243, 536870916, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Key" parent="." instance=ExtResource( 7 )]
+position = Vector2( 383, 258.437 )
+
+[node name="Labels" type="Node" parent="."]
+
+[node name="Label World1-0" type="Label" parent="Labels"]
+show_behind_parent = true
+margin_left = -481.0
+margin_top = -89.0
+margin_right = -297.0
+margin_bottom = -14.0
+custom_styles/normal = SubResource( 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "TUTORIAL WORLD"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label World2-1" type="Label" parent="Labels"]
+show_behind_parent = true
+margin_left = -91.0
+margin_top = -55.0
+margin_right = 93.0
+margin_bottom = -9.0
+custom_styles/normal = SubResource( 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "World 2-1"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label World2-2" type="Label" parent="Labels"]
+show_behind_parent = true
+margin_left = 295.0
+margin_top = -53.0
+margin_right = 479.0
+margin_bottom = -7.0
+custom_styles/normal = SubResource( 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "World 2-2"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label World2-3" type="Label" parent="Labels"]
+show_behind_parent = true
+margin_left = 680.0
+margin_top = -55.0
+margin_right = 864.0
+margin_bottom = -9.0
+custom_styles/normal = SubResource( 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "World 2-3"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label World2-4" type="Label" parent="Labels"]
+show_behind_parent = true
+margin_left = 1062.0
+margin_top = -57.0
+margin_right = 1246.0
+margin_bottom = -11.0
+custom_styles/normal = SubResource( 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "World 2-4"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label World2-5" type="Label" parent="Labels"]
+show_behind_parent = true
+margin_left = 1446.0
+margin_top = -56.0
+margin_right = 1630.0
+margin_bottom = -10.0
+custom_styles/normal = SubResource( 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "World 2-5"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label World2-6" type="Label" parent="Labels"]
+show_behind_parent = true
+margin_left = 1830.0
+margin_top = -55.0
+margin_right = 2014.0
+margin_bottom = -9.0
+custom_styles/normal = SubResource( 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "World 2-6"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label World2-7" type="Label" parent="Labels"]
+show_behind_parent = true
+margin_left = 2215.0
+margin_top = -55.0
+margin_right = 2399.0
+margin_bottom = -9.0
+custom_styles/normal = SubResource( 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "World 2-7"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label WorldX-X1" type="Label" parent="Labels"]
+show_behind_parent = true
+margin_left = 2598.0
+margin_top = -55.0
+margin_right = 2782.0
+margin_bottom = -9.0
+custom_styles/normal = SubResource( 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "UNKNOWN W."
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label WorldX-X2" type="Label" parent="Labels"]
+show_behind_parent = true
+margin_left = 2983.0
+margin_top = -54.0
+margin_right = 3167.0
+margin_bottom = -8.0
+custom_styles/normal = SubResource( 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "UNKNOWN W."
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Doors" type="Node" parent="."]
+
+[node name="World1-0" parent="Doors" instance=ExtResource( 2 )]
+show_behind_parent = true
+position = Vector2( -383.8, 68.172 )
+next_scene = "res://src/Levels/World0-0.tscn"
+
+[node name="World2-1" parent="Doors" instance=ExtResource( 2 )]
+show_behind_parent = true
+position = Vector2( 0.199997, 66.172 )
+next_scene = "res://src/Levels/World2-1.tscn"
+
+[node name="World2-2" parent="Doors" instance=ExtResource( 2 )]
+show_behind_parent = true
+position = Vector2( 385, 70 )
+is_locked = true
+next_scene = "res://src/Levels/World2-2.tscn"
+
+[node name="World2-3" parent="Doors" instance=ExtResource( 2 )]
+show_behind_parent = true
+position = Vector2( 770, 68 )
+is_locked = true
+next_scene = "res://src/Levels/World2-3.tscn"
+
+[node name="World2-4" parent="Doors" instance=ExtResource( 2 )]
+show_behind_parent = true
+position = Vector2( 1152, 66 )
+is_locked = true
+next_scene = "res://src/Levels/World2-4.tscn"
+
+[node name="World2-5" parent="Doors" instance=ExtResource( 2 )]
+show_behind_parent = true
+position = Vector2( 1536, 67 )
+is_locked = true
+next_scene = "res://src/Levels/World2-5.tscn"
+
+[node name="World2-6" parent="Doors" instance=ExtResource( 2 )]
+show_behind_parent = true
+position = Vector2( 1920, 68 )
+is_locked = true
+next_scene = "res://src/Levels/World2-6.tscn"
+
+[node name="World2-7" parent="Doors" instance=ExtResource( 2 )]
+show_behind_parent = true
+position = Vector2( 2305, 68 )
+is_locked = true
+next_scene = "res://src/Levels/World2-7.tscn"
+
+[node name="WorldX-X1" parent="Doors" instance=ExtResource( 2 )]
+show_behind_parent = true
+position = Vector2( 2688, 68 )
+is_locked = true
+next_scene = "res://src/Levels/World2-2.tscn"
+
+[node name="WorldX-X2" parent="Doors" instance=ExtResource( 2 )]
+show_behind_parent = true
+position = Vector2( 3073, 69 )
+is_locked = true
+next_scene = "res://src/Levels/World2-2.tscn"
+
+[node name="Player2" parent="Doors" instance=ExtResource( 8 )]
+position = Vector2( -74.033, 311.955 )
+collision_layer = 0
+collision_mask = 0
+script = null
+
+[node name="Player1" parent="Doors" instance=ExtResource( 3 )]
+position = Vector2( 71.785, -52.9797 )
+
+[node name="DestroyableBlocks" type="Node" parent="."]
+
+[node name="BlockToBeDestroyedByTrigger02" parent="DestroyableBlocks" instance=ExtResource( 10 )]
+position = Vector2( 192.116, 191.869 )
+
+[node name="BlockToBeDestroyedByTrigger03" parent="DestroyableBlocks" instance=ExtResource( 10 )]
+position = Vector2( 192.531, 317.319 )
+
+[node name="BlockToBeDestroyedByTrigger04" parent="DestroyableBlocks" instance=ExtResource( 10 )]
+position = Vector2( 576.196, 191.212 )
+
+[node name="BlockToBeDestroyedByTrigger05" parent="DestroyableBlocks" instance=ExtResource( 10 )]
+position = Vector2( 576.611, 316.663 )
+
+[node name="BlockToBeDestroyedByTrigger06" parent="DestroyableBlocks" instance=ExtResource( 10 )]
+position = Vector2( 960.448, 192.04 )
+
+[node name="BlockToBeDestroyedByTrigger07" parent="DestroyableBlocks" instance=ExtResource( 10 )]
+position = Vector2( 960.863, 317.491 )
+
+[node name="BlockToBeDestroyedByTrigger08" parent="DestroyableBlocks" instance=ExtResource( 10 )]
+position = Vector2( 1343.7, 192.04 )
+
+[node name="BlockToBeDestroyedByTrigger09" parent="DestroyableBlocks" instance=ExtResource( 10 )]
+position = Vector2( 1344.11, 317.491 )
+
+[node name="BlockToBeDestroyedByTrigger10" parent="DestroyableBlocks" instance=ExtResource( 10 )]
+position = Vector2( 1728.12, 191.383 )
+
+[node name="BlockToBeDestroyedByTrigger11" parent="DestroyableBlocks" instance=ExtResource( 10 )]
+position = Vector2( 1727.54, 316.834 )
+
+[node name="BlockToBeDestroyedByTrigger12" parent="DestroyableBlocks" instance=ExtResource( 10 )]
+position = Vector2( 2111.38, 191.798 )
+
+[node name="BlockToBeDestroyedByTrigger13" parent="DestroyableBlocks" instance=ExtResource( 10 )]
+position = Vector2( 2111.79, 317.249 )
+
+[node name="BlockToBeDestroyedByTrigger14" parent="DestroyableBlocks" instance=ExtResource( 10 )]
+position = Vector2( 2495.87, 192.04 )
+
+[node name="BlockToBeDestroyedByTrigger15" parent="DestroyableBlocks" instance=ExtResource( 10 )]
+position = Vector2( 2496.29, 317.491 )
+
+[node name="BlockToBeDestroyedByTrigger16" parent="DestroyableBlocks" instance=ExtResource( 10 )]
+position = Vector2( 2879.95, 190.919 )
+
+[node name="BlockToBeDestroyedByTrigger17" parent="DestroyableBlocks" instance=ExtResource( 10 )]
+position = Vector2( 2879.95, 318.198 )
+[connection signal="pressed" from="DestroyerButton" to="DestroyableBlocks/BlockToBeDestroyedByTrigger02" method="_on_DestroyerButton_pressed"]
+[connection signal="pressed" from="DestroyerButton" to="DestroyableBlocks/BlockToBeDestroyedByTrigger03" method="_on_DestroyerButton_pressed"]
+[connection signal="picked" from="Key" to="Doors/World2-2" method="_on_Key_picked"]
