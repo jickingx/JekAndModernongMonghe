@@ -1,6 +1,5 @@
 extends KinematicBody2D
 
-
 const ParticlesExplosion = preload("res://src/Particles/Explosion.tscn")
 var is_activated = false
 var fall_velocity = Vector2.ZERO
@@ -9,7 +8,7 @@ var fall_velocity = Vector2.ZERO
 func _physics_process(delta):
 	if is_activated:
 		fall_velocity.y += 128 * delta * 60
-		fall_velocity = move_and_slide( fall_velocity )
+		fall_velocity = move_and_slide(fall_velocity)
 
 
 func die():

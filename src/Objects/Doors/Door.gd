@@ -1,7 +1,7 @@
 extends Area2D
 
 export var is_locked := false
-export(String, FILE) var next_scene
+export (String, FILE) var next_scene
 export var switch_delay: float = .4
 
 

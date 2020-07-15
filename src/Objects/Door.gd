@@ -1,7 +1,8 @@
 extends Area2D
 
-export(String, FILE) var next_scene
+export (String, FILE) var next_scene
 export var switch_delay: float = .4
+
 
 func _on_Door_body_entered(body):
 	if body.is_in_group("players"):

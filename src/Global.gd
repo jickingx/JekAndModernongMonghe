@@ -3,7 +3,7 @@ extends Node
 const ScreenOverlay: PackedScene = preload("res://src/UI/FX/ScreenOverlay.tscn")
 const OverlayCameraLens: PackedScene = preload("res://src/UI/FX/OverlayCamera.tscn")
 
-var current_scene_path:= ""
+var current_scene_path := ""
 
 onready var root = get_tree().get_root()
 onready var current_scene = root.get_child(root.get_child_count() - 1)
@@ -25,10 +25,10 @@ func switch_scene(path: String):
 func _deferred_goto_scene(path: String):
 	if path.length() == 0:
 		path = "res://src/Screens/Start.tscn"
-	
+
 	# It is now safe to remove the current scene
 	current_scene.free()
-	
+
 	# Load the new scene.
 	var s = ResourceLoader.load(path)
 	# Instance the new scene.
@@ -47,7 +47,7 @@ func setup_fade_transition():
 
 func fade_out_transition() -> void:
 	var so = current_scene.get_node_or_null("ScreenOverlay")
-	if so != null :
+	if so != null:
 		so.fade_out()
 
 

@@ -2,11 +2,11 @@ extends StaticBody2D
 
 signal pressed
 
-var is_pressed:= false
+var is_pressed := false
 
 
 func _ready():
-	if is_pressed :
+	if is_pressed:
 		$AnimatedSprite.play("pressed")
 	else:
 		$AnimatedSprite.play("default")
@@ -25,4 +25,4 @@ func _on_TriggerDetector_body_entered(body):
 
 
 func _on_DestroyerButton_pressed():
-	pass # Replace with function body.
+	pass  # Replace with function body.
