@@ -8,32 +8,62 @@
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
+[node name="Credits" type="Label" parent="CanvasLayer"]
+margin_left = 395.171
+margin_top = 55.2635
+margin_right = 878.171
+margin_bottom = 387.263
+size_flags_stretch_ratio = 0.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0.0431373, 1, 0.396078, 1 )
+custom_colors/font_outline_modulate = Color( 0.262745, 0.160784, 0.160784, 1 )
+custom_colors/font_color_shadow = Color( 0.486275, 0.137255, 0.137255, 1 )
+custom_constants/line_spacing = 3
+custom_constants/shadow_offset_y = 1
+custom_constants/shadow_as_outline = 1
+text = "Jek & MM Adventure Presents`
+"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Game Title" type="Label" parent="CanvasLayer"]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -659.493
-margin_top = 66.154
-margin_right = -329.493
-margin_bottom = 141.154
+margin_left = -658.079
+margin_top = 193.433
+margin_right = -328.079
+margin_bottom = 268.433
 rect_scale = Vector2( 4, 4 )
 custom_fonts/font = ExtResource( 2 )
-text = "JEK & MM 
-PORTAL MAZE"
+custom_colors/font_color = Color( 0.0431373, 1, 0.396078, 1 )
+custom_colors/font_outline_modulate = Color( 0.262745, 0.160784, 0.160784, 1 )
+custom_colors/font_color_shadow = Color( 0.486275, 0.137255, 0.137255, 1 )
+text = "PORTAL MAZE"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Start" type="Button" parent="CanvasLayer"]
+modulate = Color( 0.407843, 0.933333, 0.270588, 1 )
+self_modulate = Color( 0.909804, 0.909804, 0.909804, 1 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -183.0
-margin_top = 41.0
-margin_right = 183.0
-margin_bottom = 125.0
+margin_left = -181.586
+margin_top = 111.711
+margin_right = 184.414
+margin_bottom = 195.711
 custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color_disabled = Color( 0.0431373, 1, 0.396078, 1 )
+custom_colors/font_color = Color( 0.0431373, 1, 0.396078, 1 )
+custom_colors/font_color_hover = Color( 0.447059, 0.878431, 0.0862745, 1 )
+custom_colors/font_color_pressed = Color( 0.223529, 0.639216, 0.52549, 1 )
 text = "Play"
 script = ExtResource( 1 )
 __meta__ = {
@@ -42,6 +72,7 @@ __meta__ = {
 next_scene = "res://src/Levels/World1-0.tscn"
 
 [node name="Demo Player Switch" type="Button" parent="CanvasLayer"]
+visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -57,6 +88,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 next_scene = "res://src/Levels/DemoLevel00.tscn"
+
+[node name="CanvasModulate" type="CanvasModulate" parent="CanvasLayer"]
+visible = false
+modulate = Color( 0.952941, 0.247059, 0.247059, 1 )
+color = Color( 0.6, 0.631373, 0.835294, 1 )
 
 [node name="OverlayCamera" parent="." instance=ExtResource( 3 )]
 [connection signal="button_up" from="CanvasLayer/Start" to="CanvasLayer/Start" method="_on_Button_button_up"]
