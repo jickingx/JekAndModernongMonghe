@@ -2,6 +2,7 @@ extends Node
 
 const ScreenOverlay: PackedScene = preload("res://src/UI/FX/ScreenOverlay.tscn")
 const OverlayCameraLens: PackedScene = preload("res://src/UI/FX/OverlayCamera.tscn")
+const TouchControls: PackedScene = preload("res://src/UI/TouchControls.tscn")
 
 var current_scene_path := ""
 var score := 0
@@ -38,6 +39,7 @@ func _deferred_goto_scene(path: String):
 	get_tree().get_root().add_child(current_scene)
 	setup_fade_transition()
 	setup_camera_lens_overlay()
+	setup_touch_controls()
 
 
 func setup_fade_transition():
@@ -55,4 +57,10 @@ func fade_out_transition() -> void:
 func setup_camera_lens_overlay():
 	var so = OverlayCameraLens.instance()
 	so.set_name("OverlayCameraLens")
+	current_scene.add_child(so)
+
+
+func setup_touch_controls():
+	var so = TouchControls.instance()
+	so.set_name("TouchControls")
 	current_scene.add_child(so)
