@@ -17,7 +17,7 @@ func _on_Player_coin_collected():
 
 
 func _on_Door_player_entered():
-	Global.score += score
+	Global.score = score
 
 
 func setup_hud():
