@@ -1,5 +1,5 @@
 extends Area2D
 
 
-func kill():
+func die():
 	queue_free()

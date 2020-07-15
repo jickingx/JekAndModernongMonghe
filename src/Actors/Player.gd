@@ -49,11 +49,8 @@ func _physics_process(delta):
 
 
 func die():
-	var ex = ParticlesExplosion.instance()
-	ex.position = self.position
-	Global.current_scene.add_child(ex)
-	ex.emitting = true
-
+	$CollisionShape2D.queue_free()	
+	explode()
 	var dm = UIDeathMessage.instance()
 	Global.current_scene.add_child(dm)
 
@@ -80,10 +77,20 @@ func disable_control():
 func _on_ObjectDetector_body_entered(body):
 	if body.is_in_group("hazards"):
 		die()
+	elif body.is_in_group("enemy_heads") && body.has_method("die"):
+		body.die()
+	else:
+		print_debug(body)
 
 
 func _on_ObjectDetector_area_entered(area):
-	if area.is_in_group("coins") && area.has_method("kill"):
+	if area.is_in_group("hazards"):
+		die()
+	if area.is_in_group("coins") && area.has_method("die"):
 		$Sounds/Pickup.play()
 		emit_signal("coin_collected")
-		area.kill()
+		area.die()
+
+
+func _on_ObjectDetector_body_shape_entered(body_id, body, body_shape, area_shape):
+	pass # Replace with function body.

@@ -28,3 +28,10 @@ func disable():
 func enable():
 	is_disabled = false
 	show()
+
+
+func explode():
+	var ex = ParticlesExplosion.instance()
+	ex.position = self.position
+	Global.current_scene.add_child(ex)
+	ex.emitting = true

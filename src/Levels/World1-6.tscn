@@ -101,7 +101,7 @@ collision_mask = 0
 script = null
 
 [node name="Player1" parent="." instance=ExtResource( 1 )]
-position = Vector2( -385.491, 318.059 )
+position = Vector2( -343.032, 286.159 )
 
 [node name="Coins" type="Node" parent="."]
 
@@ -153,7 +153,7 @@ position = Vector2( 2816.62, 160.887 )
 [node name="Walking Enemies" type="Node" parent="."]
 
 [node name="GoryoEnemy00" parent="Walking Enemies" instance=ExtResource( 8 )]
-position = Vector2( 1348, 254 )
+position = Vector2( 1091.92, 305.932 )
 
 [node name="GoryoEnemy01" parent="Walking Enemies" instance=ExtResource( 8 )]
 position = Vector2( 2240, 256 )

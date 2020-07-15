@@ -19,6 +19,11 @@ func _physics_process(delta):
 	_velocity = move_and_slide(_velocity, Vector2.UP)
 
 
+func die():
+	explode()
+	queue_free()
+
+
 func _on_VisibilityNotifier2D_screen_entered():
 	enable()
 

@@ -16,14 +16,14 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ), ExtResource( 2 ) ],
-"loop": true,
-"name": "walk",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
 "name": "jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "walk",
 "speed": 5.0
 } ]
 
@@ -38,6 +38,7 @@ height = 61.5384
 [node name="Player" type="KinematicBody2D" groups=[
 "players",
 ]]
+collision_layer = 2
 script = ExtResource( 4 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
@@ -70,3 +71,4 @@ position = Vector2( 2, 8 )
 shape = SubResource( 3 )
 [connection signal="area_entered" from="ObjectDetector" to="." method="_on_ObjectDetector_area_entered"]
 [connection signal="body_entered" from="ObjectDetector" to="." method="_on_ObjectDetector_body_entered"]
+[connection signal="body_shape_entered" from="ObjectDetector" to="." method="_on_ObjectDetector_body_shape_entered"]
