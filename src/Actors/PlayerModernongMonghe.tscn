@@ -55,10 +55,10 @@ script = ExtResource( 7 )
 
 [node name="Sounds" type="Node" parent="."]
 
-[node name="Jump" type="AudioStreamPlayer2D" parent="Sounds"]
+[node name="Jump" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource( 6 )
 
-[node name="Dead" type="AudioStreamPlayer2D" parent="Sounds"]
+[node name="Dead" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource( 5 )
 
 [node name="Pickup" type="AudioStreamPlayer" parent="Sounds"]
