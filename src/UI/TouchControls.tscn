@@ -17,7 +17,7 @@ radius = 40.0
 layer = 3
 
 [node name="UpTouchScreenButton" type="TouchScreenButton" parent="."]
-position = Vector2( 1024, 464 )
+position = Vector2( 1028.24, 455.515 )
 scale = Vector2( 2, 2 )
 normal = ExtResource( 1 )
 shape = SubResource( 1 )
@@ -25,7 +25,7 @@ action = "ui_up"
 visibility_mode = 1
 
 [node name="LeftTouchScreenButton" type="TouchScreenButton" parent="."]
-position = Vector2( 0, 464 )
+position = Vector2( 7.07108, 455.515 )
 scale = Vector2( 2, 2 )
 normal = ExtResource( 2 )
 shape = SubResource( 2 )
@@ -33,7 +33,7 @@ action = "ui_left"
 visibility_mode = 1
 
 [node name="RightTouchScreenButton" type="TouchScreenButton" parent="."]
-position = Vector2( 256, 472 )
+position = Vector2( 271.556, 455.03 )
 scale = Vector2( 2, 2 )
 normal = ExtResource( 3 )
 shape = SubResource( 3 )
