@@ -1,5 +1,7 @@
 extends Area2D
 
+signal player_entered
+
 export var is_locked := false
 export (String, FILE) var next_scene
 export var switch_delay: float = .4
@@ -13,6 +15,7 @@ func _ready():
 
 
 func switch_scene():
+	emit_signal("player_entered")
 	$AudioStreamPlayer2D.play()
 	yield(get_tree().create_timer(switch_delay), "timeout")
 	Global.switch_scene(next_scene)
@@ -38,3 +41,4 @@ func _on_Key_picked():
 
 func _on_DoorButton_pressed():
 	unlock()
+

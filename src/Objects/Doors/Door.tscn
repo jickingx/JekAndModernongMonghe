@@ -13,21 +13,23 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 9 ), ExtResource( 2 ), ExtResource( 7 ), ExtResource( 1 ) ],
-"loop": true,
-"name": "unlocked",
-"speed": 7.0
-}, {
 "frames": [ ExtResource( 5 ), ExtResource( 8 ), ExtResource( 6 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "locked",
+"speed": 7.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 2 ), ExtResource( 7 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "unlocked",
 "speed": 7.0
 } ]
 
 [sub_resource type="SegmentShape2D" id=2]
 b = Vector2( -0.157692, 56.2467 )
 
-[node name="Door" type="Area2D"]
+[node name="Door" type="Area2D" groups=[
+"doors",
+]]
 script = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]

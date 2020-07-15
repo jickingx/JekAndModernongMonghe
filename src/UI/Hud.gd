@@ -4,9 +4,9 @@ const FORMAT_STRING_COINS = " %s"
 var coins := 0
 
 
-func coin_add():
+func coin_add(val: int):
 	var new_text
-	coins += 1
+	coins += val
 	if coins < 10:
 		new_text = "00" + str(coins)
 	elif coins >= 100:

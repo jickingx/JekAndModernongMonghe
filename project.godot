@@ -20,7 +20,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="JekAndModdernongMonghe01"
+config/name="JekAndMM"
 run/main_scene="res://src/Screens/Start.tscn"
 config/icon="res://icon.png"
 
