@@ -1,5 +1,6 @@
 extends Actor
 
+export var hp = 1
 var movement_direction := -1
 
 
@@ -37,3 +38,17 @@ func _on_WallDetector_body_entered(body):
 	yield(get_tree().create_timer(.2), "timeout")
 	movement_direction *= -1
 	is_disabled = false
+	$AnimatedSprite.flip_h = true if movement_direction == 1 else false
+
+
+func _on_StompDetector_area_entered(area):
+	if area.global_position.y > $StompDetector.global_position.y:
+		return
+	if not area.is_in_group("players"):
+		return
+	hp -= 1
+	
+	if hp <= 0:
+		die()
+
+

@@ -64,11 +64,12 @@ stream = ExtResource( 5 )
 [node name="Pickup" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource( 8 )
 
-[node name="ObjectDetector" type="Area2D" parent="."]
+[node name="ObjectDetector" type="Area2D" parent="." groups=[
+"players",
+]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectDetector"]
 position = Vector2( 2, 8 )
 shape = SubResource( 3 )
 [connection signal="area_entered" from="ObjectDetector" to="." method="_on_ObjectDetector_area_entered"]
 [connection signal="body_entered" from="ObjectDetector" to="." method="_on_ObjectDetector_body_entered"]
-[connection signal="body_shape_entered" from="ObjectDetector" to="." method="_on_ObjectDetector_body_shape_entered"]

@@ -49,7 +49,7 @@ func _physics_process(delta):
 
 
 func die():
-	$CollisionShape2D.queue_free()	
+	$CollisionShape2D.queue_free()
 	explode()
 	var dm = UIDeathMessage.instance()
 	Global.current_scene.add_child(dm)
@@ -90,7 +90,7 @@ func _on_ObjectDetector_area_entered(area):
 		$Sounds/Pickup.play()
 		emit_signal("coin_collected")
 		area.die()
+	if area.is_in_group("stompables") && area.global_position.y > $ObjectDetector.global_position.y:
+		_velocity.y = -speed_jump
+		$Sounds/Dead.play()
 
-
-func _on_ObjectDetector_body_shape_entered(body_id, body, body_shape, area_shape):
-	pass # Replace with function body.

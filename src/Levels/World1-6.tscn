@@ -154,6 +154,7 @@ position = Vector2( 2816.62, 160.887 )
 
 [node name="GoryoEnemy00" parent="Walking Enemies" instance=ExtResource( 8 )]
 position = Vector2( 1091.92, 305.932 )
+hp = 2
 
 [node name="GoryoEnemy01" parent="Walking Enemies" instance=ExtResource( 8 )]
 position = Vector2( 2240, 256 )
