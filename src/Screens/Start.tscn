@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/Screens/ButtonSwitchScene.gd" type="Script" id=1]
 [ext_resource path="res://assets/Fonts/score.tres" type="DynamicFont" id=2]
@@ -8,6 +8,23 @@
 [ext_resource path="res://assets/Sprites/MMSprite_150x150_Idle_0001.png" type="Texture" id=6]
 [ext_resource path="res://assets/Sprites/JexSprite_150x150_Idle_0001.png" type="Texture" id=7]
 [ext_resource path="res://assets/Sprites/EnemyGoryoSprite_15-x150_Idle_0000.png" type="Texture" id=8]
+
+[sub_resource type="Animation" id=1]
+resource_name = "TitleAnim"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("GameTitleSprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.98, 0.98 ), Vector2( 1, 1 ) ]
+}
 
 [node name="Intro Canvas" type="Node2D"]
 
@@ -85,6 +102,7 @@ __meta__ = {
 
 [node name="GameTitleSprite" type="Sprite" parent="CanvasLayer"]
 position = Vector2( 624.869, 282.843 )
+scale = Vector2( 0.9851, 0.9851 )
 texture = ExtResource( 4 )
 
 [node name="StartButton" type="Button" parent="CanvasLayer"]
@@ -126,5 +144,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 next_scene = "res://src/Levels/DemoLevel00.tscn"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
+autoplay = "TitleAnim"
+anims/TitleAnim = SubResource( 1 )
 [connection signal="button_up" from="CanvasLayer/StartButton" to="CanvasLayer/StartButton" method="_on_Button_button_up"]
 [connection signal="button_up" from="CanvasLayer/DemoPlayerSwitchButton" to="CanvasLayer/DemoPlayerSwitchButton" method="_on_Button_button_up"]
