@@ -1,9 +1,14 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://assets/Fonts/score.tres" type="DynamicFont" id=1]
 [ext_resource path="res://assets/Sprites/mmcoin00.png" type="Texture" id=2]
 [ext_resource path="res://src/UI/Hud.gd" type="Script" id=3]
 [ext_resource path="res://assets/Sprites/headmm.png" type="Texture" id=4]
+[ext_resource path="res://assets/Sprites/mmcoin05.png" type="Texture" id=5]
+[ext_resource path="res://assets/Sprites/mmcoin02.png" type="Texture" id=6]
+[ext_resource path="res://assets/Sprites/mmcoin03.png" type="Texture" id=7]
+[ext_resource path="res://assets/Sprites/mmcoin04.png" type="Texture" id=8]
+[ext_resource path="res://assets/Sprites/mmcoin01.png" type="Texture" id=9]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0, 0, 1 )
@@ -16,7 +21,15 @@ expand_margin_right = 20.0
 expand_margin_top = 2.0
 expand_margin_bottom = 2.0
 
-[sub_resource type="StyleBoxFlat" id=2]
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 9 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.0862745, 0.0666667, 0.0666667, 1 )
 corner_radius_top_left = 25
 corner_radius_top_right = 25
@@ -48,10 +61,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Coin Sprite" type="Sprite" parent="CoinCounter"]
+[node name="Coin Sprite" type="AnimatedSprite" parent="CoinCounter"]
 position = Vector2( -3.66406, 18.8438 )
 scale = Vector2( 0.239154, 0.218006 )
-texture = ExtResource( 2 )
+frames = SubResource( 2 )
+frame = 2
+playing = true
 
 [node name="LifeCounter" type="Label" parent="."]
 visible = false
@@ -63,7 +78,7 @@ margin_top = 24.0
 margin_right = -448.0
 margin_bottom = 60.0
 rect_scale = Vector2( 2, 2 )
-custom_styles/normal = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
 custom_fonts/font = ExtResource( 1 )
 text = " "
 autowrap = true
