@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://src/Screens/ButtonSwitchScene.gd" type="Script" id=1]
 [ext_resource path="res://assets/Fonts/score.tres" type="DynamicFont" id=2]
@@ -8,13 +8,15 @@
 [ext_resource path="res://assets/Sprites/MMSprite_150x150_Idle_0001.png" type="Texture" id=6]
 [ext_resource path="res://assets/Sprites/JexSprite_150x150_Idle_0001.png" type="Texture" id=7]
 [ext_resource path="res://assets/Sprites/EnemyGoryoSprite_15-x150_Idle_0000.png" type="Texture" id=8]
+[ext_resource path="res://assets/Sprites/JexSprite_150x150_Idle_0000.png" type="Texture" id=9]
+[ext_resource path="res://assets/Sprites/EnemyGoryoSprite_15-x150_Idle_0001.png" type="Texture" id=10]
 
 [sub_resource type="Animation" id=1]
 resource_name = "TitleAnim"
 length = 0.4
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("GameTitleSprite:scale")
+tracks/0/path = NodePath("Sprites/GameTitleSprite:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -25,6 +27,90 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Vector2( 1, 1 ), Vector2( 0.98, 0.98 ), Vector2( 1, 1 ) ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprites/MM:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprites/JEKidle1:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprites/JEKidle2:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Sprites/Goryo1idle1:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Sprites/Goryo1idle2:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Sprites/Goryo2idle1:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Sprites/Goryo2idle2:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
 
 [node name="Intro Canvas" type="Node2D"]
 
@@ -32,80 +118,57 @@ tracks/0/keys = {
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="MM" type="Sprite" parent="CanvasLayer"]
-position = Vector2( 242.837, 630.313 )
+[node name="Sprites" type="Node" parent="CanvasLayer"]
+
+[node name="MM" type="Sprite" parent="CanvasLayer/Sprites"]
+position = Vector2( 304.293, 602.171 )
 scale = Vector2( 2.01459, 1.99098 )
 texture = ExtResource( 6 )
 
-[node name="JEK" type="Sprite" parent="CanvasLayer"]
-position = Vector2( 72.8369, 628.313 )
+[node name="JEKidle1" type="Sprite" parent="CanvasLayer/Sprites"]
+position = Vector2( 106.778, 616.999 )
+scale = Vector2( 2.01459, 1.99098 )
+texture = ExtResource( 9 )
+
+[node name="JEKidle2" type="Sprite" parent="CanvasLayer/Sprites"]
+visible = false
+position = Vector2( 106.778, 616.999 )
 scale = Vector2( 2.01459, 1.99098 )
 texture = ExtResource( 7 )
 
-[node name="Goryo1" type="Sprite" parent="CanvasLayer"]
-position = Vector2( 1020.84, 644.313 )
+[node name="Goryo1idle1" type="Sprite" parent="CanvasLayer/Sprites"]
+position = Vector2( 1001.04, 628.757 )
 scale = Vector2( 2.01459, 1.99098 )
 texture = ExtResource( 8 )
 
-[node name="shadow" type="Sprite" parent="CanvasLayer/Goryo1"]
-texture = ExtResource( 8 )
+[node name="Goryo1idle2" type="Sprite" parent="CanvasLayer/Sprites"]
+visible = false
+position = Vector2( 1001.04, 628.757 )
+scale = Vector2( 2.01459, 1.99098 )
+texture = ExtResource( 10 )
 
-[node name="Goryo2" type="Sprite" parent="CanvasLayer"]
-position = Vector2( 1198.84, 650.313 )
+[node name="Goryo2idle1" type="Sprite" parent="CanvasLayer/Sprites"]
+position = Vector2( 1181.87, 627.686 )
 scale = Vector2( 2.01459, 1.99098 )
 texture = ExtResource( 8 )
 
-[node name="shadow" type="Sprite" parent="CanvasLayer/Goryo2"]
-texture = ExtResource( 8 )
-
-[node name="Game Title" type="Label" parent="CanvasLayer"]
+[node name="Goryo2idle2" type="Sprite" parent="CanvasLayer/Sprites"]
 visible = false
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -658.079
-margin_top = 193.433
-margin_right = -328.079
-margin_bottom = 268.433
-rect_scale = Vector2( 4, 4 )
-custom_fonts/font = ExtResource( 2 )
-custom_colors/font_color = Color( 0.0431373, 1, 0.396078, 1 )
-custom_colors/font_outline_modulate = Color( 0.262745, 0.160784, 0.160784, 1 )
-custom_colors/font_color_shadow = Color( 0.486275, 0.137255, 0.137255, 1 )
-text = "PORTAL MAZE"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
+position = Vector2( 1181.87, 627.686 )
+scale = Vector2( 2.01459, 1.99098 )
+texture = ExtResource( 10 )
 
-[node name="Credits" type="Label" parent="CanvasLayer/Game Title"]
-visible = false
-margin_left = 103.312
-margin_top = -34.5424
-margin_right = 586.313
-margin_bottom = 297.457
-size_flags_stretch_ratio = 0.0
-custom_fonts/font = ExtResource( 2 )
-custom_colors/font_color = Color( 0.0431373, 1, 0.396078, 1 )
-custom_colors/font_outline_modulate = Color( 0.262745, 0.160784, 0.160784, 1 )
-custom_colors/font_color_shadow = Color( 0.486275, 0.137255, 0.137255, 1 )
-custom_constants/line_spacing = 3
-custom_constants/shadow_offset_y = 1
-custom_constants/shadow_as_outline = 1
-text = "Jek & MM Adventure Presents`
-"
-align = 1
-valign = 1
-autowrap = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="GameTitleSprite" type="Sprite" parent="CanvasLayer"]
+[node name="GameTitleSprite" type="Sprite" parent="CanvasLayer/Sprites"]
 position = Vector2( 624.869, 282.843 )
-scale = Vector2( 0.9851, 0.9851 )
 texture = ExtResource( 4 )
 
+[node name="PlayButtonSprite" type="Sprite" parent="CanvasLayer/Sprites"]
+position = Vector2( 632.153, 606.697 )
+scale = Vector2( 0.538003, 0.636778 )
+texture = ExtResource( 5 )
+
 [node name="StartButton" type="Button" parent="CanvasLayer"]
+modulate = Color( 0.913725, 0.905882, 0.87451, 0.392157 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -121,11 +184,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 next_scene = "res://src/Levels/World1-0.tscn"
-
-[node name="PlayButtonSprite" type="Sprite" parent="CanvasLayer/StartButton"]
-position = Vector2( 470.108, 650.05 )
-scale = Vector2( 2.58918, 6.0216 )
-texture = ExtResource( 5 )
 
 [node name="DemoPlayerSwitchButton" type="Button" parent="CanvasLayer"]
 visible = false
