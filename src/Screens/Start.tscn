@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://src/Screens/ButtonSwitchScene.gd" type="Script" id=1]
 [ext_resource path="res://assets/Fonts/score.tres" type="DynamicFont" id=2]
@@ -7,9 +7,12 @@
 [ext_resource path="res://assets/GameArt/playbutton.png" type="Texture" id=5]
 [ext_resource path="res://assets/Sprites/MMSprite_150x150_Idle_0001.png" type="Texture" id=6]
 [ext_resource path="res://assets/Sprites/JexSprite_150x150_Idle_0001.png" type="Texture" id=7]
-[ext_resource path="res://assets/Sprites/EnemyGoryoSprite_15-x150_Idle_0000.png" type="Texture" id=8]
+[ext_resource path="res://assets/Sprites/EnemyGoryoSprite_150x150_Idle_0000.png" type="Texture" id=8]
 [ext_resource path="res://assets/Sprites/JexSprite_150x150_Idle_0000.png" type="Texture" id=9]
-[ext_resource path="res://assets/Sprites/EnemyGoryoSprite_15-x150_Idle_0001.png" type="Texture" id=10]
+[ext_resource path="res://assets/Sprites/EnemyGoryoSprite_150x150_Idle_0001.png" type="Texture" id=10]
+[ext_resource path="res://assets/Sounds/BGM/Ocarina Desire.wav" type="AudioStream" id=11]
+[ext_resource path="res://assets/Sprites/EnemyPetchaySprite_185x185_0000.png" type="Texture" id=12]
+[ext_resource path="res://assets/Sprites/EnemyPetchaySprite_185x185_0001.png" type="Texture" id=13]
 
 [sub_resource type="Animation" id=1]
 resource_name = "TitleAnim"
@@ -64,7 +67,7 @@ tracks/3/keys = {
 "values": [ false, true, false ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Sprites/Goryo1idle1:visible")
+tracks/4/path = NodePath("Sprites/Goryoidle1:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -76,7 +79,7 @@ tracks/4/keys = {
 "values": [ true, false, true ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Sprites/Goryo1idle2:visible")
+tracks/5/path = NodePath("Sprites/Goryoidle2:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -88,7 +91,7 @@ tracks/5/keys = {
 "values": [ false, true, false ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Sprites/Goryo2idle1:visible")
+tracks/6/path = NodePath("Sprites/Petchayidle1:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -100,7 +103,7 @@ tracks/6/keys = {
 "values": [ true, false, true ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Sprites/Goryo2idle2:visible")
+tracks/7/path = NodePath("Sprites/Petchayidle2:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -136,27 +139,27 @@ position = Vector2( 106.778, 616.999 )
 scale = Vector2( 2.01459, 1.99098 )
 texture = ExtResource( 7 )
 
-[node name="Goryo1idle1" type="Sprite" parent="CanvasLayer/Sprites"]
-position = Vector2( 1001.04, 628.757 )
+[node name="Goryoidle1" type="Sprite" parent="CanvasLayer/Sprites"]
+position = Vector2( 977.04, 634.757 )
 scale = Vector2( 2.01459, 1.99098 )
 texture = ExtResource( 8 )
 
-[node name="Goryo1idle2" type="Sprite" parent="CanvasLayer/Sprites"]
+[node name="Goryoidle2" type="Sprite" parent="CanvasLayer/Sprites"]
 visible = false
-position = Vector2( 1001.04, 628.757 )
+position = Vector2( 977.04, 634.757 )
 scale = Vector2( 2.01459, 1.99098 )
 texture = ExtResource( 10 )
 
-[node name="Goryo2idle1" type="Sprite" parent="CanvasLayer/Sprites"]
-position = Vector2( 1181.87, 627.686 )
+[node name="Petchayidle1" type="Sprite" parent="CanvasLayer/Sprites"]
+position = Vector2( 1163.87, 659.686 )
 scale = Vector2( 2.01459, 1.99098 )
-texture = ExtResource( 8 )
+texture = ExtResource( 12 )
 
-[node name="Goryo2idle2" type="Sprite" parent="CanvasLayer/Sprites"]
+[node name="Petchayidle2" type="Sprite" parent="CanvasLayer/Sprites"]
 visible = false
-position = Vector2( 1181.87, 627.686 )
+position = Vector2( 1163.87, 659.686 )
 scale = Vector2( 2.01459, 1.99098 )
-texture = ExtResource( 10 )
+texture = ExtResource( 13 )
 
 [node name="GameTitleSprite" type="Sprite" parent="CanvasLayer/Sprites"]
 position = Vector2( 624.869, 282.843 )
@@ -168,16 +171,17 @@ scale = Vector2( 0.538003, 0.636778 )
 texture = ExtResource( 5 )
 
 [node name="StartButton" type="Button" parent="CanvasLayer"]
-modulate = Color( 0.913725, 0.905882, 0.87451, 0.392157 )
+modulate = Color( 1, 1, 1, 0.392157 )
+self_modulate = Color( 1, 1, 1, 0.470588 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -105.53
-margin_top = 177.955
-margin_right = 898.47
-margin_bottom = 1152.96
-rect_scale = Vector2( 0.207789, 0.105749 )
+margin_left = -111.53
+margin_top = 175.955
+margin_right = 892.47
+margin_bottom = 1150.96
+rect_scale = Vector2( 0.218641, 0.105749 )
 custom_fonts/font = ExtResource( 2 )
 script = ExtResource( 1 )
 __meta__ = {
@@ -206,5 +210,24 @@ next_scene = "res://src/Levels/DemoLevel00.tscn"
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
 autoplay = "TitleAnim"
 anims/TitleAnim = SubResource( 1 )
+
+[node name="Version" type="Label" parent="CanvasLayer"]
+modulate = Color( 0.462745, 0.996078, 0.470588, 0.505882 )
+margin_left = 1083.0
+margin_top = -2.0
+margin_right = 1275.0
+margin_bottom = 34.0
+custom_fonts/font = ExtResource( 2 )
+text = "version 0.7.0"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 11 )
+volume_db = 1.0
+pitch_scale = 0.5
+autoplay = true
 [connection signal="button_up" from="CanvasLayer/StartButton" to="CanvasLayer/StartButton" method="_on_Button_button_up"]
 [connection signal="button_up" from="CanvasLayer/DemoPlayerSwitchButton" to="CanvasLayer/DemoPlayerSwitchButton" method="_on_Button_button_up"]

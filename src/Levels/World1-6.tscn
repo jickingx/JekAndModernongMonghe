@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://src/Actors/PlayerModernongMonghe.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Objects/Doors/Door.tscn" type="PackedScene" id=2]
@@ -7,9 +7,10 @@
 [ext_resource path="res://assets/Tiles/Tileset01.tres" type="TileSet" id=5]
 [ext_resource path="res://src/Levels/LevelManager.gd" type="Script" id=6]
 [ext_resource path="res://assets/Tiles/spikes1.png" type="Texture" id=7]
-[ext_resource path="res://src/Actors/EnemyWalking.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/Actors/EnemyGoryo.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/Actors/PlayerJekengkoy.tscn" type="PackedScene" id=9]
 [ext_resource path="res://src/UI/BG/Background.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/Actors/EnemyPetchay.tscn" type="PackedScene" id=11]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 128, 128, 0, 128, -3, 84, 126, 87 )
@@ -154,10 +155,10 @@ position = Vector2( 2816.62, 160.887 )
 
 [node name="GoryoEnemy00" parent="Walking Enemies" instance=ExtResource( 8 )]
 position = Vector2( 1091.92, 305.932 )
-hp = 2
 
 [node name="GoryoEnemy01" parent="Walking Enemies" instance=ExtResource( 8 )]
-position = Vector2( 2240, 256 )
+position = Vector2( 2242.11, 223.402 )
 
-[node name="GoryoEnemy02" parent="Walking Enemies" instance=ExtResource( 8 )]
-position = Vector2( 3116.69, 231.373 )
+[node name="PetchayEnemy00" parent="Walking Enemies" instance=ExtResource( 11 )]
+position = Vector2( 3023.17, 168.362 )
+hp = 2

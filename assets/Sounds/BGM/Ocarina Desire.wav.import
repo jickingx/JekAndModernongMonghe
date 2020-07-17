@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Ocarina Desire.wav-7fbaa8ddf4162702ea5032fa6950caa8.sample"
+
+[deps]
+
+source_file="res://assets/Sounds/BGM/Ocarina Desire.wav"
+dest_files=[ "res://.import/Ocarina Desire.wav-7fbaa8ddf4162702ea5032fa6950caa8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
