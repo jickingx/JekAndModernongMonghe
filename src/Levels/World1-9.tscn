@@ -289,10 +289,10 @@ tile_data = PoolIntArray( -655346, 1610612740, 0, -655345, 1610612740, 0, -65534
 __meta__ = {
 "_edit_lock_": true
 }
-[connection signal="pressed" from="DestroyerButton" to="Detroyable Blocks/BlockToBeDestroyedByTrigger02" method="_on_DestroyerButton_pressed"]
-[connection signal="pressed" from="DestroyerButton" to="Detroyable Blocks/BlockToBeDestroyedByTrigger05" method="_on_DestroyerButton_pressed"]
 [connection signal="pressed" from="DestroyerButton" to="Detroyable Blocks/BlockToBeDestroyedByTrigger00" method="_on_DestroyerButton_pressed"]
+[connection signal="pressed" from="DestroyerButton" to="Detroyable Blocks/BlockToBeDestroyedByTrigger02" method="_on_DestroyerButton_pressed"]
+[connection signal="pressed" from="DestroyerButton" to="Detroyable Blocks/BlockToBeDestroyedByTrigger03" method="_on_DestroyerButton_pressed"]
+[connection signal="pressed" from="DestroyerButton" to="Detroyable Blocks/BlockToBeDestroyedByTrigger05" method="_on_DestroyerButton_pressed"]
 [connection signal="pressed" from="DestroyerButton" to="Detroyable Blocks/BlockToBeDestroyedByTrigger01" method="_on_DestroyerButton_pressed"]
 [connection signal="pressed" from="DestroyerButton" to="Detroyable Blocks/BlockToBeDestroyedByTrigger04" method="_on_DestroyerButton_pressed"]
-[connection signal="pressed" from="DestroyerButton" to="Detroyable Blocks/BlockToBeDestroyedByTrigger03" method="_on_DestroyerButton_pressed"]
 [connection signal="pressed" from="DoorButton" to="Door" method="_on_DoorButton_pressed"]

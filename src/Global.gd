@@ -3,6 +3,7 @@ extends Node
 const ScreenOverlay: PackedScene = preload("res://src/UI/FX/ScreenOverlay.tscn")
 const OverlayCameraLens: PackedScene = preload("res://src/UI/FX/OverlayCamera.tscn")
 const TouchControls: PackedScene = preload("res://src/UI/TouchControls.tscn")
+const START_SCREEN_PATH = "res://src/Screens/Start.tscn"
 
 var current_scene_path := ""
 var score := 0
@@ -26,8 +27,7 @@ func switch_scene(path: String):
 
 func _deferred_goto_scene(path: String):
 	if path.length() == 0:
-		path = "res://src/Screens/Start.tscn"
-
+		path = START_SCREEN_PATH
 	# It is now safe to remove the current scene
 	current_scene.free()
 
@@ -37,6 +37,7 @@ func _deferred_goto_scene(path: String):
 	current_scene = s.instance()
 	# Add it to the active scene, as child of root.
 	get_tree().get_root().add_child(current_scene)
+	current_scene_path = path
 	setup_fade_transition()
 	setup_camera_lens_overlay()
 	setup_touch_controls()
@@ -55,6 +56,8 @@ func fade_out_transition() -> void:
 
 
 func setup_camera_lens_overlay():
+	if current_scene_path == START_SCREEN_PATH:
+		return
 	var so = OverlayCameraLens.instance()
 	so.set_name("OverlayCameraLens")
 	current_scene.add_child(so)

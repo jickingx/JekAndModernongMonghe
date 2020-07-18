@@ -597,11 +597,11 @@ __meta__ = {
 }
 [connection signal="pressed" from="Buttons/DestroyerButton00" to="DetroyableBlocks/BlockToBeDestroyedByTrigger03" method="_on_DestroyerButton00_pressed"]
 [connection signal="pressed" from="Buttons/DestroyerButton00" to="DetroyableBlocks/BlockToBeDestroyedByTrigger02" method="_on_DestroyerButton00_pressed"]
-[connection signal="pressed" from="Buttons/DestroyerButton01" to="DetroyableBlocks/BlockToBeDestroyedByTrigger00" method="_on_DestroyerButton01_pressed"]
 [connection signal="pressed" from="Buttons/DestroyerButton01" to="DetroyableBlocks/BlockToBeDestroyedByTrigger01" method="_on_DestroyerButton01_pressed"]
+[connection signal="pressed" from="Buttons/DestroyerButton01" to="DetroyableBlocks/BlockToBeDestroyedByTrigger00" method="_on_DestroyerButton01_pressed"]
 [connection signal="pressed" from="Buttons/DestroyerButton02" to="DetroyableBlocks/BlockToBeDestroyedByTrigger04" method="_on_DestroyerButton02_pressed"]
-[connection signal="pressed" from="Buttons/DestroyerButton03" to="DetroyableBlocks/BlockToBeDestroyedByTrigger06" method="_on_DestroyerButton03_pressed"]
 [connection signal="pressed" from="Buttons/DestroyerButton03" to="DetroyableBlocks/BlockToBeDestroyedByTrigger05" method="_on_DestroyerButton03_pressed"]
+[connection signal="pressed" from="Buttons/DestroyerButton03" to="DetroyableBlocks/BlockToBeDestroyedByTrigger06" method="_on_DestroyerButton03_pressed"]
 [connection signal="pressed" from="Buttons/DestroyerButton04" to="DetroyableBlocks/BlockToBeDestroyedByTrigger08" method="_on_DestroyerButton04_pressed"]
 [connection signal="pressed" from="Buttons/DestroyerButton04" to="DetroyableBlocks/BlockToBeDestroyedByTrigger07" method="_on_DestroyerButton04_pressed"]
 [connection signal="pressed" from="Buttons/DoorButton" to="Door" method="_on_DoorButton_pressed"]

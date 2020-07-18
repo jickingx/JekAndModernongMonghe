@@ -361,6 +361,6 @@ position = Vector2( 3839.95, 768.919 )
 
 [node name="BlockToBeDestroyedByTrigger17" parent="DestroyableBlocks" instance=ExtResource( 10 )]
 position = Vector2( 3839.95, 896.198 )
-[connection signal="pressed" from="DestroyerButton" to="DestroyableBlocks/BlockToBeDestroyedByTrigger00" method="_on_DestroyerButton_pressed"]
 [connection signal="pressed" from="DestroyerButton" to="DestroyableBlocks/BlockToBeDestroyedByTrigger01" method="_on_DestroyerButton_pressed"]
+[connection signal="pressed" from="DestroyerButton" to="DestroyableBlocks/BlockToBeDestroyedByTrigger00" method="_on_DestroyerButton_pressed"]
 [connection signal="picked" from="Key" to="Doors/World2-1" method="_on_Key_picked"]
