@@ -7,6 +7,7 @@ const UIDeathMessage = preload("res://src/UI/DeathMessage.tscn")
 export var death_restart_delay := 0.8
 var x_input := 0
 var input := Vector2.ZERO
+var is_dead:= false
 onready var animatedSprite := $AnimatedSprite
 
 
@@ -49,6 +50,8 @@ func _physics_process(delta):
 
 
 func die():
+	if is_dead:
+		return
 	$CollisionShape2D.queue_free()
 	explode()
 	var dm = UIDeathMessage.instance()

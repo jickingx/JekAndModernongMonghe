@@ -1,4 +1,5 @@
 extends Actor
+class_name EnemyWalking
 
 export var hp = 1
 var movement_direction := -1
