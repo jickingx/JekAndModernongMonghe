@@ -52,6 +52,7 @@ func _physics_process(delta):
 func die():
 	if is_dead:
 		return
+	is_dead = true 
 	$CollisionShape2D.queue_free()
 	explode()
 	var dm = UIDeathMessage.instance()
