@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://src/Objects/Doors/Door.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Objects/Coin.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://assets/Tiles/spikes1.png" type="Texture" id=7]
 [ext_resource path="res://src/Actors/PlayerJekengkoy.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/UI/BG/Background.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/UI/BGM/BGM1 - Ocarina Desire.tscn" type="PackedScene" id=10]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 128, 128, 0, 128, -3, 84, 126, 87 )
@@ -44,6 +45,7 @@ corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
 
 [node name="World1-4" type="Node2D"]
+position = Vector2( 1217.37, 705.858 )
 script = ExtResource( 6 )
 
 [node name="Background" parent="." instance=ExtResource( 9 )]
@@ -105,37 +107,40 @@ script = null
 [node name="Player1" parent="." instance=ExtResource( 3 )]
 position = Vector2( -367.515, 307.314 )
 
+[node name="Ocarina Desire" parent="Player1" instance=ExtResource( 10 )]
+position = Vector2( 367.515, -307.314 )
+
 [node name="Coins" type="Node" parent="."]
 
 [node name="Coin00" parent="Coins" instance=ExtResource( 2 )]
-position = Vector2( 314.902, 392.917 )
+position = Vector2( 1532.27, 1098.77 )
 
 [node name="Coin01" parent="Coins" instance=ExtResource( 2 )]
-position = Vector2( 507.754, 267.402 )
+position = Vector2( 1725.13, 973.26 )
 
 [node name="Coin02" parent="Coins" instance=ExtResource( 2 )]
-position = Vector2( 700.62, 183.887 )
+position = Vector2( 1917.99, 889.745 )
 
 [node name="Coin03" parent="Coins" instance=ExtResource( 2 )]
-position = Vector2( 960.62, 119.887 )
+position = Vector2( 2177.99, 825.745 )
 
 [node name="Coin04" parent="Coins" instance=ExtResource( 2 )]
-position = Vector2( 1212.62, 319.887 )
+position = Vector2( 2429.99, 1025.74 )
 
 [node name="Coin05" parent="Coins" instance=ExtResource( 2 )]
-position = Vector2( 1340.62, 127.887 )
+position = Vector2( 2557.99, 833.745 )
 
 [node name="Coin06" parent="Coins" instance=ExtResource( 2 )]
-position = Vector2( 1472.62, 319.887 )
+position = Vector2( 2689.99, 1025.74 )
 
 [node name="Coin07" parent="Coins" instance=ExtResource( 2 )]
-position = Vector2( 1728.62, 127.887 )
+position = Vector2( 2945.99, 833.745 )
 
 [node name="Coin08" parent="Coins" instance=ExtResource( 2 )]
-position = Vector2( 1980.62, 195.887 )
+position = Vector2( 3197.99, 901.745 )
 
 [node name="Coin09" parent="Coins" instance=ExtResource( 2 )]
-position = Vector2( 2172.62, 259.887 )
+position = Vector2( 3389.99, 965.745 )
 
 [node name="Coin10" parent="Coins" instance=ExtResource( 2 )]
-position = Vector2( 2364.62, 383.887 )
+position = Vector2( 3581.99, 1089.74 )

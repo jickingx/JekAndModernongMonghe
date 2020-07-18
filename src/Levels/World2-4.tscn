@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://assets/Tiles/Tileset01.tres" type="TileSet" id=1]
 [ext_resource path="res://src/Actors/PlayerModernongMonghe.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://src/Levels/LevelManager.gd" type="Script" id=8]
 [ext_resource path="res://src/UI/BG/Background.tscn" type="PackedScene" id=9]
 [ext_resource path="res://src/Objects/Pickups/Key.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/UI/BGM/BGM1 - Ocarina Desire.tscn" type="PackedScene" id=11]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 128, 128, 0, 128, -3, 84, 126, 87 )
@@ -38,6 +39,7 @@ points = PoolVector2Array( 128, 128, 0, 128, -3, 84, 126, 87 )
 0/z_index = 0
 
 [node name="World2-4" type="Node2D"]
+position = Vector2( 2752, 2624 )
 script = ExtResource( 8 )
 
 [node name="Background" parent="." instance=ExtResource( 9 )]
@@ -73,6 +75,9 @@ position = Vector2( 4294.67, 3841.17 )
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( -304, 268 )
 
+[node name="Ocarina Desire" parent="Player" instance=ExtResource( 11 )]
+position = Vector2( 304, -268 )
+
 [node name="BlockToBeDestroyedByTrigger" parent="." instance=ExtResource( 6 )]
 position = Vector2( -577.172, 445.421 )
 
@@ -94,12 +99,12 @@ position = Vector2( -704.451, 318.142 )
 [node name="DestroyerButton" parent="." instance=ExtResource( 7 )]
 position = Vector2( -64, 448 )
 
-[node name="Key" parent="DestroyerButton" instance=ExtResource( 10 )]
-position = Vector2( 256, -40 )
+[node name="Key" parent="." instance=ExtResource( 10 )]
+position = Vector2( 192, 408 )
 [connection signal="pressed" from="DestroyerButton" to="BlockToBeDestroyedByTrigger" method="_on_DestroyerButton_pressed"]
-[connection signal="pressed" from="DestroyerButton" to="BlockToBeDestroyedByTrigger6" method="_on_DestroyerButton_pressed"]
+[connection signal="pressed" from="DestroyerButton" to="BlockToBeDestroyedByTrigger2" method="_on_DestroyerButton_pressed"]
 [connection signal="pressed" from="DestroyerButton" to="BlockToBeDestroyedByTrigger3" method="_on_DestroyerButton_pressed"]
 [connection signal="pressed" from="DestroyerButton" to="BlockToBeDestroyedByTrigger4" method="_on_DestroyerButton_pressed"]
+[connection signal="pressed" from="DestroyerButton" to="BlockToBeDestroyedByTrigger6" method="_on_DestroyerButton_pressed"]
 [connection signal="pressed" from="DestroyerButton" to="BlockToBeDestroyedByTrigger5" method="_on_DestroyerButton_pressed"]
-[connection signal="pressed" from="DestroyerButton" to="BlockToBeDestroyedByTrigger2" method="_on_DestroyerButton_pressed"]
-[connection signal="picked" from="DestroyerButton/Key" to="Door" method="_on_Key_picked"]
+[connection signal="picked" from="Key" to="Door" method="_on_Key_picked"]

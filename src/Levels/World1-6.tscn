@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://src/Actors/PlayerModernongMonghe.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Objects/Doors/Door.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://src/Actors/PlayerJekengkoy.tscn" type="PackedScene" id=9]
 [ext_resource path="res://src/UI/BG/Background.tscn" type="PackedScene" id=10]
 [ext_resource path="res://src/Actors/EnemyPetchay.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/UI/BGM/BGM1 - Ocarina Desire.tscn" type="PackedScene" id=12]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 128, 128, 0, 128, -3, 84, 126, 87 )
@@ -46,6 +47,7 @@ corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
 
 [node name="World1-6" type="Node2D"]
+position = Vector2( 1216, 706.343 )
 script = ExtResource( 6 )
 
 [node name="Background" parent="." instance=ExtResource( 10 )]
@@ -75,18 +77,18 @@ __meta__ = {
 
 [node name="Guide Text Caption" type="Label" parent="."]
 show_behind_parent = true
-margin_left = -500.0
+margin_left = -434.0
 margin_top = 70.0
-margin_right = 28.0
-margin_bottom = 340.0
+margin_right = 94.0
+margin_bottom = 379.0
 custom_styles/normal = SubResource( 3 )
 custom_fonts/font = ExtResource( 4 )
 text = "
 On this stage 
-beware of a walking enemies.
+beware of \"goryo & petchay\".
 
 \"Jump over the enemies
-to avoid death.\"
+to avoid death or  stomp them in their head so they can die.\"
 "
 align = 1
 autowrap = true
@@ -104,61 +106,63 @@ script = null
 [node name="Player1" parent="." instance=ExtResource( 1 )]
 position = Vector2( -343.032, 286.159 )
 
+[node name="Ocarina Desire" parent="Player1" instance=ExtResource( 12 )]
+position = Vector2( -872.968, -992.502 )
+
 [node name="Coins" type="Node" parent="."]
 
 [node name="Coin00" parent="Coins" instance=ExtResource( 3 )]
-position = Vector2( 126.902, 157.917 )
+position = Vector2( 1342.9, 864.26 )
 
 [node name="Coin01" parent="Coins" instance=ExtResource( 3 )]
-position = Vector2( 317.754, 156.402 )
+position = Vector2( 1533.75, 862.745 )
 
 [node name="Coin02" parent="Coins" instance=ExtResource( 3 )]
-position = Vector2( 510.62, 154.887 )
+position = Vector2( 1726.62, 861.23 )
 
 [node name="Coin03" parent="Coins" instance=ExtResource( 3 )]
-position = Vector2( 702.62, 154.887 )
+position = Vector2( 1918.62, 861.23 )
 
 [node name="Coin04" parent="Coins" instance=ExtResource( 3 )]
-position = Vector2( 896.62, 156.887 )
+position = Vector2( 2112.62, 863.23 )
 
 [node name="Coin05" parent="Coins" instance=ExtResource( 3 )]
-position = Vector2( 1086.62, 156.887 )
+position = Vector2( 2302.62, 863.23 )
 
 [node name="Coin06" parent="Coins" instance=ExtResource( 3 )]
-position = Vector2( 1278.62, 154.887 )
+position = Vector2( 2494.62, 861.23 )
 
 [node name="Coin07" parent="Coins" instance=ExtResource( 3 )]
-position = Vector2( 1470.62, 156.887 )
+position = Vector2( 2686.62, 863.23 )
 
 [node name="Coin08" parent="Coins" instance=ExtResource( 3 )]
-position = Vector2( 1660.62, 158.887 )
+position = Vector2( 2876.62, 865.23 )
 
 [node name="Coin09" parent="Coins" instance=ExtResource( 3 )]
-position = Vector2( 1854.62, 158.887 )
+position = Vector2( 3070.62, 865.23 )
 
 [node name="Coin10" parent="Coins" instance=ExtResource( 3 )]
-position = Vector2( 2046.62, 160.887 )
+position = Vector2( 3262.62, 867.23 )
 
 [node name="Coin11" parent="Coins" instance=ExtResource( 3 )]
-position = Vector2( 2240.62, 158.887 )
+position = Vector2( 3456.62, 865.23 )
 
 [node name="Coin12" parent="Coins" instance=ExtResource( 3 )]
-position = Vector2( 2430.62, 160.887 )
+position = Vector2( 3646.62, 867.23 )
 
 [node name="Coin13" parent="Coins" instance=ExtResource( 3 )]
-position = Vector2( 2621.62, 160.887 )
+position = Vector2( 3837.62, 867.23 )
 
 [node name="Coin14" parent="Coins" instance=ExtResource( 3 )]
-position = Vector2( 2816.62, 160.887 )
+position = Vector2( 4032.62, 867.23 )
 
 [node name="Walking Enemies" type="Node" parent="."]
 
 [node name="GoryoEnemy00" parent="Walking Enemies" instance=ExtResource( 8 )]
-position = Vector2( 1091.92, 305.932 )
+position = Vector2( 2307.92, 1012.28 )
 
 [node name="GoryoEnemy01" parent="Walking Enemies" instance=ExtResource( 8 )]
-position = Vector2( 2242.11, 223.402 )
+position = Vector2( 3458.11, 929.745 )
 
 [node name="PetchayEnemy00" parent="Walking Enemies" instance=ExtResource( 11 )]
-position = Vector2( 3023.17, 168.362 )
-hp = 2
+position = Vector2( 4239.17, 874.705 )
