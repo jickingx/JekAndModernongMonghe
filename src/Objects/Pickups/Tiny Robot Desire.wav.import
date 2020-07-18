@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Tiny Robot Desire.wav-185eecbcb8436f2afea0676ce27f42cc.sample"
+
+[deps]
+
+source_file="res://src/Objects/Pickups/Tiny Robot Desire.wav"
+dest_files=[ "res://.import/Tiny Robot Desire.wav-185eecbcb8436f2afea0676ce27f42cc.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

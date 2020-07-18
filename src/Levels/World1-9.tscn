@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://src/Levels/LevelManager.gd" type="Script" id=1]
 [ext_resource path="res://src/Objects/Button.tscn" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://src/Objects/BlockToBeDestroyedByTrigger.tscn" type="PackedScene" id=10]
 [ext_resource path="res://src/UI/BG/Background.tscn" type="PackedScene" id=11]
 [ext_resource path="res://src/Actors/PlayerJekengkoy.tscn" type="PackedScene" id=12]
+[ext_resource path="res://src/UI/BGM/BGM1 - Ocarina Desire.tscn" type="PackedScene" id=13]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 128, 128, 0, 128, -3, 84, 126, 87 )
@@ -121,6 +122,7 @@ points = PoolVector2Array( 121, 2, 128, 0, 128, 1, 125, 15 )
 2/z_index = 0
 
 [node name="World1-9" type="Node2D"]
+position = Vector2( 1215.25, 1601.23 )
 script = ExtResource( 1 )
 
 [node name="Background" parent="." instance=ExtResource( 11 )]
@@ -201,69 +203,69 @@ __meta__ = {
 [node name="Detroyable Blocks" type="Node" parent="."]
 
 [node name="BlockToBeDestroyedByTrigger00" parent="Detroyable Blocks" instance=ExtResource( 10 )]
-position = Vector2( 2238.68, -324.219 )
+position = Vector2( 3453.93, 1277.01 )
 
 [node name="BlockToBeDestroyedByTrigger01" parent="Detroyable Blocks" instance=ExtResource( 10 )]
-position = Vector2( 2239.26, -447.976 )
+position = Vector2( 3454.51, 1153.26 )
 
 [node name="BlockToBeDestroyedByTrigger02" parent="Detroyable Blocks" instance=ExtResource( 10 )]
-position = Vector2( 2111.85, -449.633 )
+position = Vector2( 3327.1, 1151.6 )
 
 [node name="BlockToBeDestroyedByTrigger03" parent="Detroyable Blocks" instance=ExtResource( 10 )]
-position = Vector2( 2111.85, -327.633 )
+position = Vector2( 3327.1, 1273.6 )
 
 [node name="BlockToBeDestroyedByTrigger04" parent="Detroyable Blocks" instance=ExtResource( 10 )]
-position = Vector2( 1982.92, -451.047 )
+position = Vector2( 3198.17, 1150.19 )
 
 [node name="BlockToBeDestroyedByTrigger05" parent="Detroyable Blocks" instance=ExtResource( 10 )]
-position = Vector2( 1983.51, -327.047 )
+position = Vector2( 3198.76, 1274.19 )
 
 [node name="Coins" type="Node" parent="."]
 
 [node name="Coin00" parent="Coins" instance=ExtResource( 5 )]
-position = Vector2( 59.902, 258.917 )
+position = Vector2( 1275.16, 1860.15 )
 
 [node name="Coin01" parent="Coins" instance=ExtResource( 5 )]
-position = Vector2( 250.754, 257.402 )
+position = Vector2( 1466.01, 1858.63 )
 
 [node name="Coin02" parent="Coins" instance=ExtResource( 5 )]
-position = Vector2( 443.62, 255.887 )
+position = Vector2( 1658.87, 1857.12 )
 
 [node name="Coin03" parent="Coins" instance=ExtResource( 5 )]
-position = Vector2( 2879.62, 259.887 )
+position = Vector2( 4094.87, 1861.12 )
 
 [node name="Coin04" parent="Coins" instance=ExtResource( 5 )]
-position = Vector2( 3009.62, 185.887 )
+position = Vector2( 4224.87, 1787.12 )
 
 [node name="Coin05" parent="Coins" instance=ExtResource( 5 )]
-position = Vector2( 3011.62, 9.88699 )
+position = Vector2( 4226.87, 1611.12 )
 
 [node name="Coin06" parent="Coins" instance=ExtResource( 5 )]
-position = Vector2( 3135.62, 3.88699 )
+position = Vector2( 4350.87, 1605.12 )
 
 [node name="Coin07" parent="Coins" instance=ExtResource( 5 )]
-position = Vector2( 3011.62, -126.113 )
+position = Vector2( 4226.87, 1475.12 )
 
 [node name="Coin08" parent="Coins" instance=ExtResource( 5 )]
-position = Vector2( 3133.62, -124.113 )
+position = Vector2( 4348.87, 1477.12 )
 
 [node name="Coin09" parent="Coins" instance=ExtResource( 5 )]
-position = Vector2( 3007.62, -252.113 )
+position = Vector2( 4222.87, 1349.12 )
 
 [node name="Coin10" parent="Coins" instance=ExtResource( 5 )]
-position = Vector2( 2875.62, -194.113 )
+position = Vector2( 4090.87, 1407.12 )
 
 [node name="Coin11" parent="Coins" instance=ExtResource( 5 )]
-position = Vector2( 2873.62, -376.113 )
+position = Vector2( 4088.87, 1225.12 )
 
 [node name="Coin12" parent="Coins" instance=ExtResource( 5 )]
-position = Vector2( 2755.62, -198.113 )
+position = Vector2( 3970.87, 1403.12 )
 
 [node name="Coin13" parent="Coins" instance=ExtResource( 5 )]
-position = Vector2( 2751.62, -374.113 )
+position = Vector2( 3966.87, 1227.12 )
 
 [node name="Coin14" parent="Coins" instance=ExtResource( 5 )]
-position = Vector2( 2623.59, -378.924 )
+position = Vector2( 3838.84, 1222.31 )
 
 [node name="Player2" parent="." instance=ExtResource( 12 )]
 position = Vector2( -469.899, 314.142 )
@@ -273,6 +275,9 @@ script = null
 
 [node name="Player1" parent="." instance=ExtResource( 3 )]
 position = Vector2( -291.491, 310.059 )
+
+[node name="Ocarina Desire" parent="Player1" instance=ExtResource( 13 )]
+position = Vector2( 291.491, -310.059 )
 
 [node name="TileMapHiddenPassage" type="TileMap" parent="." groups=[
 "Hidden Passage",
@@ -284,10 +289,10 @@ tile_data = PoolIntArray( -655346, 1610612740, 0, -655345, 1610612740, 0, -65534
 __meta__ = {
 "_edit_lock_": true
 }
-[connection signal="pressed" from="DestroyerButton" to="Detroyable Blocks/BlockToBeDestroyedByTrigger01" method="_on_DestroyerButton_pressed"]
-[connection signal="pressed" from="DestroyerButton" to="Detroyable Blocks/BlockToBeDestroyedByTrigger00" method="_on_DestroyerButton_pressed"]
-[connection signal="pressed" from="DestroyerButton" to="Detroyable Blocks/BlockToBeDestroyedByTrigger03" method="_on_DestroyerButton_pressed"]
 [connection signal="pressed" from="DestroyerButton" to="Detroyable Blocks/BlockToBeDestroyedByTrigger02" method="_on_DestroyerButton_pressed"]
 [connection signal="pressed" from="DestroyerButton" to="Detroyable Blocks/BlockToBeDestroyedByTrigger05" method="_on_DestroyerButton_pressed"]
+[connection signal="pressed" from="DestroyerButton" to="Detroyable Blocks/BlockToBeDestroyedByTrigger00" method="_on_DestroyerButton_pressed"]
+[connection signal="pressed" from="DestroyerButton" to="Detroyable Blocks/BlockToBeDestroyedByTrigger01" method="_on_DestroyerButton_pressed"]
 [connection signal="pressed" from="DestroyerButton" to="Detroyable Blocks/BlockToBeDestroyedByTrigger04" method="_on_DestroyerButton_pressed"]
+[connection signal="pressed" from="DestroyerButton" to="Detroyable Blocks/BlockToBeDestroyedByTrigger03" method="_on_DestroyerButton_pressed"]
 [connection signal="pressed" from="DoorButton" to="Door" method="_on_DoorButton_pressed"]

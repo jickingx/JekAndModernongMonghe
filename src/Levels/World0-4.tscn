@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://src/Levels/LevelManager.gd" type="Script" id=1]
 [ext_resource path="res://src/Objects/Doors/Door.tscn" type="PackedScene" id=2]
@@ -8,8 +8,9 @@
 [ext_resource path="res://src/Objects/Button.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Objects/Pickups/Key.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/Actors/PlayerJekengkoy.tscn" type="PackedScene" id=8]
-[ext_resource path="res://src/UI/BG/Background.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/UI/BG/Background-Skyblue.tscn" type="PackedScene" id=9]
 [ext_resource path="res://src/Objects/BlockToBeDestroyedByTrigger.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/UI/BGM/BGM1 - Ocarina Desire.tscn" type="PackedScene" id=11]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.137255, 0.129412, 0.196078, 1 )
@@ -19,6 +20,7 @@ corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
 
 [node name="World0-0" type="Node2D"]
+position = Vector2( 959.515, 577.414 )
 script = ExtResource( 1 )
 
 [node name="Background" parent="." instance=ExtResource( 9 )]
@@ -43,6 +45,10 @@ position = Vector2( 1536, 256.437 )
 
 [node name="Label World1-0" type="Label" parent="Labels"]
 show_behind_parent = true
+anchor_left = 0.749621
+anchor_top = 0.801964
+anchor_right = 0.749621
+anchor_bottom = 0.801964
 margin_left = -481.0
 margin_top = -89.0
 margin_right = -297.0
@@ -58,6 +64,10 @@ __meta__ = {
 
 [node name="Label World2-1" type="Label" parent="Labels"]
 show_behind_parent = true
+anchor_left = 0.749621
+anchor_top = 0.801964
+anchor_right = 0.749621
+anchor_bottom = 0.801964
 margin_left = -91.0
 margin_top = -55.0
 margin_right = 93.0
@@ -73,6 +83,10 @@ __meta__ = {
 
 [node name="Label World2-2" type="Label" parent="Labels"]
 show_behind_parent = true
+anchor_left = 0.749621
+anchor_top = 0.801964
+anchor_right = 0.749621
+anchor_bottom = 0.801964
 margin_left = 295.0
 margin_top = -53.0
 margin_right = 479.0
@@ -88,6 +102,10 @@ __meta__ = {
 
 [node name="Label World2-3" type="Label" parent="Labels"]
 show_behind_parent = true
+anchor_left = 0.749621
+anchor_top = 0.801964
+anchor_right = 0.749621
+anchor_bottom = 0.801964
 margin_left = 680.0
 margin_top = -55.0
 margin_right = 864.0
@@ -103,6 +121,10 @@ __meta__ = {
 
 [node name="Label World2-4" type="Label" parent="Labels"]
 show_behind_parent = true
+anchor_left = 0.749621
+anchor_top = 0.801964
+anchor_right = 0.749621
+anchor_bottom = 0.801964
 margin_left = 1062.0
 margin_top = -57.0
 margin_right = 1246.0
@@ -118,6 +140,10 @@ __meta__ = {
 
 [node name="Label World2-5" type="Label" parent="Labels"]
 show_behind_parent = true
+anchor_left = 0.749621
+anchor_top = 0.801964
+anchor_right = 0.749621
+anchor_bottom = 0.801964
 margin_left = 1446.0
 margin_top = -56.0
 margin_right = 1630.0
@@ -133,6 +159,10 @@ __meta__ = {
 
 [node name="Label World2-6" type="Label" parent="Labels"]
 show_behind_parent = true
+anchor_left = 0.749621
+anchor_top = 0.801964
+anchor_right = 0.749621
+anchor_bottom = 0.801964
 margin_left = 1830.0
 margin_top = -55.0
 margin_right = 2014.0
@@ -148,6 +178,10 @@ __meta__ = {
 
 [node name="Label World2-7" type="Label" parent="Labels"]
 show_behind_parent = true
+anchor_left = 0.749621
+anchor_top = 0.801964
+anchor_right = 0.749621
+anchor_bottom = 0.801964
 margin_left = 2215.0
 margin_top = -55.0
 margin_right = 2399.0
@@ -163,6 +197,10 @@ __meta__ = {
 
 [node name="Label WorldX-X1" type="Label" parent="Labels"]
 show_behind_parent = true
+anchor_left = 0.749621
+anchor_top = 0.801964
+anchor_right = 0.749621
+anchor_bottom = 0.801964
 margin_left = 2598.0
 margin_top = -55.0
 margin_right = 2782.0
@@ -178,6 +216,10 @@ __meta__ = {
 
 [node name="Label WorldX-X2" type="Label" parent="Labels"]
 show_behind_parent = true
+anchor_left = 0.749621
+anchor_top = 0.801964
+anchor_right = 0.749621
+anchor_bottom = 0.801964
 margin_left = 2983.0
 margin_top = -54.0
 margin_right = 3167.0
@@ -195,99 +237,101 @@ __meta__ = {
 
 [node name="World1-0" parent="Doors" instance=ExtResource( 2 )]
 show_behind_parent = true
-position = Vector2( -383.8, 68.172 )
+position = Vector2( 575.715, 645.586 )
 next_scene = "res://src/Levels/World0-0.tscn"
 
 [node name="World2-1" parent="Doors" instance=ExtResource( 2 )]
 show_behind_parent = true
-position = Vector2( 0.199997, 66.172 )
+position = Vector2( 959.715, 643.586 )
 next_scene = "res://src/Levels/World2-1.tscn"
 
 [node name="World2-2" parent="Doors" instance=ExtResource( 2 )]
 show_behind_parent = true
-position = Vector2( 385, 70 )
+position = Vector2( 1344.51, 647.414 )
 next_scene = "res://src/Levels/World2-2.tscn"
 
 [node name="World2-3" parent="Doors" instance=ExtResource( 2 )]
 show_behind_parent = true
-position = Vector2( 770, 68 )
+position = Vector2( 1729.51, 645.414 )
 next_scene = "res://src/Levels/World2-3.tscn"
 
 [node name="World2-4" parent="Doors" instance=ExtResource( 2 )]
 show_behind_parent = true
-position = Vector2( 1152, 66 )
+position = Vector2( 2111.51, 643.414 )
 next_scene = "res://src/Levels/World2-4.tscn"
 
 [node name="World2-5" parent="Doors" instance=ExtResource( 2 )]
 show_behind_parent = true
-position = Vector2( 1536, 67 )
+position = Vector2( 2495.51, 644.414 )
 is_locked = true
 next_scene = "res://src/Levels/World2-5.tscn"
 
 [node name="World2-6" parent="Doors" instance=ExtResource( 2 )]
 show_behind_parent = true
-position = Vector2( 1920, 68 )
+position = Vector2( 2879.51, 645.414 )
 is_locked = true
 next_scene = "res://src/Levels/World2-6.tscn"
 
 [node name="World2-7" parent="Doors" instance=ExtResource( 2 )]
 show_behind_parent = true
-position = Vector2( 2305, 68 )
+position = Vector2( 3264.51, 645.414 )
 is_locked = true
 next_scene = "res://src/Levels/World2-7.tscn"
 
 [node name="WorldX-X1" parent="Doors" instance=ExtResource( 2 )]
 show_behind_parent = true
-position = Vector2( 2688, 68 )
+position = Vector2( 3647.51, 645.414 )
 is_locked = true
 next_scene = "res://src/Levels/World2-2.tscn"
 
 [node name="WorldX-X2" parent="Doors" instance=ExtResource( 2 )]
 show_behind_parent = true
-position = Vector2( 3073, 69 )
+position = Vector2( 4032.51, 646.414 )
 is_locked = true
 next_scene = "res://src/Levels/World2-2.tscn"
 
 [node name="Player2" parent="Doors" instance=ExtResource( 8 )]
-position = Vector2( 1087.97, 311.955 )
+position = Vector2( 2047.48, 889.369 )
 collision_layer = 0
 collision_mask = 0
 script = null
 
 [node name="Player1" parent="Doors" instance=ExtResource( 3 )]
-position = Vector2( 1214.79, -53.9797 )
+position = Vector2( 2174.3, 523.434 )
+
+[node name="Ocarina Desire" parent="Doors/Player1" instance=ExtResource( 11 )]
 
 [node name="DestroyableBlocks" type="Node" parent="."]
 
 [node name="BlockToBeDestroyedByTrigger08" parent="DestroyableBlocks" instance=ExtResource( 10 )]
-position = Vector2( 1343.7, 192.04 )
+position = Vector2( 2303.21, 769.454 )
 
 [node name="BlockToBeDestroyedByTrigger09" parent="DestroyableBlocks" instance=ExtResource( 10 )]
-position = Vector2( 1344.11, 317.491 )
+position = Vector2( 2303.62, 894.905 )
 
 [node name="BlockToBeDestroyedByTrigger10" parent="DestroyableBlocks" instance=ExtResource( 10 )]
-position = Vector2( 1728.12, 191.383 )
+position = Vector2( 2687.63, 768.797 )
 
 [node name="BlockToBeDestroyedByTrigger11" parent="DestroyableBlocks" instance=ExtResource( 10 )]
-position = Vector2( 1727.54, 316.834 )
+position = Vector2( 2687.05, 894.248 )
 
 [node name="BlockToBeDestroyedByTrigger12" parent="DestroyableBlocks" instance=ExtResource( 10 )]
-position = Vector2( 2111.38, 191.798 )
+position = Vector2( 3070.89, 769.212 )
 
 [node name="BlockToBeDestroyedByTrigger13" parent="DestroyableBlocks" instance=ExtResource( 10 )]
-position = Vector2( 2111.79, 317.249 )
+position = Vector2( 3071.3, 894.663 )
 
 [node name="BlockToBeDestroyedByTrigger14" parent="DestroyableBlocks" instance=ExtResource( 10 )]
-position = Vector2( 2495.87, 192.04 )
+position = Vector2( 3455.38, 769.454 )
 
 [node name="BlockToBeDestroyedByTrigger15" parent="DestroyableBlocks" instance=ExtResource( 10 )]
-position = Vector2( 2496.29, 317.491 )
+position = Vector2( 3455.8, 894.905 )
 
 [node name="BlockToBeDestroyedByTrigger16" parent="DestroyableBlocks" instance=ExtResource( 10 )]
-position = Vector2( 2879.95, 190.919 )
+position = Vector2( 3839.46, 768.333 )
 
 [node name="BlockToBeDestroyedByTrigger17" parent="DestroyableBlocks" instance=ExtResource( 10 )]
-position = Vector2( 2879.95, 318.198 )
+position = Vector2( 3839.46, 895.612 )
 [connection signal="pressed" from="DestroyerButton" to="DestroyableBlocks/BlockToBeDestroyedByTrigger08" method="_on_DestroyerButton_pressed"]
 [connection signal="pressed" from="DestroyerButton" to="DestroyableBlocks/BlockToBeDestroyedByTrigger09" method="_on_DestroyerButton_pressed"]
 [connection signal="picked" from="Key" to="Doors/World2-5" method="_on_Key_picked"]

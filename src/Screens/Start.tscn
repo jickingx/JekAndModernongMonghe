@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://src/Screens/ButtonSwitchScene.gd" type="Script" id=1]
 [ext_resource path="res://assets/Fonts/score.tres" type="DynamicFont" id=2]
@@ -10,13 +10,13 @@
 [ext_resource path="res://assets/Sprites/EnemyGoryoSprite_150x150_Idle_0000.png" type="Texture" id=8]
 [ext_resource path="res://assets/Sprites/JexSprite_150x150_Idle_0000.png" type="Texture" id=9]
 [ext_resource path="res://assets/Sprites/EnemyGoryoSprite_150x150_Idle_0001.png" type="Texture" id=10]
-[ext_resource path="res://assets/Sounds/BGM/Ocarina Desire.wav" type="AudioStream" id=11]
-[ext_resource path="res://assets/Sprites/EnemyPetchaySprite_185x185_0000.png" type="Texture" id=12]
+[ext_resource path="res://src/UI/BGM/BGM1 - Ocarina Desire.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/UI/BG/Background.tscn" type="PackedScene" id=12]
 [ext_resource path="res://assets/Sprites/EnemyPetchaySprite_185x185_0001.png" type="Texture" id=13]
+[ext_resource path="res://assets/Sprites/FallingTunyaySprite_128x220_0000.png" type="Texture" id=14]
 
 [sub_resource type="Animation" id=1]
 resource_name = "TitleAnim"
-length = 0.4
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprites/GameTitleSprite:scale")
@@ -25,10 +25,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 0.98, 0.98 ), Vector2( 1, 1 ) ]
+"values": [ Vector2( 1, 1 ), Vector2( 0.98, 0.98 ), Vector2( 1, 1 ), Vector2( 0.98, 0.98 ), Vector2( 1, 1 ), Vector2( 0.98, 0.98 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Sprites/MM:flip_h")
@@ -37,85 +37,123 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ false, true, false ]
+"values": [ false, false, true, true, false, false ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Sprites/JEKidle1:visible")
+tracks/2/path = NodePath("Sprites/Jek1:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ true, false, true ]
+"values": [ true, false, true, false, true, false ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Sprites/JEKidle2:visible")
+tracks/3/path = NodePath("Sprites/Jek2:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ false, true, false ]
+"values": [ false, true, false, true, false, true ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Sprites/Goryoidle1:visible")
+tracks/4/path = NodePath("Sprites/Goryo1:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ true, false, true ]
+"values": [ true, false, true, false, true, false ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Sprites/Goryoidle2:visible")
+tracks/5/path = NodePath("Sprites/Goryo2:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ false, true, false ]
+"values": [ false, true, false, true, false, true ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Sprites/Petchayidle1:visible")
+tracks/6/path = NodePath("Sprites/Petchay1:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ true, false, true ]
+"values": [ true, false, true, false, true, false ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Sprites/Petchayidle2:visible")
+tracks/7/path = NodePath("Sprites/Petchay2:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ false, true, false ]
+"values": [ false, true, false, true, false, true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Sprites/Tunyay1:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, false, false, false, true, true ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Sprites/Tunyay2:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, true, false, false, false, false ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Sprites/Tunyay3:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, false, true, true, false, false ]
 }
 
 [node name="Intro Canvas" type="Node2D"]
+
+[node name="Background" parent="." instance=ExtResource( 12 )]
 
 [node name="OverlayCamera" parent="." instance=ExtResource( 3 )]
 
@@ -128,38 +166,57 @@ position = Vector2( 304.293, 602.171 )
 scale = Vector2( 2.01459, 1.99098 )
 texture = ExtResource( 6 )
 
-[node name="JEKidle1" type="Sprite" parent="CanvasLayer/Sprites"]
+[node name="Jek1" type="Sprite" parent="CanvasLayer/Sprites"]
 position = Vector2( 106.778, 616.999 )
 scale = Vector2( 2.01459, 1.99098 )
 texture = ExtResource( 9 )
 
-[node name="JEKidle2" type="Sprite" parent="CanvasLayer/Sprites"]
+[node name="Jek2" type="Sprite" parent="CanvasLayer/Sprites"]
 visible = false
 position = Vector2( 106.778, 616.999 )
 scale = Vector2( 2.01459, 1.99098 )
 texture = ExtResource( 7 )
 
-[node name="Goryoidle1" type="Sprite" parent="CanvasLayer/Sprites"]
+[node name="Goryo1" type="Sprite" parent="CanvasLayer/Sprites"]
 position = Vector2( 977.04, 634.757 )
 scale = Vector2( 2.01459, 1.99098 )
 texture = ExtResource( 8 )
 
-[node name="Goryoidle2" type="Sprite" parent="CanvasLayer/Sprites"]
+[node name="Goryo2" type="Sprite" parent="CanvasLayer/Sprites"]
 visible = false
 position = Vector2( 977.04, 634.757 )
 scale = Vector2( 2.01459, 1.99098 )
 texture = ExtResource( 10 )
 
-[node name="Petchayidle1" type="Sprite" parent="CanvasLayer/Sprites"]
-position = Vector2( 1163.87, 659.686 )
-scale = Vector2( 2.01459, 1.99098 )
-texture = ExtResource( 12 )
-
-[node name="Petchayidle2" type="Sprite" parent="CanvasLayer/Sprites"]
-visible = false
+[node name="Petchay1" type="Sprite" parent="CanvasLayer/Sprites"]
 position = Vector2( 1163.87, 659.686 )
 scale = Vector2( 2.01459, 1.99098 )
 texture = ExtResource( 13 )
+
+[node name="Petchay2" type="Sprite" parent="CanvasLayer/Sprites"]
+visible = false
+position = Vector2( 1163.87, 669.686 )
+scale = Vector2( 2.01459, 1.99098 )
+texture = ExtResource( 13 )
+
+[node name="Tunyay1" type="Sprite" parent="CanvasLayer/Sprites"]
+position = Vector2( 1112.05, 187.887 )
+scale = Vector2( 2.01459, 1.99098 )
+texture = ExtResource( 14 )
+
+[node name="Tunyay2" type="Sprite" parent="CanvasLayer/Sprites"]
+visible = false
+position = Vector2( 1072.05, 185.887 )
+rotation = 0.181631
+scale = Vector2( 2.01459, 1.99098 )
+texture = ExtResource( 14 )
+
+[node name="Tunyay3" type="Sprite" parent="CanvasLayer/Sprites"]
+visible = false
+position = Vector2( 1156.05, 184.887 )
+rotation = -0.230752
+scale = Vector2( 2.01459, 1.99098 )
+texture = ExtResource( 14 )
 
 [node name="GameTitleSprite" type="Sprite" parent="CanvasLayer/Sprites"]
 position = Vector2( 624.869, 282.843 )
@@ -218,16 +275,12 @@ margin_top = -2.0
 margin_right = 1275.0
 margin_bottom = 34.0
 custom_fonts/font = ExtResource( 2 )
-text = "version 0.7.0"
+text = "version 0.8.0"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 11 )
-volume_db = 1.0
-pitch_scale = 0.5
-autoplay = true
+[node name="Ocarina Desire" parent="." instance=ExtResource( 11 )]
 [connection signal="button_up" from="CanvasLayer/StartButton" to="CanvasLayer/StartButton" method="_on_Button_button_up"]
 [connection signal="button_up" from="CanvasLayer/DemoPlayerSwitchButton" to="CanvasLayer/DemoPlayerSwitchButton" method="_on_Button_button_up"]

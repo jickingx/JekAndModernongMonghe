@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://src/Objects/Doors/Door.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Actors/PlayerModernongMonghe.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://assets/Tiles/spikes1.png" type="Texture" id=7]
 [ext_resource path="res://src/Actors/PlayerJekengkoy.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/UI/BG/Background.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/UI/BGM/BGM1 - Ocarina Desire.tscn" type="PackedScene" id=10]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 128, 128, 0, 128, -3, 84, 126, 87 )
@@ -44,6 +45,7 @@ corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
 
 [node name="World1-2" type="Node2D"]
+position = Vector2( 1216.22, 579.827 )
 script = ExtResource( 6 )
 
 [node name="Background" parent="." instance=ExtResource( 9 )]
@@ -93,20 +95,23 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="Player1" parent="." instance=ExtResource( 2 )]
-position = Vector2( -384.491, 310.059 )
-
 [node name="Player2" parent="." instance=ExtResource( 8 )]
 position = Vector2( -467, 312 )
 script = null
 
+[node name="Player1" parent="." instance=ExtResource( 2 )]
+position = Vector2( -384.491, 310.059 )
+
+[node name="Ocarina Desire" parent="Player1" instance=ExtResource( 10 )]
+position = Vector2( 384.491, -310.059 )
+
 [node name="Coins" type="Node" parent="."]
 
 [node name="Coin00" parent="Coins" instance=ExtResource( 3 )]
-position = Vector2( 258.902, 204.917 )
+position = Vector2( 1475.12, 784.744 )
 
 [node name="Coin01" parent="Coins" instance=ExtResource( 3 )]
-position = Vector2( 639.754, 199.402 )
+position = Vector2( 1855.98, 779.229 )
 
 [node name="Coin02" parent="Coins" instance=ExtResource( 3 )]
-position = Vector2( 1028.62, 195.887 )
+position = Vector2( 2244.84, 775.714 )

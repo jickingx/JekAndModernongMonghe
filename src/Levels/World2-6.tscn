@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/Tiles/Tileset01.tres" type="TileSet" id=1]
 [ext_resource path="res://src/Actors/PlayerModernongMonghe.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://src/Objects/BlockToBeDestroyedByTrigger.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Objects/Button.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/Levels/LevelManager.gd" type="Script" id=8]
+[ext_resource path="res://src/UI/BGM/BGM1 - Ocarina Desire.tscn" type="PackedScene" id=9]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 128, 128, 0, 128, -3, 84, 126, 87 )
@@ -36,6 +37,7 @@ points = PoolVector2Array( 128, 128, 0, 128, -3, 84, 126, 87 )
 0/z_index = 0
 
 [node name="World2-6" type="Node2D"]
+position = Vector2( 1024, 384 )
 script = ExtResource( 8 )
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -64,6 +66,9 @@ position = Vector2( 1536, 704 )
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( -448, 296 )
 
+[node name="Ocarina Desire" parent="Player" instance=ExtResource( 9 )]
+position = Vector2( 448, -296 )
+
 [node name="BlockToBeDestroyedByTrigger" parent="." instance=ExtResource( 6 )]
 position = Vector2( 64, 320 )
 
@@ -72,5 +77,5 @@ position = Vector2( 64, 192 )
 
 [node name="DestroyerButton" parent="." instance=ExtResource( 7 )]
 position = Vector2( -192, 320 )
-[connection signal="pressed" from="DestroyerButton" to="BlockToBeDestroyedByTrigger" method="_on_DestroyerButton_pressed"]
 [connection signal="pressed" from="DestroyerButton" to="BlockToBeDestroyedByTrigger2" method="_on_DestroyerButton_pressed"]
+[connection signal="pressed" from="DestroyerButton" to="BlockToBeDestroyedByTrigger" method="_on_DestroyerButton_pressed"]

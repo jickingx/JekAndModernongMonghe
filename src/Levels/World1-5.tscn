@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://src/Actors/PlayerModernongMonghe.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Objects/Doors/Door.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://src/Objects/Hazards/FallingSpike.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/Actors/PlayerJekengkoy.tscn" type="PackedScene" id=9]
 [ext_resource path="res://src/UI/BG/Background.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/UI/BGM/BGM1 - Ocarina Desire.tscn" type="PackedScene" id=11]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 128, 128, 0, 128, -3, 84, 126, 87 )
@@ -45,6 +46,7 @@ corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
 
 [node name="World1-5" type="Node2D"]
+position = Vector2( 1216, 707.633 )
 script = ExtResource( 6 )
 
 [node name="Background" parent="." instance=ExtResource( 10 )]
@@ -83,7 +85,7 @@ custom_fonts/font = ExtResource( 4 )
 text = "
 On this stage 
 beware of 
-falling objects.
+falling \"Tunyay\".
 
 \"Walk continously 
 to avoid death.\"
@@ -104,84 +106,87 @@ script = null
 [node name="Player1" parent="." instance=ExtResource( 1 )]
 position = Vector2( -370.344, 311.556 )
 
+[node name="Ocarina Desire" parent="Player1" instance=ExtResource( 11 )]
+position = Vector2( 370.344, -311.556 )
+
 [node name="Coins" type="Node" parent="."]
 
 [node name="Coin00" parent="Coins" instance=ExtResource( 3 )]
-position = Vector2( 126.902, 258.917 )
+position = Vector2( 1342.9, 966.55 )
 
 [node name="Coin01" parent="Coins" instance=ExtResource( 3 )]
-position = Vector2( 317.754, 257.402 )
+position = Vector2( 1533.75, 965.034 )
 
 [node name="Coin02" parent="Coins" instance=ExtResource( 3 )]
-position = Vector2( 510.62, 255.887 )
+position = Vector2( 1726.62, 963.52 )
 
 [node name="Coin03" parent="Coins" instance=ExtResource( 3 )]
-position = Vector2( 702.62, 255.887 )
+position = Vector2( 1918.62, 963.52 )
 
 [node name="Coin04" parent="Coins" instance=ExtResource( 3 )]
-position = Vector2( 896.62, 257.887 )
+position = Vector2( 2112.62, 965.52 )
 
 [node name="Coin05" parent="Coins" instance=ExtResource( 3 )]
-position = Vector2( 1086.62, 257.887 )
+position = Vector2( 2302.62, 965.52 )
 
 [node name="Coin06" parent="Coins" instance=ExtResource( 3 )]
-position = Vector2( 1278.62, 255.887 )
+position = Vector2( 2494.62, 963.52 )
 
 [node name="Coin07" parent="Coins" instance=ExtResource( 3 )]
-position = Vector2( 1470.62, 257.887 )
+position = Vector2( 2686.62, 965.52 )
 
 [node name="Coin08" parent="Coins" instance=ExtResource( 3 )]
-position = Vector2( 1660.62, 259.887 )
+position = Vector2( 2876.62, 967.52 )
 
 [node name="Coin09" parent="Coins" instance=ExtResource( 3 )]
-position = Vector2( 1854.62, 259.887 )
+position = Vector2( 3070.62, 967.52 )
 
 [node name="Coin10" parent="Coins" instance=ExtResource( 3 )]
-position = Vector2( 2046.62, 261.887 )
+position = Vector2( 3262.62, 969.52 )
 
 [node name="Coin11" parent="Coins" instance=ExtResource( 3 )]
-position = Vector2( 2240.62, 259.887 )
+position = Vector2( 3456.62, 967.52 )
 
 [node name="Coin12" parent="Coins" instance=ExtResource( 3 )]
-position = Vector2( 2430.62, 261.887 )
+position = Vector2( 3646.62, 969.52 )
 
 [node name="FallingObjects" type="Node" parent="."]
 
 [node name="FallingObject00" parent="FallingObjects" instance=ExtResource( 8 )]
-position = Vector2( 128.854, -59.6325 )
+position = Vector2( 1344.85, 690 )
 
 [node name="FallingObject01" parent="FallingObjects" instance=ExtResource( 8 )]
-position = Vector2( 320.854, -59.6325 )
+position = Vector2( 1536.85, 690 )
 
 [node name="FallingObject02" parent="FallingObjects" instance=ExtResource( 8 )]
-position = Vector2( 511.854, -59.6325 )
+position = Vector2( 1727.85, 690 )
 
 [node name="FallingObject03" parent="FallingObjects" instance=ExtResource( 8 )]
-position = Vector2( 704.854, -59.6325 )
+position = Vector2( 1920.85, 690 )
 
 [node name="FallingObject04" parent="FallingObjects" instance=ExtResource( 8 )]
-position = Vector2( 895.854, -59.6325 )
+position = Vector2( 2111.85, 690 )
 
 [node name="FallingObject05" parent="FallingObjects" instance=ExtResource( 8 )]
-position = Vector2( 1087.85, -59.6325 )
+position = Vector2( 2303.85, 690 )
 
 [node name="FallingObject06" parent="FallingObjects" instance=ExtResource( 8 )]
-position = Vector2( 1279.85, -59.6325 )
+position = Vector2( 2495.85, 690 )
 
 [node name="FallingObject07" parent="FallingObjects" instance=ExtResource( 8 )]
-position = Vector2( 1472.85, -59.6325 )
+position = Vector2( 2688.85, 690 )
 
 [node name="FallingObject08" parent="FallingObjects" instance=ExtResource( 8 )]
-position = Vector2( 1664.85, -59.6325 )
+position = Vector2( 2880.85, 690 )
 
 [node name="FallingObject09" parent="FallingObjects" instance=ExtResource( 8 )]
-position = Vector2( 1854.85, -59.6325 )
+position = Vector2( 3070.85, 690 )
 
 [node name="FallingObject10" parent="FallingObjects" instance=ExtResource( 8 )]
-position = Vector2( 2047.85, -59.6325 )
+position = Vector2( 3263.85, 690 )
 
 [node name="FallingObject11" parent="FallingObjects" instance=ExtResource( 8 )]
-position = Vector2( 2240.85, -59.6325 )
+position = Vector2( 3456.85, 690 )
 
 [node name="FallingObject12" parent="FallingObjects" instance=ExtResource( 8 )]
-position = Vector2( 2431.85, -59.6325 )
+position = Vector2( 3647.85, 690 )

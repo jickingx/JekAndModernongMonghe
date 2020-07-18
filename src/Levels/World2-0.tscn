@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://src/Levels/LevelManager.gd" type="Script" id=1]
 [ext_resource path="res://src/Objects/Button.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://assets/Tiles/blocks.png" type="Texture" id=9]
 [ext_resource path="res://src/UI/BG/Background.tscn" type="PackedScene" id=10]
 [ext_resource path="res://src/Actors/PlayerJekengkoy.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/UI/BGM/BGM1 - Ocarina Desire.tscn" type="PackedScene" id=12]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 128, 128, 0, 128, -3, 84, 126, 87 )
@@ -120,6 +121,7 @@ points = PoolVector2Array( 121, 2, 128, 0, 128, 1, 125, 15 )
 2/z_index = 0
 
 [node name="World2-0" type="Node2D"]
+position = Vector2( 1216, 578 )
 script = ExtResource( 1 )
 __meta__ = {
 "_editor_description_": ""
@@ -209,52 +211,55 @@ script = null
 [node name="Player1" parent="." instance=ExtResource( 3 )]
 position = Vector2( -340.645, 307.314 )
 
+[node name="Ocarina Desire" parent="Player1" instance=ExtResource( 12 )]
+position = Vector2( 340.645, -307.314 )
+
 [node name="Coins" type="Node" parent="."]
 
 [node name="Coin00" parent="Coins" instance=ExtResource( 5 )]
-position = Vector2( -449.215, 835.916 )
+position = Vector2( 766.785, 1413.92 )
 
 [node name="Coin01" parent="Coins" instance=ExtResource( 5 )]
-position = Vector2( 3073.52, 260.23 )
+position = Vector2( 4289.52, 838.23 )
 
 [node name="Coin02" parent="Coins" instance=ExtResource( 5 )]
-position = Vector2( -195.605, 832.886 )
+position = Vector2( 1020.4, 1410.89 )
 
 [node name="Coin03" parent="Coins" instance=ExtResource( 5 )]
-position = Vector2( 2625.06, 839.715 )
+position = Vector2( 3841.06, 1417.72 )
 
 [node name="Coin04" parent="Coins" instance=ExtResource( 5 )]
-position = Vector2( 2882.34, 836.425 )
+position = Vector2( 4098.34, 1414.43 )
 
 [node name="Coin05" parent="Coins" instance=ExtResource( 5 )]
-position = Vector2( 3071.02, 388.896 )
+position = Vector2( 4287.02, 966.896 )
 
 [node name="Coin06" parent="Coins" instance=ExtResource( 5 )]
-position = Vector2( 3200.67, 507.347 )
+position = Vector2( 4416.67, 1085.35 )
 
 [node name="Coin07" parent="Coins" instance=ExtResource( 5 )]
-position = Vector2( 2369.57, 841.209 )
+position = Vector2( 3585.57, 1419.21 )
 
 [node name="Coin08" parent="Coins" instance=ExtResource( 5 )]
-position = Vector2( 3198.67, 648.048 )
+position = Vector2( 4414.67, 1226.05 )
 
 [node name="Coin09" parent="Coins" instance=ExtResource( 5 )]
-position = Vector2( 2113.84, 836.832 )
+position = Vector2( 3329.84, 1414.83 )
 
 [node name="Coin10" parent="Coins" instance=ExtResource( 5 )]
-position = Vector2( 1851.73, 838.263 )
+position = Vector2( 3067.73, 1416.26 )
 
 [node name="Coin11" parent="Coins" instance=ExtResource( 5 )]
-position = Vector2( 1599.03, 831.887 )
+position = Vector2( 2815.03, 1409.89 )
 
 [node name="Coin12" parent="Coins" instance=ExtResource( 5 )]
-position = Vector2( 1345.03, 833.402 )
+position = Vector2( 2561.03, 1411.4 )
 
 [node name="Coin13" parent="Coins" instance=ExtResource( 5 )]
-position = Vector2( 1087.62, 833.402 )
+position = Vector2( 2303.62, 1411.4 )
 
 [node name="Coin14" parent="Coins" instance=ExtResource( 5 )]
-position = Vector2( 833.277, 833.887 )
+position = Vector2( 2049.28, 1411.89 )
 
 [node name="TileMapHiddenPassage" type="TileMap" parent="." groups=[
 "Hidden Passage",

@@ -21,9 +21,10 @@ extents = Vector2( 72, 10 )
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 45.5435, 2.76796 )
 
-[node name="WalkingEnemy" type="KinematicBody2D"]
+[node name="PetchayEnemy" type="KinematicBody2D"]
 collision_layer = 4
 script = ExtResource( 2 )
+hp = 2
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
@@ -32,13 +33,16 @@ playing = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=[
 "hazards",
 ]]
+position = Vector2( -1, 28 )
 shape = SubResource( 2 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( -1, 28 )
 
 [node name="WallDetector" type="Area2D" parent="." groups=[
 "hazards",
 ]]
+position = Vector2( -1, 28 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallDetector"]
 shape = SubResource( 3 )
