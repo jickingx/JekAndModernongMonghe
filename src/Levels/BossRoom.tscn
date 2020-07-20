@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://src/Actors/PlayerModernongMonghe.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/Tiles/Tileset01.tres" type="TileSet" id=2]
 [ext_resource path="res://assets/Tiles/spikes1.png" type="Texture" id=3]
 [ext_resource path="res://src/Actors/Enemies/Boss00.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/Tiles/TileSet1.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/UI/BG/Background.tscn" type="PackedScene" id=6]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 128, 128, 0, 128, -3, 84, 126, 87 )
@@ -33,7 +35,10 @@ points = PoolVector2Array( 128, 128, 0, 128, -3, 84, 126, 87 )
 
 [node name="BossRoom" type="Node2D"]
 
+[node name="Background" parent="." instance=ExtResource( 6 )]
+
 [node name="TileMap" type="TileMap" parent="."]
+visible = false
 tile_set = ExtResource( 2 )
 cell_size = Vector2( 128, 128 )
 format = 1
@@ -54,6 +59,12 @@ __meta__ = {
 
 [node name="Boss" parent="." instance=ExtResource( 4 )]
 position = Vector2( 3040.48, 1054.31 )
+hp = 5
 
 [node name="Monghe" parent="." instance=ExtResource( 1 )]
 position = Vector2( 863.204, 1030.47 )
+
+[node name="TileMapSet1" parent="." instance=ExtResource( 5 )]
+cell_size = Vector2( 128, 128 )
+cell_quadrant_size = 32
+tile_data = PoolIntArray( 589830, 21, 0, 589831, 21, 0, 589832, 21, 0, 589833, 21, 0, 589834, 21, 0, 589835, 21, 0, 589836, 21, 0, 589837, 21, 0, 589838, 21, 0, 589839, 21, 0, 589840, 21, 0, 589841, 21, 0, 589842, 21, 0, 589843, 21, 0, 589844, 21, 0, 589845, 21, 0, 589846, 21, 0, 589847, 21, 0, 589848, 21, 0, 589849, 21, 0, 589850, 21, 0 )

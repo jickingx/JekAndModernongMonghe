@@ -1,7 +1,6 @@
-[gd_resource type="TileSet" load_steps=8 format=2]
+[gd_resource type="TileSet" load_steps=7 format=2]
 
 [ext_resource path="res://assets/Tiles/blocks.png" type="Texture" id=1]
-[ext_resource path="res://assets/Tiles/block3-bottom.png" type="Texture" id=2]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
@@ -104,7 +103,6 @@ points = PoolVector2Array( 128, 64, 0, 64, 0, 0, 128, 0 )
 } ]
 3/z_index = 0
 4/name = "block3-bottom.png 4"
-4/texture = ExtResource( 2 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 0, 0, 128, 128 )
