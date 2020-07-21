@@ -58,7 +58,7 @@ __meta__ = {
 
 [node name="Door" parent="." instance=ExtResource( 4 )]
 position = Vector2( 2112, 320 )
-next_scene = "res://src/Levels/World2-7.tscn"
+next_scene = "res://src/Levels/World0-6.tscn"
 
 [node name="EnemyWalking" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1536, 704 )
@@ -77,5 +77,5 @@ position = Vector2( 64, 192 )
 
 [node name="DestroyerButton" parent="." instance=ExtResource( 7 )]
 position = Vector2( -192, 320 )
-[connection signal="pressed" from="DestroyerButton" to="BlockToBeDestroyedByTrigger2" method="_on_DestroyerButton_pressed"]
 [connection signal="pressed" from="DestroyerButton" to="BlockToBeDestroyedByTrigger" method="_on_DestroyerButton_pressed"]
+[connection signal="pressed" from="DestroyerButton" to="BlockToBeDestroyedByTrigger2" method="_on_DestroyerButton_pressed"]

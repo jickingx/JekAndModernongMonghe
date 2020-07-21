@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Tiny Robot Desire by Poy Lizardo.ogg-93caee241d6bb401fdc882017c97bc04.oggstr"
+
+[deps]
+
+source_file="res://assets/Sounds/BGM/Tiny Robot Desire by Poy Lizardo.ogg"
+dest_files=[ "res://.import/Tiny Robot Desire by Poy Lizardo.ogg-93caee241d6bb401fdc882017c97bc04.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -64,7 +64,7 @@ __meta__ = {
 [node name="Door" parent="." instance=ExtResource( 4 )]
 position = Vector2( -577.172, 320.971 )
 is_locked = true
-next_scene = "res://src/Levels/World0-4.tscn"
+next_scene = "res://src/Levels/World0-5.tscn"
 
 [node name="EnemyWalking" parent="." instance=ExtResource( 5 )]
 position = Vector2( 153.855, 3829.86 )
@@ -101,10 +101,10 @@ position = Vector2( -64, 448 )
 
 [node name="Key" parent="." instance=ExtResource( 10 )]
 position = Vector2( 192, 408 )
+[connection signal="pressed" from="DestroyerButton" to="BlockToBeDestroyedByTrigger6" method="_on_DestroyerButton_pressed"]
 [connection signal="pressed" from="DestroyerButton" to="BlockToBeDestroyedByTrigger" method="_on_DestroyerButton_pressed"]
-[connection signal="pressed" from="DestroyerButton" to="BlockToBeDestroyedByTrigger2" method="_on_DestroyerButton_pressed"]
+[connection signal="pressed" from="DestroyerButton" to="BlockToBeDestroyedByTrigger5" method="_on_DestroyerButton_pressed"]
 [connection signal="pressed" from="DestroyerButton" to="BlockToBeDestroyedByTrigger3" method="_on_DestroyerButton_pressed"]
 [connection signal="pressed" from="DestroyerButton" to="BlockToBeDestroyedByTrigger4" method="_on_DestroyerButton_pressed"]
-[connection signal="pressed" from="DestroyerButton" to="BlockToBeDestroyedByTrigger6" method="_on_DestroyerButton_pressed"]
-[connection signal="pressed" from="DestroyerButton" to="BlockToBeDestroyedByTrigger5" method="_on_DestroyerButton_pressed"]
+[connection signal="pressed" from="DestroyerButton" to="BlockToBeDestroyedByTrigger2" method="_on_DestroyerButton_pressed"]
 [connection signal="picked" from="Key" to="Door" method="_on_Key_picked"]

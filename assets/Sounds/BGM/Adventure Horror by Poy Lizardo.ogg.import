@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Adventure Horror by Poy Lizardo.ogg-11a832c0b49b39ec8fe03ee9d2c60e31.oggstr"
+
+[deps]
+
+source_file="res://assets/Sounds/BGM/Adventure Horror by Poy Lizardo.ogg"
+dest_files=[ "res://.import/Adventure Horror by Poy Lizardo.ogg-11a832c0b49b39ec8fe03ee9d2c60e31.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

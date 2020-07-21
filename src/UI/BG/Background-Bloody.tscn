@@ -13,9 +13,11 @@ animations = [ {
 "speed": 0.5
 } ]
 
-[node name="Background-Skyblue" type="ParallaxBackground"]
+[node name="Background" type="ParallaxBackground"]
 
 [node name="BackgroundLayer" type="ParallaxLayer" parent="."]
+modulate = Color( 0.266667, 0.027451, 0.0352941, 1 )
+self_modulate = Color( 0.423529, 0.117647, 0.117647, 1 )
 position = Vector2( 904, 484 )
 motion_scale = Vector2( 0.1, 1 )
 motion_mirroring = Vector2( 2272, 1280 )
@@ -32,7 +34,7 @@ __meta__ = {
 }
 
 [node name="Clouds" type="ParallaxLayer" parent="."]
-modulate = Color( 1, 1, 1, 0.470588 )
+modulate = Color( 0.8, 0.254902, 0.560784, 0.470588 )
 self_modulate = Color( 1, 1, 1, 0.588235 )
 position = Vector2( 904, 484 )
 motion_scale = Vector2( 0.5, 1 )
@@ -157,7 +159,7 @@ animation = "clouds"
 playing = true
 
 [node name="Clouds2" type="ParallaxLayer" parent="."]
-modulate = Color( 1, 1, 1, 0.12549 )
+modulate = Color( 0.8, 0.254902, 0.560784, 0.12549 )
 self_modulate = Color( 1, 1, 1, 0.588235 )
 position = Vector2( 798.627, 921.685 )
 motion_scale = Vector2( 0.8, 1 )
@@ -286,7 +288,7 @@ frame = 1
 playing = true
 
 [node name="Clouds3" type="ParallaxLayer" parent="."]
-modulate = Color( 1, 1, 1, 0.470588 )
+modulate = Color( 0.8, 0.254902, 0.560784, 0.470588 )
 self_modulate = Color( 1, 1, 1, 0.588235 )
 position = Vector2( 1072, 2332 )
 motion_scale = Vector2( 0.5, 1 )
@@ -420,7 +422,7 @@ frame = 2
 playing = true
 
 [node name="Clouds4" type="ParallaxLayer" parent="."]
-modulate = Color( 1, 1, 1, 0.12549 )
+modulate = Color( 0.8, 0.254902, 0.560784, 0.12549 )
 self_modulate = Color( 1, 1, 1, 0.588235 )
 position = Vector2( 966.627, 2769.69 )
 motion_scale = Vector2( 0.8, 1 )

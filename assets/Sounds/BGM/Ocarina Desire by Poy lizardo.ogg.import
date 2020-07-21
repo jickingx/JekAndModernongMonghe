@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Ocarina Desire by Poy lizardo.ogg-84f47a2d783bb678bd4349f7d2063889.oggstr"
+
+[deps]
+
+source_file="res://assets/Sounds/BGM/Ocarina Desire by Poy lizardo.ogg"
+dest_files=[ "res://.import/Ocarina Desire by Poy lizardo.ogg-84f47a2d783bb678bd4349f7d2063889.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

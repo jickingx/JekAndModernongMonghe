@@ -56,7 +56,7 @@ __meta__ = {
 
 [node name="Door" parent="." instance=ExtResource( 4 )]
 position = Vector2( 2112, 320 )
-next_scene = "res://src/Screens/Start.tscn"
+next_scene = "res://src/Levels/World0-4.tscn"
 
 [node name="EnemyWalking" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1536, 704 )

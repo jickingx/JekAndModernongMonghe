@@ -22,7 +22,7 @@ b = Vector2( 0.442932, 1.70393 )
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 36.9319, 52.2311 )
 
-[node name="FallingSpike" type="KinematicBody2D" groups=[
+[node name="FallingTunyay" type="KinematicBody2D" groups=[
 "hazards",
 ]]
 script = ExtResource( 2 )

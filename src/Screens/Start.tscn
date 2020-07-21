@@ -200,12 +200,12 @@ scale = Vector2( 2.01459, 1.99098 )
 texture = ExtResource( 13 )
 
 [node name="Tunyay1" type="Sprite" parent="CanvasLayer/Sprites"]
+visible = false
 position = Vector2( 1112.05, 187.887 )
 scale = Vector2( 2.01459, 1.99098 )
 texture = ExtResource( 14 )
 
 [node name="Tunyay2" type="Sprite" parent="CanvasLayer/Sprites"]
-visible = false
 position = Vector2( 1072.05, 185.887 )
 rotation = 0.181631
 scale = Vector2( 2.01459, 1.99098 )
@@ -275,12 +275,14 @@ margin_top = -2.0
 margin_right = 1275.0
 margin_bottom = 34.0
 custom_fonts/font = ExtResource( 2 )
-text = "version 0.8.0"
+text = "version 0.9.0"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Ocarina Desire" parent="." instance=ExtResource( 11 )]
+[node name="BGM1" parent="." instance=ExtResource( 11 )]
+position = Vector2( 642.053, 321.026 )
+volume_db = 1.0
 [connection signal="button_up" from="CanvasLayer/StartButton" to="CanvasLayer/StartButton" method="_on_Button_button_up"]
 [connection signal="button_up" from="CanvasLayer/DemoPlayerSwitchButton" to="CanvasLayer/DemoPlayerSwitchButton" method="_on_Button_button_up"]

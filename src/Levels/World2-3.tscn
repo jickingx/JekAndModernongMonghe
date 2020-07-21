@@ -1047,11 +1047,11 @@ position = Vector2( 5657.63, 392.71 )
 
 [node name="FallingObject36" parent="FallingObjects" instance=ExtResource( 6 )]
 position = Vector2( 5897, 576 )
-[connection signal="pressed" from="Buttons/DestroyerButton00" to="DestroyableBlocks/BlockToBeDestroyedByTrigger02" method="_on_DestroyerButton00_pressed"]
 [connection signal="pressed" from="Buttons/DestroyerButton00" to="DestroyableBlocks/BlockToBeDestroyedByTrigger03" method="_on_DestroyerButton00_pressed"]
-[connection signal="pressed" from="Buttons/DestroyerButton00" to="DestroyableBlocks/BlockToBeDestroyedByTrigger04" method="_on_DestroyerButton00_pressed"]
-[connection signal="pressed" from="Buttons/DestroyerButton00" to="DestroyableBlocks/BlockToBeDestroyedByTrigger00" method="_on_DestroyerButton00_pressed"]
 [connection signal="pressed" from="Buttons/DestroyerButton00" to="DestroyableBlocks/BlockToBeDestroyedByTrigger01" method="_on_DestroyerButton00_pressed"]
+[connection signal="pressed" from="Buttons/DestroyerButton00" to="DestroyableBlocks/BlockToBeDestroyedByTrigger02" method="_on_DestroyerButton00_pressed"]
+[connection signal="pressed" from="Buttons/DestroyerButton00" to="DestroyableBlocks/BlockToBeDestroyedByTrigger04" method="_on_DestroyerButton00_pressed"]
 [connection signal="pressed" from="Buttons/DestroyerButton00" to="DestroyableBlocks/BlockToBeDestroyedByTrigger05" method="_on_DestroyerButton00_pressed"]
-[connection signal="pressed" from="Buttons/DestroyerButton00" to="DestroyableBlocks/BlockToBeDestroyedByTrigger07" method="_on_DestroyerButton00_pressed"]
 [connection signal="pressed" from="Buttons/DestroyerButton00" to="DestroyableBlocks/BlockToBeDestroyedByTrigger06" method="_on_DestroyerButton00_pressed"]
+[connection signal="pressed" from="Buttons/DestroyerButton00" to="DestroyableBlocks/BlockToBeDestroyedByTrigger00" method="_on_DestroyerButton00_pressed"]
+[connection signal="pressed" from="Buttons/DestroyerButton00" to="DestroyableBlocks/BlockToBeDestroyedByTrigger07" method="_on_DestroyerButton00_pressed"]

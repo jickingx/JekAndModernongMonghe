@@ -1,7 +1,7 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://assets/Sounds/BGM/Ocarina Desire.wav" type="AudioStream" id=1]
+[ext_resource path="res://assets/Sounds/BGM/Ocarina Desire by Poy lizardo.ogg" type="AudioStream" id=1]
 
-[node name="Ocarina Desire" type="AudioStreamPlayer2D"]
+[node name="BGM1" type="AudioStreamPlayer2D"]
 stream = ExtResource( 1 )
 autoplay = true

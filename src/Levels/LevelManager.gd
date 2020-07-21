@@ -32,3 +32,7 @@ func setup_hud():
 func setup_doors():
 	for door in Global.current_scene.get_tree().get_nodes_in_group("doors"):
 		door.connect("player_entered", self, "_on_Door_player_entered")
+
+
+func _on_Key_picked():
+	pass # Replace with function body.
