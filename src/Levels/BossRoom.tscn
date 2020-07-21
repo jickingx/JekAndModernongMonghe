@@ -1,4 +1,4 @@
-[gd_scene load_steps=132 format=2]
+[gd_scene load_steps=133 format=2]
 
 [ext_resource path="res://src/Actors/PlayerModernongMonghe.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/Tiles/Tileset01.tres" type="TileSet" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://src/UI/BG/Background-Bloody.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/Tiles/tileset.png" type="Texture" id=7]
 [ext_resource path="res://src/UI/BGM/BGM3 - Adventure Horror.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/UI/BG/Background.tscn" type="PackedScene" id=9]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 128, 128, 0, 128, -3, 84, 126, 87 )
@@ -1395,3 +1396,5 @@ volume_db = 1.0
 tile_set = SubResource( 123 )
 
 [node name="Background" parent="." instance=ExtResource( 6 )]
+
+[node name="Background2" parent="." instance=ExtResource( 9 )]
