@@ -2,17 +2,19 @@
 
 [ext_resource path="res://src/Levels/LevelManager.gd" type="Script" id=1]
 [ext_resource path="res://src/Objects/Button.tscn" type="PackedScene" id=2]
-[ext_resource path="res://src/Actors/PlayerModernongMonghe.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Actors/Players/PlayerModernongMonghe.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/Objects/Doors/Door.tscn" type="PackedScene" id=4]
-[ext_resource path="res://src/Objects/Coin.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/Objects/Pickups/Coin.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/Fonts/score.tres" type="DynamicFont" id=6]
 [ext_resource path="res://src/Objects/Pickups/Key.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/Objects/BlockToBeDestroyedByTrigger.tscn" type="PackedScene" id=10]
 [ext_resource path="res://src/UI/BG/Background.tscn" type="PackedScene" id=11]
-[ext_resource path="res://src/Actors/PlayerJekengkoy.tscn" type="PackedScene" id=12]
+[ext_resource path="res://src/Actors/Players/PlayerJekengkoy.tscn" type="PackedScene" id=12]
 [ext_resource path="res://src/UI/BGM/BGM1 - Ocarina Desire.tscn" type="PackedScene" id=13]
 [ext_resource path="res://src/Tiles/TileSet1.tscn" type="PackedScene" id=14]
 [ext_resource path="res://src/Tiles/TileSecretPassages.tscn" type="PackedScene" id=15]
+
+
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.137255, 0.129412, 0.196078, 1 )

@@ -17,7 +17,7 @@ _global_script_classes=[ {
 "base": "Actor",
 "class": "EnemyWalking",
 "language": "GDScript",
-"path": "res://src/Actors/EnemyWalking.gd"
+"path": "res://src/Actors/Enemies/EnemyWalking.gd"
 } ]
 _global_script_class_icons={
 "Actor": "",
@@ -27,7 +27,7 @@ _global_script_class_icons={
 [application]
 
 config/name="JekAndMM"
-run/main_scene="res://src/Levels/BossRoom.tscn"
+run/main_scene="res://src/Game.tscn"
 config/icon="res://icon.png"
 
 [autoload]

@@ -1,13 +1,14 @@
 [gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/Sprites/coin.png" type="Texture" id=1]
-[ext_resource path="res://src/Objects/Coin.gd" type="Script" id=2]
+[ext_resource path="res://src/Objects/Pickups/Coin.gd" type="Script" id=2]
 [ext_resource path="res://assets/Sprites/mmcoin04.png" type="Texture" id=3]
 [ext_resource path="res://assets/Sprites/mmcoin01.png" type="Texture" id=4]
 [ext_resource path="res://assets/Sprites/mmcoin02.png" type="Texture" id=5]
 [ext_resource path="res://assets/Sprites/mmcoin03.png" type="Texture" id=6]
 [ext_resource path="res://assets/Sprites/mmcoin00.png" type="Texture" id=7]
 [ext_resource path="res://assets/Sprites/mmcoin05.png" type="Texture" id=8]
+
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {

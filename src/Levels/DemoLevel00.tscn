@@ -1,11 +1,12 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/Tiles/Tileset01.tres" type="TileSet" id=1]
-[ext_resource path="res://src/Actors/PlayerModernongMonghe.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/Actors/Players/PlayerModernongMonghe.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/Tiles/spikes1.png" type="Texture" id=3]
 [ext_resource path="res://assets/Fonts/score.tres" type="DynamicFont" id=4]
-[ext_resource path="res://src/Actors/PlayerJekengkoy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/Actors/Players/PlayerJekengkoy.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/Levels/SwitchPlayerControl.gd" type="Script" id=6]
+
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 128, 128, 0, 128, -3, 84, 126, 87 )
