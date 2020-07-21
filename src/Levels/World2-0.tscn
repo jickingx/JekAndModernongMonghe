@@ -13,8 +13,6 @@
 [ext_resource path="res://src/Tiles/TileSecretPassages.tscn" type="PackedScene" id=13]
 [ext_resource path="res://src/Tiles/TileSet1.tscn" type="PackedScene" id=14]
 
-
-
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.137255, 0.129412, 0.196078, 1 )
 corner_radius_top_left = 25

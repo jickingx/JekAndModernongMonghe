@@ -11,8 +11,6 @@
 [ext_resource path="res://src/UI/BGM/BGM1 - Ocarina Desire.tscn" type="PackedScene" id=10]
 [ext_resource path="res://src/Tiles/TileSet1.tscn" type="PackedScene" id=11]
 
-
-
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]

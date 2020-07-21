@@ -16,9 +16,6 @@
 [ext_resource path="res://src/UI/BGM/BGM2 - Tiny Robot Desire.tscn" type="PackedScene" id=14]
 [ext_resource path="res://src/Tiles/TileSet1.tscn" type="PackedScene" id=15]
 
-
-
-
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 128, 128, 0, 128, -3, 84, 126, 87 )
 
@@ -608,8 +605,8 @@ __meta__ = {
 [connection signal="pressed" from="Buttons/DestroyerButton01" to="DetroyableBlocks/BlockToBeDestroyedByTrigger00" method="_on_DestroyerButton01_pressed"]
 [connection signal="pressed" from="Buttons/DestroyerButton01" to="DetroyableBlocks/BlockToBeDestroyedByTrigger01" method="_on_DestroyerButton01_pressed"]
 [connection signal="pressed" from="Buttons/DestroyerButton02" to="DetroyableBlocks/BlockToBeDestroyedByTrigger04" method="_on_DestroyerButton02_pressed"]
-[connection signal="pressed" from="Buttons/DestroyerButton03" to="DetroyableBlocks/BlockToBeDestroyedByTrigger05" method="_on_DestroyerButton03_pressed"]
 [connection signal="pressed" from="Buttons/DestroyerButton03" to="DetroyableBlocks/BlockToBeDestroyedByTrigger06" method="_on_DestroyerButton03_pressed"]
-[connection signal="pressed" from="Buttons/DestroyerButton04" to="DetroyableBlocks/BlockToBeDestroyedByTrigger08" method="_on_DestroyerButton04_pressed"]
+[connection signal="pressed" from="Buttons/DestroyerButton03" to="DetroyableBlocks/BlockToBeDestroyedByTrigger05" method="_on_DestroyerButton03_pressed"]
 [connection signal="pressed" from="Buttons/DestroyerButton04" to="DetroyableBlocks/BlockToBeDestroyedByTrigger07" method="_on_DestroyerButton04_pressed"]
+[connection signal="pressed" from="Buttons/DestroyerButton04" to="DetroyableBlocks/BlockToBeDestroyedByTrigger08" method="_on_DestroyerButton04_pressed"]
 [connection signal="pressed" from="Buttons/DoorButton" to="Door" method="_on_DoorButton_pressed"]
