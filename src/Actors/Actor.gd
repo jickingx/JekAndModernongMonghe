@@ -24,14 +24,14 @@ func _physics_process(delta):
 func die():
 	if is_disabled_movement:
 		return
+	is_disabled_movement = true
 	remove_collisions()
 	emit_signal("died")
 	explode()
-	is_disabled_movement = true
 	$AnimationPlayer.play("hurt")
 	$Sounds/Hurt.play()
 	yield($Sounds/Hurt, "finished")
-	#queue_free()
+	#call queue_free() on child after calling .die()
 	
 
 func explode():

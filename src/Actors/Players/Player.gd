@@ -57,6 +57,8 @@ func die():
 	if $Camera2D.has_method("shake"):
 		$Camera2D.shake()
 	.die()
+	yield(get_tree().create_timer(.4), "timeout")
+	$AnimatedSprite.hide()
 	yield(get_tree().create_timer(death_restart_delay), "timeout")
 	Global.restart_scene()
 
