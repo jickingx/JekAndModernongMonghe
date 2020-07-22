@@ -17,9 +17,6 @@
 [ext_resource path="res://src/Tiles/TileSet1.tscn" type="PackedScene" id=15]
 [ext_resource path="res://src/Objects/Hazards/FallingTunyay.tscn" type="PackedScene" id=16]
 
-
-
-
 [node name="World2-1" type="Node2D"]
 position = Vector2( 1408, 3072 )
 script = ExtResource( 6 )
@@ -514,17 +511,17 @@ tile_data = PoolIntArray( -1441794, 28, 0, -1441793, 28, 0, -1507328, 28, 0, -15
 
 [node name="Background" parent="." instance=ExtResource( 10 )]
 [connection signal="picked" from="Key" to="Door" method="_on_Key_picked"]
-[connection signal="pressed" from="Buttons/DestroyerButton00" to="DetroyableBlocks/JigsawBTBD07" method="_on_DestroyerButton00_pressed"]
 [connection signal="pressed" from="Buttons/DestroyerButton00" to="DetroyableBlocks/JigsawBTBD08" method="_on_DestroyerButton00_pressed"]
+[connection signal="pressed" from="Buttons/DestroyerButton00" to="DetroyableBlocks/JigsawBTBD07" method="_on_DestroyerButton00_pressed"]
 [connection signal="pressed" from="Buttons/DestroyerButton00" to="DetroyableBlocks/JigsawBTBD09" method="_on_DestroyerButton00_pressed"]
-[connection signal="pressed" from="Buttons/DestroyerButton01" to="DetroyableBlocks/JigsawBTBD05" method="_on_DestroyerButton01_pressed"]
 [connection signal="pressed" from="Buttons/DestroyerButton01" to="DetroyableBlocks/JigsawBTBD06" method="_on_DestroyerButton01_pressed"]
+[connection signal="pressed" from="Buttons/DestroyerButton01" to="DetroyableBlocks/JigsawBTBD05" method="_on_DestroyerButton01_pressed"]
 [connection signal="pressed" from="Buttons/DestroyerButton02" to="DetroyableBlocks/JigsawBTBD00" method="_on_DestroyerButton02_pressed"]
 [connection signal="pressed" from="Buttons/DestroyerButton02" to="DetroyableBlocks/JigsawBTBD01" method="_on_DestroyerButton02_pressed"]
-[connection signal="pressed" from="Buttons/DestroyerButton03" to="DetroyableBlocks/JigsawBTBD02" method="_on_DestroyerButton03_pressed"]
 [connection signal="pressed" from="Buttons/DestroyerButton03" to="DetroyableBlocks/JigsawBTBD04" method="_on_DestroyerButton03_pressed"]
+[connection signal="pressed" from="Buttons/DestroyerButton03" to="DetroyableBlocks/JigsawBTBD02" method="_on_DestroyerButton03_pressed"]
 [connection signal="pressed" from="Buttons/DestroyerButton03" to="DetroyableBlocks/JigsawBTBD03" method="_on_DestroyerButton03_pressed"]
-[connection signal="pressed" from="Buttons/DestroyerButton04" to="DetroyableBlocks/JigsawBTBD11" method="_on_DestroyerButton04_pressed"]
 [connection signal="pressed" from="Buttons/DestroyerButton04" to="DetroyableBlocks/JigsawBTBD12" method="_on_DestroyerButton04_pressed"]
+[connection signal="pressed" from="Buttons/DestroyerButton04" to="DetroyableBlocks/JigsawBTBD11" method="_on_DestroyerButton04_pressed"]
 [connection signal="pressed" from="Buttons/DestroyerButton04" to="DetroyableBlocks/JigsawBTBD13" method="_on_DestroyerButton04_pressed"]
 [connection signal="pressed" from="Buttons/DestroyerButton04" to="DetroyableBlocks/JigsawBTBD10" method="_on_DestroyerButton04_pressed"]
