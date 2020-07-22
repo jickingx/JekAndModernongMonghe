@@ -8,7 +8,6 @@
 [ext_resource path="res://assets/Sprites/JexSprite_150x150_Idle_0001.png" type="Texture" id=7]
 [ext_resource path="res://assets/Sprites/JexSprite_150x150_Walk_0001.png" type="Texture" id=8]
 
-
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 1 ), ExtResource( 7 ) ],
@@ -45,6 +44,7 @@ script = ExtResource( 4 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "idle"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

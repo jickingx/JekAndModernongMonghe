@@ -1,76 +1,70 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://assets/Sprites/MMSprite_150x150_Idle_0000.png" type="Texture" id=1]
-[ext_resource path="res://assets/Sprites/MMSprite_150x150_Idle_0001.png" type="Texture" id=2]
-[ext_resource path="res://assets/Sprites/MMSprite_150x150_Walk_0001.png" type="Texture" id=3]
+[ext_resource path="res://src/Actors/Actor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Actors/Players/Player.gd" type="Script" id=4]
-[ext_resource path="res://assets/Sounds/explosion.wav" type="AudioStream" id=5]
 [ext_resource path="res://assets/Sounds/jump.wav" type="AudioStream" id=6]
 [ext_resource path="res://src/UI/FX/ShakeCamera.gd" type="Script" id=7]
 [ext_resource path="res://assets/Sounds/coin.wav" type="AudioStream" id=8]
 
+[sub_resource type="Animation" id=1]
+resource_name = "warp"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.6 ),
+"transitions": PoolRealArray( 1, 0.466517, 0.258816 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.8, 0.6 ), Vector2( 1, 1.4 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AnimatedSprite:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -32 ) ]
+}
 
-[sub_resource type="SpriteFrames" id=1]
-animations = [ {
-"frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
-"loop": true,
-"name": "idle",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 3 ) ],
-"loop": true,
-"name": "jump",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 3 ), ExtResource( 2 ) ],
-"loop": true,
-"name": "walk",
-"speed": 5.0
-} ]
-
-[sub_resource type="CapsuleShape2D" id=2]
-radius = 32.7976
-height = 63.7757
-
-[sub_resource type="CapsuleShape2D" id=3]
-radius = 37.2567
-height = 61.5384
-
-[node name="Player" type="KinematicBody2D" groups=[
-"players",
-]]
-collision_layer = 2
+[node name="Player" instance=ExtResource( 1 )]
 script = ExtResource( 4 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-frames = SubResource( 1 )
-animation = "jump"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 2, 9 )
-shape = SubResource( 2 )
-
-[node name="Camera2D" type="Camera2D" parent="."]
-current = true
-script = ExtResource( 7 )
-
-[node name="Sounds" type="Node" parent="."]
-
-[node name="Jump" type="AudioStreamPlayer" parent="Sounds"]
+[node name="Jump" type="AudioStreamPlayer" parent="Sounds" index="1"]
 stream = ExtResource( 6 )
 
-[node name="Dead" type="AudioStreamPlayer" parent="Sounds"]
-stream = ExtResource( 5 )
-
-[node name="Pickup" type="AudioStreamPlayer" parent="Sounds"]
+[node name="Pickup" type="AudioStreamPlayer" parent="Sounds" index="2"]
 stream = ExtResource( 8 )
 
-[node name="ObjectDetector" type="Area2D" parent="." groups=[
+[node name="Detector" parent="." index="3" groups=[
 "players",
 ]]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectDetector"]
-position = Vector2( 2, 8 )
-shape = SubResource( 3 )
-[connection signal="area_entered" from="ObjectDetector" to="." method="_on_ObjectDetector_area_entered"]
-[connection signal="body_entered" from="ObjectDetector" to="." method="_on_ObjectDetector_body_entered"]
+[node name="AnimationPlayer" parent="." index="4"]
+autoplay = ""
+anims/warp = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="." index="5"]
+current = true
+script = ExtResource( 7 )
+[connection signal="area_entered" from="Detector" to="." method="_on_Detector_area_entered"]
+[connection signal="body_entered" from="Detector" to="." method="_on_Detector_body_entered"]

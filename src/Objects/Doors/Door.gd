@@ -4,7 +4,7 @@ signal player_entered
 
 export var is_locked := false
 export (String, FILE) var next_scene
-export var switch_delay: float = .4
+export var switch_delay: float = .6
 
 
 func _ready():
@@ -31,7 +31,7 @@ func _on_Door_body_entered(body):
 	if is_locked:
 		return
 	if body.is_in_group("players"):
-		body.disable()
+		body.warp_to_portal()
 		switch_scene()
 
 

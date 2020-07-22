@@ -9,25 +9,25 @@ func _ready():
 	acceleration = 64
 	speed_max = 512
 	friction = 80
-	disable()
+	is_disabled_movement = true
 
 
 func _physics_process(delta):
-	if is_disabled:
+	if is_disabled_movement:
 		return
 
 	_velocity.x += movement_direction * acceleration * delta * TARGET_FPS
 	_velocity.x = clamp(_velocity.x, -speed_max, speed_max)
 	_velocity = move_and_slide(_velocity, Vector2.UP)
 
-
+#TODO: use actor die()
 func die():
 	explode()
 	queue_free()
 
 
 func _on_VisibilityNotifier2D_screen_entered():
-	enable()
+	is_disabled_movement = false
 
 
 func _on_WallDetector_body_entered(body):
@@ -35,10 +35,10 @@ func _on_WallDetector_body_entered(body):
 	if not wall:
 		return
 
-	is_disabled = true
+	is_disabled_movement = true
 	yield(get_tree().create_timer(.2), "timeout")
 	movement_direction *= -1
-	is_disabled = false
+	is_disabled_movement = false
 	$AnimatedSprite.flip_h = true if movement_direction == 1 else false
 
 

@@ -12,9 +12,6 @@
 [ext_resource path="res://src/Actors/Enemies/EnemyPetchay.tscn" type="PackedScene" id=11]
 [ext_resource path="res://src/UI/BGM/BGM1 - Ocarina Desire.tscn" type="PackedScene" id=12]
 
-
-
-
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.137255, 0.129412, 0.196078, 1 )
 corner_radius_top_left = 25
