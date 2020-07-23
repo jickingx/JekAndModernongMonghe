@@ -12,8 +12,6 @@
 [ext_resource path="res://src/Objects/Pickups/Key.tscn" type="PackedScene" id=10]
 [ext_resource path="res://src/UI/BGM/BGM1 - Ocarina Desire.tscn" type="PackedScene" id=11]
 
-
-
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 128, 128, 0, 128, -3, 84, 126, 87 )
 
@@ -103,10 +101,10 @@ position = Vector2( -64, 448 )
 
 [node name="Key" parent="." instance=ExtResource( 10 )]
 position = Vector2( 192, 408 )
-[connection signal="pressed" from="DestroyerButton" to="BlockToBeDestroyedByTrigger6" method="_on_DestroyerButton_pressed"]
-[connection signal="pressed" from="DestroyerButton" to="BlockToBeDestroyedByTrigger" method="_on_DestroyerButton_pressed"]
-[connection signal="pressed" from="DestroyerButton" to="BlockToBeDestroyedByTrigger5" method="_on_DestroyerButton_pressed"]
 [connection signal="pressed" from="DestroyerButton" to="BlockToBeDestroyedByTrigger3" method="_on_DestroyerButton_pressed"]
 [connection signal="pressed" from="DestroyerButton" to="BlockToBeDestroyedByTrigger4" method="_on_DestroyerButton_pressed"]
 [connection signal="pressed" from="DestroyerButton" to="BlockToBeDestroyedByTrigger2" method="_on_DestroyerButton_pressed"]
+[connection signal="pressed" from="DestroyerButton" to="BlockToBeDestroyedByTrigger5" method="_on_DestroyerButton_pressed"]
+[connection signal="pressed" from="DestroyerButton" to="BlockToBeDestroyedByTrigger6" method="_on_DestroyerButton_pressed"]
+[connection signal="pressed" from="DestroyerButton" to="BlockToBeDestroyedByTrigger" method="_on_DestroyerButton_pressed"]
 [connection signal="picked" from="Key" to="Door" method="_on_Key_picked"]
