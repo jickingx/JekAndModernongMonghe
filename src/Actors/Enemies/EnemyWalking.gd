@@ -6,10 +6,14 @@ var movement_direction := -1
 
 
 func _ready():
+	if not self.is_in_group("enemies"):
+		self.add_to_group("enemies")
+	
 	acceleration = 64
 	speed_max = 512
 	friction = 80
 	is_disabled_movement = true
+	$AnimatedSprite.playing = true
 
 
 func _physics_process(delta):
@@ -20,17 +24,25 @@ func _physics_process(delta):
 	_velocity.x = clamp(_velocity.x, -speed_max, speed_max)
 	_velocity = move_and_slide(_velocity, Vector2.UP)
 
-#TODO: use actor die()
-func die():
-	explode()
-	queue_free()
 
 
 func _on_VisibilityNotifier2D_screen_entered():
 	is_disabled_movement = false
 
 
-func _on_WallDetector_body_entered(body):
+func _on_Detector_area_entered(area):
+	if area.global_position.y > $Detector.global_position.y:
+		return
+	if not area.is_in_group("players"):
+		return
+	hp -= 1
+	$Sounds/Hurt.play()
+	$AnimationPlayer.play("hurt")
+	if hp <= 0:
+		die()
+
+
+func _on_Detector_body_entered(body):
 	var wall := body as TileMap
 	if not wall:
 		return
@@ -42,14 +54,6 @@ func _on_WallDetector_body_entered(body):
 	$AnimatedSprite.flip_h = true if movement_direction == 1 else false
 
 
-func _on_StompDetector_area_entered(area):
-	if area.global_position.y > $StompDetector.global_position.y:
-		return
-	if not area.is_in_group("players"):
-		return
-	hp -= 1
-	
-	if hp <= 0:
-		die()
 
-
+func _on_Goryo_died():
+	queue_free()

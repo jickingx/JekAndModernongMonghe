@@ -1,10 +1,18 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/Actors/Actor.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/AnimationFrames/monghe.tres" type="SpriteFrames" id=2]
 [ext_resource path="res://src/Actors/Players/Player.gd" type="Script" id=4]
 [ext_resource path="res://assets/Sounds/jump.wav" type="AudioStream" id=6]
 [ext_resource path="res://src/UI/FX/ShakeCamera.gd" type="Script" id=7]
 [ext_resource path="res://assets/Sounds/coin.wav" type="AudioStream" id=8]
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 33.9885
+height = 68.025
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 43.3987, 73.623 )
 
 [sub_resource type="Animation" id=1]
 resource_name = "warp"
@@ -47,7 +55,17 @@ tracks/2/keys = {
 }
 
 [node name="Player" instance=ExtResource( 1 )]
+collision_layer = 2
 script = ExtResource( 4 )
+
+[node name="AnimatedSprite" parent="." index="0"]
+frames = ExtResource( 2 )
+frame = 1
+playing = true
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2( 4, 5 )
+shape = SubResource( 3 )
 
 [node name="Jump" type="AudioStreamPlayer" parent="Sounds" index="1"]
 stream = ExtResource( 6 )
@@ -58,6 +76,9 @@ stream = ExtResource( 8 )
 [node name="Detector" parent="." index="3" groups=[
 "players",
 ]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detector" index="0"]
+shape = SubResource( 2 )
 
 [node name="AnimationPlayer" parent="." index="4"]
 autoplay = ""

@@ -78,13 +78,12 @@ func _on_Detector_area_entered(area):
 		area.die()
 	if area.is_in_group("stompables") && area.global_position.y > $Detector.global_position.y:
 		_velocity.y = -speed_jump
-		$Sounds/Hurt.play()
 
 
 func _on_Detector_body_entered(body):
 	if body.is_in_group("hazards"):
 		die()
-	elif body.is_in_group("enemy_heads") && body.has_method("die"):
-		body.die()
+	if body.is_in_group("enemies"):
+		die()
 	else:
 		print_debug(body)

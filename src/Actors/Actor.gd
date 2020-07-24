@@ -26,17 +26,18 @@ func die():
 		return
 	is_disabled_movement = true
 	remove_collisions()
-	emit_signal("died")
 	explode()
-	$AnimationPlayer.play("hurt")
+	#$AnimationPlayer.play("hurt")
+	$AnimatedSprite.hide()
 	$Sounds/Hurt.play()
 	yield($Sounds/Hurt, "finished")
-	#call queue_free() on child after calling .die()
+	emit_signal("died")
+	#subscribe to signal then call queue_free()
 	
 
 func explode():
 	var ex = ParticlesExplosion.instance()
-	ex.position = self.position
+	ex.position = self.global_position
 	Global.current_scene.add_child(ex)
 	ex.emitting = true
 
