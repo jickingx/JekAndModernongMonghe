@@ -11,9 +11,6 @@
 [ext_resource path="res://src/Objects/Pickups/Coin.tscn" type="PackedScene" id=9]
 [ext_resource path="res://src/UI/BGM/BGM1 - Ocarina Desire.tscn" type="PackedScene" id=10]
 
-
-
-
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 128, 128, 0, 128, -3, 84, 126, 87 )
 
