@@ -4,11 +4,11 @@
 [ext_resource path="res://src/Actors/Enemies/EnemyWalking.gd" type="Script" id=2]
 [ext_resource path="res://assets/AnimationFrames/goryo.tres" type="SpriteFrames" id=3]
 
-[sub_resource type="CapsuleShape2D" id=2]
+[sub_resource type="CapsuleShape2D" id=1]
 radius = 40.1499
 height = 41.35
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 45, 34.4239 )
 
 [node name="Goryo" instance=ExtResource( 1 )]
@@ -19,7 +19,7 @@ frames = ExtResource( 3 )
 
 [node name="CollisionShape2D" parent="." index="1"]
 position = Vector2( -1, 13 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Detector" parent="." index="3" groups=[
 "stompables",
@@ -27,7 +27,7 @@ shape = SubResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Detector" index="0"]
 position = Vector2( 0, -44 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="." index="5"]
 [connection signal="died" from="." to="." method="_on_Goryo_died"]

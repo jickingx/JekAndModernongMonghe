@@ -14,20 +14,32 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://src/Actors/Actor.gd"
 }, {
+"base": "EnemyWalking",
+"class": "EnemyShooter",
+"language": "GDScript",
+"path": "res://src/Actors/Enemies/EnemyShooter.gd"
+}, {
 "base": "Actor",
 "class": "EnemyWalking",
 "language": "GDScript",
 "path": "res://src/Actors/Enemies/EnemyWalking.gd"
+}, {
+"base": "Actor",
+"class": "Player",
+"language": "GDScript",
+"path": "res://src/Actors/Players/Player.gd"
 } ]
 _global_script_class_icons={
 "Actor": "",
-"EnemyWalking": ""
+"EnemyShooter": "",
+"EnemyWalking": "",
+"Player": ""
 }
 
 [application]
 
 config/name="JekAndMM"
-run/main_scene="res://src/Game.tscn"
+run/main_scene="res://src/Levels/BossRoom.tscn"
 config/icon="res://icon.png"
 
 [autoload]

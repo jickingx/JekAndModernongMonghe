@@ -26,8 +26,8 @@ func die():
 		return
 	is_disabled_movement = true
 	remove_collisions()
-	explode()
 	#$AnimationPlayer.play("hurt")
+	explode()
 	$AnimatedSprite.hide()
 	$Sounds/Hurt.play()
 	yield($Sounds/Hurt, "finished")
@@ -36,10 +36,14 @@ func die():
 	
 
 func explode():
+	$Label.text = "POS G: %s, %s " % [self.global_position.x,self.global_position.y]
+	$Label2.text = "POS : %s, %s " % [self.position.x,self.position.x]
 	var ex = ParticlesExplosion.instance()
-	ex.position = self.global_position
+	ex.global_position = self.global_position
+	#ex.position = self.position
 	Global.current_scene.add_child(ex)
 	ex.emitting = true
+	print("yawa")
 
 
 func remove_collisions():

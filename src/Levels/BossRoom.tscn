@@ -3,7 +3,7 @@
 [ext_resource path="res://src/Actors/Players/PlayerModernongMonghe.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/Tiles/Tileset01.tres" type="TileSet" id=2]
 [ext_resource path="res://assets/Tiles/spikes1.png" type="Texture" id=3]
-[ext_resource path="res://src/Actors/Enemies/Boss00.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/Actors/Enemies/EnemyShooter.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Tiles/TileSet1.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/UI/BG/Background-Bloody.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/Tiles/tileset.png" type="Texture" id=7]
@@ -1362,7 +1362,6 @@ resource_local_to_scene = true
 [node name="BossRoom" type="Node2D"]
 
 [node name="TileMap3" type="TileMap" parent="."]
-visible = false
 tile_set = ExtResource( 2 )
 cell_size = Vector2( 128, 128 )
 format = 1
@@ -1381,10 +1380,6 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Boss" parent="." instance=ExtResource( 4 )]
-position = Vector2( 3040.48, 1054.31 )
-hp = 100
-
 [node name="Monghe" parent="." instance=ExtResource( 1 )]
 position = Vector2( 863.204, 1030.47 )
 
@@ -1398,3 +1393,6 @@ tile_set = SubResource( 123 )
 [node name="Background" parent="." instance=ExtResource( 6 )]
 
 [node name="Background2" parent="." instance=ExtResource( 9 )]
+
+[node name="Shooter" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2028.51, 1043.45 )

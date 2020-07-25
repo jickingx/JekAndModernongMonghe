@@ -1,3 +1,4 @@
+class_name Player
 extends Actor
 
 signal coin_collected
@@ -9,8 +10,8 @@ var direction_x := 0
 
 
 func _ready():
-	if not self.is_in_group("players"):
-		self.add_to_group("players")
+	if not is_in_group("players"):
+		add_to_group("players")
 
 
 func _process(delta):
@@ -57,8 +58,6 @@ func die():
 	if $Camera2D.has_method("shake"):
 		$Camera2D.shake()
 	.die()
-	yield(get_tree().create_timer(.4), "timeout")
-	$AnimatedSprite.hide()
 	yield(get_tree().create_timer(death_restart_delay), "timeout")
 	Global.restart_scene()
 

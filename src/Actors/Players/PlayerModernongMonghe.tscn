@@ -7,15 +7,14 @@
 [ext_resource path="res://src/UI/FX/ShakeCamera.gd" type="Script" id=7]
 [ext_resource path="res://assets/Sounds/coin.wav" type="AudioStream" id=8]
 
-[sub_resource type="CapsuleShape2D" id=3]
+[sub_resource type="CapsuleShape2D" id=1]
 radius = 33.9885
 height = 68.025
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 43.3987, 73.623 )
 
-[sub_resource type="Animation" id=1]
-resource_name = "warp"
+[sub_resource type="Animation" id=3]
 length = 0.6
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:scale")
@@ -60,12 +59,11 @@ script = ExtResource( 4 )
 
 [node name="AnimatedSprite" parent="." index="0"]
 frames = ExtResource( 2 )
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" parent="." index="1"]
 position = Vector2( 4, 5 )
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 
 [node name="Jump" type="AudioStreamPlayer" parent="Sounds" index="1"]
 stream = ExtResource( 6 )
@@ -73,16 +71,12 @@ stream = ExtResource( 6 )
 [node name="Pickup" type="AudioStreamPlayer" parent="Sounds" index="2"]
 stream = ExtResource( 8 )
 
-[node name="Detector" parent="." index="3" groups=[
-"players",
-]]
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Detector" index="0"]
 shape = SubResource( 2 )
 
 [node name="AnimationPlayer" parent="." index="4"]
 autoplay = ""
-anims/warp = SubResource( 1 )
+anims/warp = SubResource( 3 )
 
 [node name="Camera2D" type="Camera2D" parent="." index="5"]
 current = true
