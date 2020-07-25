@@ -12,8 +12,6 @@
 [ext_resource path="res://src/Tiles/TileSet1.tscn" type="PackedScene" id=11]
 [ext_resource path="res://assets/Tiles/tileset.png" type="Texture" id=12]
 
-
-
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
@@ -1345,28 +1343,29 @@ corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
 
 [node name="World1-3" type="Node2D"]
-position = Vector2( 769.54, 513.106 )
 script = ExtResource( 6 )
 
 [node name="TileMapSet" parent="." instance=ExtResource( 11 )]
+position = Vector2( 768, 512 )
 tile_set = SubResource( 121 )
 tile_data = PoolIntArray( -196614, 0, 0, -196613, 1, 0, -196612, 1, 0, -196611, 1, 0, -196610, 1, 0, -196609, 1, 0, -262144, 1, 0, -262143, 1, 0, -262142, 1, 0, -262141, 1, 0, -262140, 1, 0, -262139, 1, 0, -262138, 1, 0, -262137, 1, 0, -262136, 1, 0, -262135, 1, 0, -262134, 1, 0, -262133, 1, 0, -262132, 1, 0, -262131, 1, 0, -262130, 2, 0, -131078, 3, 0, -131077, 4, 0, -131076, 4, 0, -131075, 4, 0, -131074, 4, 0, -131073, 4, 0, -196608, 4, 0, -196607, 4, 0, -196606, 4, 0, -196605, 4, 0, -196604, 4, 0, -196603, 4, 0, -196602, 4, 0, -196601, 4, 0, -196600, 4, 0, -196599, 4, 0, -196598, 4, 0, -196597, 4, 0, -196596, 4, 0, -196595, 4, 0, -196594, 5, 0, -65542, 3, 0, -65541, 4, 0, -65540, 4, 0, -65539, 4, 0, -65538, 4, 0, -65537, 4, 0, -131072, 4, 0, -131071, 6, 0, -131070, 7, 0, -131069, 7, 0, -131068, 7, 0, -131067, 7, 0, -131066, 7, 0, -131065, 7, 0, -131064, 7, 0, -131063, 8, 0, -131062, 4, 0, -131061, 4, 0, -131060, 4, 0, -131059, 4, 0, -131058, 5, 0, -6, 6, 0, -5, 7, 0, -4, 7, 0, -3, 7, 0, -2, 7, 0, -1, 7, 0, -65536, 8, 0, -65526, 6, 0, -65525, 7, 0, -65524, 7, 0, -65523, 7, 0, -65522, 8, 0, 65531, 21, 0, 13, 21, 0, 131067, 22, 0, 65549, 22, 0, 196603, 23, 0, 131075, 21, 0, 131078, 21, 0, 131085, 23, 0, 262138, 0, 0, 262139, 1, 0, 262140, 1, 0, 262141, 1, 0, 262142, 1, 0, 262143, 1, 0, 196608, 2, 0, 196611, 22, 0, 196614, 22, 0, 196617, 0, 0, 196618, 1, 0, 196619, 1, 0, 196620, 1, 0, 196621, 1, 0, 196622, 2, 0, 327674, 3, 0, 327675, 4, 0, 327676, 4, 0, 327677, 4, 0, 327678, 4, 0, 327679, 4, 0, 262144, 5, 0, 262147, 22, 0, 262150, 22, 0, 262153, 3, 0, 262154, 4, 0, 262155, 4, 0, 262156, 4, 0, 262157, 4, 0, 262158, 5, 0, 393210, 3, 0, 393211, 4, 0, 393212, 4, 0, 393213, 4, 0, 393214, 4, 0, 393215, 4, 0, 327680, 4, 0, 327681, 4, 0, 327682, 4, 0, 327683, 4, 0, 327684, 4, 0, 327685, 4, 0, 327686, 4, 0, 327687, 4, 0, 327688, 4, 0, 327689, 4, 0, 327690, 4, 0, 327691, 4, 0, 327692, 4, 0, 327693, 4, 0, 327694, 5, 0, 458746, 6, 0, 458747, 7, 0, 458748, 7, 0, 458749, 7, 0, 458750, 7, 0, 458751, 7, 0, 393216, 7, 0, 393217, 7, 0, 393218, 7, 0, 393219, 7, 0, 393220, 7, 0, 393221, 7, 0, 393222, 7, 0, 393223, 7, 0, 393224, 7, 0, 393225, 7, 0, 393226, 7, 0, 393227, 7, 0, 393228, 7, 0, 393229, 7, 0, 393230, 8, 0 )
 
 [node name="TileMapHazards" parent="." instance=ExtResource( 7 )]
+position = Vector2( 768, 512 )
 tile_data = PoolIntArray( 262145, 1, 0, 262146, 1, 0, 262148, 1, 0, 262149, 1, 0, 262151, 1, 0, 262152, 1, 0 )
 
 [node name="Background" parent="." instance=ExtResource( 9 )]
 
 [node name="Door" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1471.2, 318.451 )
+position = Vector2( 2239.2, 830.451 )
 next_scene = "res://src/Levels/World1-4.tscn"
 
 [node name="Guide Text Caption" type="Label" parent="."]
 show_behind_parent = true
-margin_left = -431.0
-margin_top = 16.0
-margin_right = 97.0
-margin_bottom = 286.0
+margin_left = 337.0
+margin_top = 528.0
+margin_right = 865.0
+margin_bottom = 798.0
 custom_styles/normal = SubResource( 122 )
 custom_fonts/font = ExtResource( 4 )
 text = "
@@ -1384,13 +1383,13 @@ __meta__ = {
 }
 
 [node name="Player2" parent="." instance=ExtResource( 8 )]
-position = Vector2( -464.776, 312.284 )
+position = Vector2( 303.224, 824.284 )
 collision_layer = 0
 collision_mask = 0
 script = null
 
 [node name="Player1" parent="." instance=ExtResource( 3 )]
-position = Vector2( -359.03, 310.142 )
+position = Vector2( 408.97, 822.142 )
 
 [node name="Ocarina Desire" parent="Player1" instance=ExtResource( 10 )]
 position = Vector2( 998.254, -264.887 )

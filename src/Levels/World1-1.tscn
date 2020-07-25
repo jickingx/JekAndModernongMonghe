@@ -1343,28 +1343,29 @@ corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
 
 [node name="World1-1" type="Node2D"]
-position = Vector2( 769.33, 385.666 )
 script = ExtResource( 6 )
 
 [node name="TileMapSet" parent="." instance=ExtResource( 11 )]
+position = Vector2( 768, 384 )
 tile_set = SubResource( 121 )
 tile_data = PoolIntArray( -131078, 0, 0, -131077, 1, 0, -131076, 1, 0, -131075, 1, 0, -131074, 1, 0, -131073, 1, 0, -196608, 1, 0, -196607, 1, 0, -196606, 1, 0, -196605, 1, 0, -196604, 1, 0, -196603, 1, 0, -196602, 1, 0, -196601, 1, 0, -196600, 1, 0, -196599, 1, 0, -196598, 1, 0, -196597, 1, 0, -196596, 1, 0, -196595, 2, 0, -65542, 3, 0, -65541, 4, 0, -65540, 4, 0, -65539, 4, 0, -65538, 4, 0, -65537, 4, 0, -131072, 4, 0, -131071, 4, 0, -131070, 4, 0, -131069, 4, 0, -131068, 4, 0, -131067, 4, 0, -131066, 4, 0, -131065, 4, 0, -131064, 4, 0, -131063, 4, 0, -131062, 4, 0, -131061, 4, 0, -131060, 4, 0, -131059, 5, 0, -6, 6, 0, -5, 7, 0, -4, 7, 0, -3, 7, 0, -2, 7, 0, -1, 7, 0, -65536, 7, 0, -65535, 7, 0, -65534, 7, 0, -65533, 7, 0, -65532, 7, 0, -65531, 7, 0, -65530, 7, 0, -65529, 7, 0, -65528, 7, 0, -65527, 7, 0, -65526, 7, 0, -65525, 7, 0, -65524, 7, 0, -65523, 8, 0, 65531, 21, 0, 12, 21, 0, 131067, 22, 0, 65548, 22, 0, 196603, 23, 0, 131084, 23, 0, 262138, 0, 0, 262139, 1, 0, 262140, 1, 0, 262141, 1, 0, 262142, 1, 0, 262143, 1, 0, 196608, 2, 0, 196610, 0, 0, 196611, 2, 0, 196613, 0, 0, 196614, 2, 0, 196616, 0, 0, 196617, 1, 0, 196618, 1, 0, 196619, 1, 0, 196620, 1, 0, 196621, 2, 0, 327674, 3, 0, 327675, 4, 0, 327676, 4, 0, 327677, 4, 0, 327678, 4, 0, 327679, 4, 0, 262144, 5, 0, 262145, 4, 0, 262146, 3, 0, 262147, 5, 0, 262148, 4, 0, 262149, 3, 0, 262150, 5, 0, 262151, 4, 0, 262152, 3, 0, 262153, 4, 0, 262154, 4, 0, 262155, 4, 0, 262156, 4, 0, 262157, 5, 0, 393210, 6, 0, 393211, 7, 0, 393212, 7, 0, 393213, 7, 0, 393214, 7, 0, 393215, 7, 0, 327680, 7, 0, 327681, 7, 0, 327682, 7, 0, 327683, 7, 0, 327684, 7, 0, 327685, 7, 0, 327686, 7, 0, 327687, 7, 0, 327688, 7, 0, 327689, 7, 0, 327690, 7, 0, 327691, 7, 0, 327692, 7, 0, 327693, 8, 0 )
 
 [node name="TileMapHazards" parent="." instance=ExtResource( 5 )]
+position = Vector2( 768, 384 )
 tile_data = PoolIntArray( 196609, 1, 0, 196612, 1, 0, 196615, 1, 0 )
 
 [node name="Background" parent="." instance=ExtResource( 9 )]
 
 [node name="Door" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1344.2, 319.037 )
+position = Vector2( 2112.2, 703.037 )
 next_scene = "res://src/Levels/World1-2.tscn"
 
 [node name="Guide Text Caption" type="Label" parent="."]
 show_behind_parent = true
-margin_left = -474.0
-margin_top = 58.0
-margin_right = -28.0
-margin_bottom = 221.0
+margin_left = 294.0
+margin_top = 442.0
+margin_right = 740.0
+margin_bottom = 605.0
 custom_styles/normal = SubResource( 122 )
 custom_fonts/font = ExtResource( 4 )
 text = "
@@ -1379,13 +1380,13 @@ __meta__ = {
 }
 
 [node name="Player2" parent="." instance=ExtResource( 8 )]
-position = Vector2( -463.491, 310.059 )
+position = Vector2( 304.509, 694.059 )
 collision_layer = 0
 collision_mask = 0
 script = null
 
 [node name="Player1" parent="." instance=ExtResource( 1 )]
-position = Vector2( -374.491, 310.059 )
+position = Vector2( 393.509, 694.059 )
 
 [node name="Ocarina Desire" parent="Player1" instance=ExtResource( 10 )]
 position = Vector2( 951.49, -112.069 )

@@ -43,119 +43,128 @@ motion_mirroring = Vector2( 2250, 0 )
 [node name="Cloud00" type="AnimatedSprite" parent="Clouds"]
 frames = SubResource( 1 )
 animation = "clouds"
+frame = 2
 playing = true
 
 [node name="Cloud01" type="AnimatedSprite" parent="Clouds"]
 position = Vector2( -526.087, -197.99 )
 frames = SubResource( 1 )
 animation = "clouds"
+frame = 2
 playing = true
 
 [node name="Cloud02" type="AnimatedSprite" parent="Clouds"]
 position = Vector2( -356.382, 214.961 )
 frames = SubResource( 1 )
 animation = "clouds"
+frame = 2
 playing = true
 
 [node name="Cloud03" type="AnimatedSprite" parent="Clouds"]
 position = Vector2( -588.313, 565.685 )
 frames = SubResource( 1 )
 animation = "clouds"
+frame = 2
 playing = true
 
 [node name="Cloud04" type="AnimatedSprite" parent="Clouds"]
 position = Vector2( 22.6274, 463.862 )
 frames = SubResource( 1 )
 animation = "clouds"
+frame = 2
 playing = true
 
 [node name="Cloud05" type="AnimatedSprite" parent="Clouds"]
 position = Vector2( 441.235, 79.196 )
 frames = SubResource( 1 )
 animation = "clouds"
+frame = 2
 playing = true
 
 [node name="Cloud06" type="AnimatedSprite" parent="Clouds"]
 position = Vector2( 509.117, 458.205 )
 frames = SubResource( 1 )
 animation = "clouds"
-frame = 1
 playing = true
 
 [node name="Cloud07" type="AnimatedSprite" parent="Clouds"]
 position = Vector2( 435.578, -248.902 )
 frames = SubResource( 1 )
 animation = "clouds"
-frame = 1
 playing = true
 
 [node name="Cloud08" type="AnimatedSprite" parent="Clouds"]
 position = Vector2( 995.606, 181.019 )
 frames = SubResource( 1 )
 animation = "clouds"
-frame = 1
 playing = true
 
 [node name="Cloud09" type="AnimatedSprite" parent="Clouds"]
 position = Vector2( 950.351, -181.019 )
 frames = SubResource( 1 )
 animation = "clouds"
+frame = 2
 playing = true
 
 [node name="Cloud10" type="AnimatedSprite" parent="Clouds"]
 position = Vector2( 1086.12, 684.479 )
 frames = SubResource( 1 )
 animation = "clouds"
+frame = 2
 playing = true
 
 [node name="Cloud11" type="AnimatedSprite" parent="Clouds"]
 position = Vector2( 328.097, 871.156 )
 frames = SubResource( 1 )
 animation = "clouds"
+frame = 2
 playing = true
 
 [node name="Cloud12" type="AnimatedSprite" parent="Clouds"]
 position = Vector2( -282.843, 972.979 )
 frames = SubResource( 1 )
 animation = "clouds"
+frame = 2
 playing = true
 
 [node name="Cloud13" type="AnimatedSprite" parent="Clouds"]
 position = Vector2( 752.361, 1103.09 )
 frames = SubResource( 1 )
 animation = "clouds"
+frame = 2
 playing = true
 
 [node name="Cloud14" type="AnimatedSprite" parent="Clouds"]
 position = Vector2( 197.99, 1306.73 )
 frames = SubResource( 1 )
 animation = "clouds"
+frame = 2
 playing = true
 
 [node name="Cloud15" type="AnimatedSprite" parent="Clouds"]
 position = Vector2( -169.706, 1408.56 )
 frames = SubResource( 1 )
 animation = "clouds"
-frame = 1
 playing = true
 
 [node name="Cloud16" type="AnimatedSprite" parent="Clouds"]
 position = Vector2( -582.656, 1255.82 )
 frames = SubResource( 1 )
 animation = "clouds"
-frame = 1
 playing = true
 
 [node name="Cloud17" type="AnimatedSprite" parent="Clouds"]
 position = Vector2( 848.528, 1453.81 )
 frames = SubResource( 1 )
 animation = "clouds"
+frame = 2
 playing = true
 
 [node name="Cloud18" type="AnimatedSprite" parent="Clouds"]
 position = Vector2( 1261.48, 1306.73 )
 frames = SubResource( 1 )
 animation = "clouds"
+frame = 2
 playing = true
 
 [node name="Clouds2" type="ParallaxLayer" parent="."]
@@ -168,123 +177,124 @@ motion_mirroring = Vector2( 2250, 0 )
 [node name="Cloud00" type="AnimatedSprite" parent="Clouds2"]
 frames = SubResource( 1 )
 animation = "clouds"
-frame = 1
 playing = true
 
 [node name="Cloud01" type="AnimatedSprite" parent="Clouds2"]
 position = Vector2( -526.087, -197.99 )
 frames = SubResource( 1 )
 animation = "clouds"
-frame = 1
 playing = true
 
 [node name="Cloud02" type="AnimatedSprite" parent="Clouds2"]
 position = Vector2( -356.382, 214.961 )
 frames = SubResource( 1 )
 animation = "clouds"
-frame = 1
 playing = true
 
 [node name="Cloud03" type="AnimatedSprite" parent="Clouds2"]
 position = Vector2( -588.313, 565.685 )
 frames = SubResource( 1 )
 animation = "clouds"
+frame = 2
 playing = true
 
 [node name="Cloud04" type="AnimatedSprite" parent="Clouds2"]
 position = Vector2( 22.6274, 463.862 )
 frames = SubResource( 1 )
 animation = "clouds"
+frame = 2
 playing = true
 
 [node name="Cloud05" type="AnimatedSprite" parent="Clouds2"]
 position = Vector2( 441.235, 79.196 )
 frames = SubResource( 1 )
 animation = "clouds"
+frame = 2
 playing = true
 
 [node name="Cloud06" type="AnimatedSprite" parent="Clouds2"]
 position = Vector2( 509.117, 458.205 )
 frames = SubResource( 1 )
 animation = "clouds"
+frame = 2
 playing = true
 
 [node name="Cloud07" type="AnimatedSprite" parent="Clouds2"]
 position = Vector2( 435.578, -248.902 )
 frames = SubResource( 1 )
 animation = "clouds"
+frame = 2
 playing = true
 
 [node name="Cloud08" type="AnimatedSprite" parent="Clouds2"]
 position = Vector2( 995.606, 181.019 )
 frames = SubResource( 1 )
 animation = "clouds"
+frame = 2
 playing = true
 
 [node name="Cloud09" type="AnimatedSprite" parent="Clouds2"]
 position = Vector2( 950.351, -181.019 )
 frames = SubResource( 1 )
 animation = "clouds"
-frame = 1
 playing = true
 
 [node name="Cloud10" type="AnimatedSprite" parent="Clouds2"]
 position = Vector2( 1086.12, 684.479 )
 frames = SubResource( 1 )
 animation = "clouds"
-frame = 1
 playing = true
 
 [node name="Cloud11" type="AnimatedSprite" parent="Clouds2"]
 position = Vector2( 328.097, 871.156 )
 frames = SubResource( 1 )
 animation = "clouds"
-frame = 1
 playing = true
 
 [node name="Cloud12" type="AnimatedSprite" parent="Clouds2"]
 position = Vector2( -282.843, 972.979 )
 frames = SubResource( 1 )
 animation = "clouds"
-frame = 1
 playing = true
 
 [node name="Cloud13" type="AnimatedSprite" parent="Clouds2"]
 position = Vector2( 752.361, 1103.09 )
 frames = SubResource( 1 )
 animation = "clouds"
+frame = 2
 playing = true
 
 [node name="Cloud14" type="AnimatedSprite" parent="Clouds2"]
 position = Vector2( 197.99, 1306.73 )
 frames = SubResource( 1 )
 animation = "clouds"
+frame = 2
 playing = true
 
 [node name="Cloud15" type="AnimatedSprite" parent="Clouds2"]
 position = Vector2( -169.706, 1408.56 )
 frames = SubResource( 1 )
 animation = "clouds"
+frame = 2
 playing = true
 
 [node name="Cloud16" type="AnimatedSprite" parent="Clouds2"]
 position = Vector2( -582.656, 1255.82 )
 frames = SubResource( 1 )
 animation = "clouds"
+frame = 2
 playing = true
 
 [node name="Cloud17" type="AnimatedSprite" parent="Clouds2"]
 position = Vector2( 848.528, 1453.81 )
 frames = SubResource( 1 )
 animation = "clouds"
-frame = 1
 playing = true
 
 [node name="Cloud18" type="AnimatedSprite" parent="Clouds2"]
 position = Vector2( 1261.48, 1306.73 )
 frames = SubResource( 1 )
 animation = "clouds"
-frame = 1
 playing = true
 
 [node name="Clouds3" type="ParallaxLayer" parent="."]
@@ -297,128 +307,133 @@ motion_mirroring = Vector2( 2250, 0 )
 [node name="Cloud00" type="AnimatedSprite" parent="Clouds3"]
 frames = SubResource( 1 )
 animation = "clouds"
-frame = 2
+frame = 1
 playing = true
 
 [node name="Cloud01" type="AnimatedSprite" parent="Clouds3"]
 position = Vector2( -526.087, -197.99 )
 frames = SubResource( 1 )
 animation = "clouds"
-frame = 2
+frame = 1
 playing = true
 
 [node name="Cloud02" type="AnimatedSprite" parent="Clouds3"]
 position = Vector2( -356.382, 214.961 )
 frames = SubResource( 1 )
 animation = "clouds"
-frame = 2
+frame = 1
 playing = true
 
 [node name="Cloud03" type="AnimatedSprite" parent="Clouds3"]
 position = Vector2( -588.313, 565.685 )
 frames = SubResource( 1 )
 animation = "clouds"
-frame = 2
+frame = 1
 playing = true
 
 [node name="Cloud04" type="AnimatedSprite" parent="Clouds3"]
 position = Vector2( 22.6274, 463.862 )
 frames = SubResource( 1 )
 animation = "clouds"
-frame = 2
+frame = 1
 playing = true
 
 [node name="Cloud05" type="AnimatedSprite" parent="Clouds3"]
 position = Vector2( 441.235, 79.196 )
 frames = SubResource( 1 )
 animation = "clouds"
-frame = 2
+frame = 1
 playing = true
 
 [node name="Cloud06" type="AnimatedSprite" parent="Clouds3"]
 position = Vector2( 509.117, 458.205 )
 frames = SubResource( 1 )
 animation = "clouds"
+frame = 2
 playing = true
 
 [node name="Cloud07" type="AnimatedSprite" parent="Clouds3"]
 position = Vector2( 435.578, -248.902 )
 frames = SubResource( 1 )
 animation = "clouds"
+frame = 2
 playing = true
 
 [node name="Cloud08" type="AnimatedSprite" parent="Clouds3"]
 position = Vector2( 995.606, 181.019 )
 frames = SubResource( 1 )
 animation = "clouds"
+frame = 2
 playing = true
 
 [node name="Cloud09" type="AnimatedSprite" parent="Clouds3"]
 position = Vector2( 950.351, -181.019 )
 frames = SubResource( 1 )
 animation = "clouds"
-frame = 2
+frame = 1
 playing = true
 
 [node name="Cloud10" type="AnimatedSprite" parent="Clouds3"]
 position = Vector2( 1086.12, 684.479 )
 frames = SubResource( 1 )
 animation = "clouds"
-frame = 2
+frame = 1
 playing = true
 
 [node name="Cloud11" type="AnimatedSprite" parent="Clouds3"]
 position = Vector2( 328.097, 871.156 )
 frames = SubResource( 1 )
 animation = "clouds"
-frame = 2
+frame = 1
 playing = true
 
 [node name="Cloud12" type="AnimatedSprite" parent="Clouds3"]
 position = Vector2( -282.843, 972.979 )
 frames = SubResource( 1 )
 animation = "clouds"
-frame = 2
+frame = 1
 playing = true
 
 [node name="Cloud13" type="AnimatedSprite" parent="Clouds3"]
 position = Vector2( 752.361, 1103.09 )
 frames = SubResource( 1 )
 animation = "clouds"
-frame = 2
+frame = 1
 playing = true
 
 [node name="Cloud14" type="AnimatedSprite" parent="Clouds3"]
 position = Vector2( 197.99, 1306.73 )
 frames = SubResource( 1 )
 animation = "clouds"
-frame = 2
+frame = 1
 playing = true
 
 [node name="Cloud15" type="AnimatedSprite" parent="Clouds3"]
 position = Vector2( -169.706, 1408.56 )
 frames = SubResource( 1 )
 animation = "clouds"
+frame = 2
 playing = true
 
 [node name="Cloud16" type="AnimatedSprite" parent="Clouds3"]
 position = Vector2( -582.656, 1255.82 )
 frames = SubResource( 1 )
 animation = "clouds"
+frame = 2
 playing = true
 
 [node name="Cloud17" type="AnimatedSprite" parent="Clouds3"]
 position = Vector2( 848.528, 1453.81 )
 frames = SubResource( 1 )
 animation = "clouds"
-frame = 2
+frame = 1
 playing = true
 
 [node name="Cloud18" type="AnimatedSprite" parent="Clouds3"]
 position = Vector2( 1261.48, 1306.73 )
 frames = SubResource( 1 )
 animation = "clouds"
-frame = 2
+frame = 1
 playing = true
 
 [node name="Clouds4" type="ParallaxLayer" parent="."]
@@ -431,122 +446,131 @@ motion_mirroring = Vector2( 2250, 0 )
 [node name="Cloud00" type="AnimatedSprite" parent="Clouds4"]
 frames = SubResource( 1 )
 animation = "clouds"
+frame = 2
 playing = true
 
 [node name="Cloud01" type="AnimatedSprite" parent="Clouds4"]
 position = Vector2( -526.087, -197.99 )
 frames = SubResource( 1 )
 animation = "clouds"
+frame = 2
 playing = true
 
 [node name="Cloud02" type="AnimatedSprite" parent="Clouds4"]
 position = Vector2( -356.382, 214.961 )
 frames = SubResource( 1 )
 animation = "clouds"
+frame = 2
 playing = true
 
 [node name="Cloud03" type="AnimatedSprite" parent="Clouds4"]
 position = Vector2( -588.313, 565.685 )
 frames = SubResource( 1 )
 animation = "clouds"
-frame = 2
+frame = 1
 playing = true
 
 [node name="Cloud04" type="AnimatedSprite" parent="Clouds4"]
 position = Vector2( 22.6274, 463.862 )
 frames = SubResource( 1 )
 animation = "clouds"
-frame = 2
+frame = 1
 playing = true
 
 [node name="Cloud05" type="AnimatedSprite" parent="Clouds4"]
 position = Vector2( 441.235, 79.196 )
 frames = SubResource( 1 )
 animation = "clouds"
-frame = 2
+frame = 1
 playing = true
 
 [node name="Cloud06" type="AnimatedSprite" parent="Clouds4"]
 position = Vector2( 509.117, 458.205 )
 frames = SubResource( 1 )
 animation = "clouds"
-frame = 2
+frame = 1
 playing = true
 
 [node name="Cloud07" type="AnimatedSprite" parent="Clouds4"]
 position = Vector2( 435.578, -248.902 )
 frames = SubResource( 1 )
 animation = "clouds"
-frame = 2
+frame = 1
 playing = true
 
 [node name="Cloud08" type="AnimatedSprite" parent="Clouds4"]
 position = Vector2( 995.606, 181.019 )
 frames = SubResource( 1 )
 animation = "clouds"
-frame = 2
+frame = 1
 playing = true
 
 [node name="Cloud09" type="AnimatedSprite" parent="Clouds4"]
 position = Vector2( 950.351, -181.019 )
 frames = SubResource( 1 )
 animation = "clouds"
+frame = 2
 playing = true
 
 [node name="Cloud10" type="AnimatedSprite" parent="Clouds4"]
 position = Vector2( 1086.12, 684.479 )
 frames = SubResource( 1 )
 animation = "clouds"
+frame = 2
 playing = true
 
 [node name="Cloud11" type="AnimatedSprite" parent="Clouds4"]
 position = Vector2( 328.097, 871.156 )
 frames = SubResource( 1 )
 animation = "clouds"
+frame = 2
 playing = true
 
 [node name="Cloud12" type="AnimatedSprite" parent="Clouds4"]
 position = Vector2( -282.843, 972.979 )
 frames = SubResource( 1 )
 animation = "clouds"
+frame = 2
 playing = true
 
 [node name="Cloud13" type="AnimatedSprite" parent="Clouds4"]
 position = Vector2( 752.361, 1103.09 )
 frames = SubResource( 1 )
 animation = "clouds"
-frame = 2
+frame = 1
 playing = true
 
 [node name="Cloud14" type="AnimatedSprite" parent="Clouds4"]
 position = Vector2( 197.99, 1306.73 )
 frames = SubResource( 1 )
 animation = "clouds"
-frame = 2
+frame = 1
 playing = true
 
 [node name="Cloud15" type="AnimatedSprite" parent="Clouds4"]
 position = Vector2( -169.706, 1408.56 )
 frames = SubResource( 1 )
 animation = "clouds"
-frame = 2
+frame = 1
 playing = true
 
 [node name="Cloud16" type="AnimatedSprite" parent="Clouds4"]
 position = Vector2( -582.656, 1255.82 )
 frames = SubResource( 1 )
 animation = "clouds"
-frame = 2
+frame = 1
 playing = true
 
 [node name="Cloud17" type="AnimatedSprite" parent="Clouds4"]
 position = Vector2( 848.528, 1453.81 )
 frames = SubResource( 1 )
 animation = "clouds"
+frame = 2
 playing = true
 
 [node name="Cloud18" type="AnimatedSprite" parent="Clouds4"]
 position = Vector2( 1261.48, 1306.73 )
 frames = SubResource( 1 )
 animation = "clouds"
+frame = 2
 playing = true

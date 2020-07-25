@@ -14,7 +14,7 @@ func _physics_process(delta):
 func die():
 	yield(get_tree().create_timer(.01), "timeout")
 	var ex = ParticlesExplosion.instance()
-	ex.position = self.position
+	ex.position = self.global_position
 	Global.current_scene.add_child(ex)
 	ex.emitting = true
 	queue_free()
