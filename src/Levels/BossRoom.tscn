@@ -1382,8 +1382,6 @@ __meta__ = {
 }
 
 [node name="Boss" parent="." instance=ExtResource( 4 )]
-position = Vector2( 3040.48, 1054.31 )
-hp = 100
 
 [node name="Monghe" parent="." instance=ExtResource( 1 )]
 position = Vector2( 863.204, 1030.47 )
