@@ -4,6 +4,7 @@ const Hud = preload("res://src/UI/Hud.tscn")
 var hud
 var score := 0 #for current level only
 
+
 func _ready():
 	setup_hud()
 	setup_players()

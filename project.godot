@@ -14,11 +14,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://src/Actors/Actor.gd"
 }, {
-"base": "EnemyWalking",
-"class": "EnemyShooter",
-"language": "GDScript",
-"path": "res://src/Actors/Enemies/EnemyShooter.gd"
-}, {
 "base": "Actor",
 "class": "EnemyWalking",
 "language": "GDScript",
@@ -31,7 +26,6 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "Actor": "",
-"EnemyShooter": "",
 "EnemyWalking": "",
 "Player": ""
 }
