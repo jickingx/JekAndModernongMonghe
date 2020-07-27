@@ -23,10 +23,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.6 ),
-"transitions": PoolRealArray( 1, 0.466517, 0.258816 ),
+"times": PoolRealArray( 0, 0.1, 0.3, 0.6 ),
+"transitions": PoolRealArray( 1, 0.466517, 0.392292, 0.258816 ),
 "update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 0.8, 0.6 ), Vector2( 1, 1.4 ) ]
+"values": [ Vector2( 1, 1 ), Vector2( 0.8, 0.6 ), Vector2( 0.933091, 1.13236 ), Vector2( 0.2, 0.2 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath(".:modulate")
