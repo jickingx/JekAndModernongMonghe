@@ -1,6 +1,5 @@
-[gd_scene load_steps=156 format=2]
+[gd_scene load_steps=155 format=2]
 
-[ext_resource path="res://src/Actors/Players/PlayerModernongMonghe.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Objects/Doors/Door.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/Objects/Pickups/Coin.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/Fonts/score.tres" type="DynamicFont" id=4]
@@ -8,10 +7,10 @@
 [ext_resource path="res://src/Levels/LevelManager.gd" type="Script" id=6]
 [ext_resource path="res://src/Tiles/TileSet1.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/Actors/Enemies/EnemyGoryo.tscn" type="PackedScene" id=8]
-[ext_resource path="res://src/Actors/Players/PlayerJekengkoy.tscn" type="PackedScene" id=9]
 [ext_resource path="res://src/UI/BG/Background.tscn" type="PackedScene" id=10]
 [ext_resource path="res://src/Actors/Enemies/EnemyPetchay.tscn" type="PackedScene" id=11]
 [ext_resource path="res://src/UI/BGM/BGM1 - Ocarina Desire.tscn" type="PackedScene" id=12]
+[ext_resource path="res://assets/Sounds/BGM/Ocarina Desire by Poy lizardo.ogg" type="AudioStream" id=13]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
@@ -1580,6 +1579,11 @@ __meta__ = {
 "_edit_group_": true
 }
 
+[node name="BGM1" type="AudioStreamPlayer" parent="." instance=ExtResource( 12 )]
+stream = ExtResource( 13 )
+volume_db = 1.0
+autoplay = true
+
 [node name="TileMapSet" parent="." instance=ExtResource( 7 )]
 position = Vector2( 768, 640 )
 tile_set = SubResource( 142 )
@@ -1611,19 +1615,6 @@ __meta__ = {
 "_edit_use_anchors_": false,
 "_editor_description_": ""
 }
-
-[node name="Player2" parent="." instance=ExtResource( 9 )]
-position = Vector2( 295.509, 954.059 )
-collision_layer = 0
-collision_mask = 0
-script = null
-
-[node name="Player1" parent="." instance=ExtResource( 1 )]
-position = Vector2( 425.968, 926.159 )
-
-[node name="BGM1" parent="Player1" instance=ExtResource( 12 )]
-position = Vector2( -1.81226, -245.797 )
-volume_db = 1.0
 
 [node name="Coins" type="Node" parent="."]
 
@@ -1683,3 +1674,6 @@ position = Vector2( 2499.94, 718.088 )
 
 [node name="PetchayEnemy00" parent="Node" instance=ExtResource( 11 )]
 position = Vector2( 3800.5, 740.705 )
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 384, 744 )

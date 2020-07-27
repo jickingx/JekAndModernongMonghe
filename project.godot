@@ -33,7 +33,7 @@ _global_script_class_icons={
 [application]
 
 config/name="JekAndMM"
-run/main_scene="res://src/Levels/BossRoom.tscn"
+run/main_scene="res://src/Screens/PlayerSelect.tscn"
 config/icon="res://icon.png"
 
 [autoload]

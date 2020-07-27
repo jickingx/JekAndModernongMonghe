@@ -1,12 +1,11 @@
-[gd_scene load_steps=134 format=2]
+[gd_scene load_steps=133 format=2]
 
 [ext_resource path="res://src/Objects/Doors/Door.tscn" type="PackedScene" id=1]
-[ext_resource path="res://src/Actors/Players/PlayerModernongMonghe.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/Objects/Pickups/Coin.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/Fonts/score.tres" type="DynamicFont" id=4]
 [ext_resource path="res://src/Tiles/TileHazards.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/Levels/LevelManager.gd" type="Script" id=6]
-[ext_resource path="res://src/Actors/Players/PlayerJekengkoy.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/Sounds/BGM/Ocarina Desire by Poy lizardo.ogg" type="AudioStream" id=7]
 [ext_resource path="res://src/UI/BG/Background.tscn" type="PackedScene" id=9]
 [ext_resource path="res://src/UI/BGM/BGM1 - Ocarina Desire.tscn" type="PackedScene" id=10]
 [ext_resource path="res://src/Tiles/TileSet1.tscn" type="PackedScene" id=11]
@@ -1343,28 +1342,33 @@ corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
 
 [node name="World1-2" type="Node2D"]
-position = Vector2( 766.5, 381.837 )
 script = ExtResource( 6 )
 
+[node name="Ocarina Desire" type="AudioStreamPlayer" parent="." instance=ExtResource( 10 )]
+stream = ExtResource( 7 )
+autoplay = true
+
 [node name="TileMapSet" parent="." instance=ExtResource( 11 )]
+position = Vector2( 768, 384 )
 tile_set = SubResource( 121 )
 tile_data = PoolIntArray( -131078, 0, 0, -131077, 1, 0, -131076, 1, 0, -131075, 1, 0, -131074, 1, 0, -131073, 1, 0, -196608, 1, 0, -196607, 1, 0, -196606, 1, 0, -196605, 1, 0, -196604, 1, 0, -196603, 1, 0, -196602, 1, 0, -196601, 1, 0, -196600, 1, 0, -196599, 1, 0, -196598, 1, 0, -196597, 1, 0, -196596, 1, 0, -196595, 1, 0, -196594, 2, 0, -65542, 3, 0, -65541, 4, 0, -65540, 4, 0, -65539, 4, 0, -65538, 4, 0, -65537, 4, 0, -131072, 4, 0, -131071, 4, 0, -131070, 4, 0, -131069, 4, 0, -131068, 4, 0, -131067, 4, 0, -131066, 4, 0, -131065, 4, 0, -131064, 4, 0, -131063, 4, 0, -131062, 4, 0, -131061, 4, 0, -131060, 4, 0, -131059, 4, 0, -131058, 5, 0, -6, 6, 0, -5, 7, 0, -4, 7, 0, -3, 7, 0, -2, 7, 0, -1, 7, 0, -65536, 7, 0, -65535, 7, 0, -65534, 7, 0, -65533, 7, 0, -65532, 7, 0, -65531, 7, 0, -65530, 7, 0, -65529, 7, 0, -65528, 7, 0, -65527, 7, 0, -65526, 7, 0, -65525, 7, 0, -65524, 7, 0, -65523, 7, 0, -65522, 8, 0, 65531, 21, 0, 13, 21, 0, 131067, 22, 0, 65549, 22, 0, 196603, 23, 0, 131085, 23, 0, 262138, 0, 0, 262139, 1, 0, 262140, 1, 0, 262141, 1, 0, 262142, 1, 0, 262143, 1, 0, 196608, 2, 0, 196611, 21, 0, 196614, 21, 0, 196617, 0, 0, 196618, 1, 0, 196619, 1, 0, 196620, 1, 0, 196621, 1, 0, 196622, 2, 0, 327674, 3, 0, 327675, 4, 0, 327676, 4, 0, 327677, 4, 0, 327678, 4, 0, 327679, 4, 0, 262144, 4, 0, 262145, 4, 0, 262146, 4, 0, 262147, 4, 0, 262148, 4, 0, 262149, 4, 0, 262150, 4, 0, 262151, 4, 0, 262152, 4, 0, 262153, 4, 0, 262154, 4, 0, 262155, 4, 0, 262156, 4, 0, 262157, 4, 0, 262158, 5, 0, 393210, 6, 0, 393211, 7, 0, 393212, 7, 0, 393213, 7, 0, 393214, 7, 0, 393215, 7, 0, 327680, 7, 0, 327681, 7, 0, 327682, 7, 0, 327683, 7, 0, 327684, 7, 0, 327685, 7, 0, 327686, 7, 0, 327687, 7, 0, 327688, 7, 0, 327689, 7, 0, 327690, 7, 0, 327691, 7, 0, 327692, 7, 0, 327693, 7, 0, 327694, 8, 0 )
 
 [node name="TileMapHazards" parent="." instance=ExtResource( 5 )]
+position = Vector2( 768, 384 )
 tile_data = PoolIntArray( 196609, 1, 0, 196610, 1, 0, 196612, 1, 0, 196613, 1, 0, 196615, 1, 0, 196616, 1, 0 )
 
 [node name="Background" parent="." instance=ExtResource( 9 )]
 
 [node name="Door" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1472.25, 320.037 )
+position = Vector2( 2240.25, 704.037 )
 next_scene = "res://src/Levels/World1-3.tscn"
 
 [node name="Guide Text Caption" type="Label" parent="."]
 show_behind_parent = true
-margin_left = -450.0
-margin_top = 12.6863
-margin_right = 78.0
-margin_bottom = 254.686
+margin_left = 318.0
+margin_top = 396.686
+margin_right = 846.0
+margin_bottom = 638.686
 custom_styles/normal = SubResource( 122 )
 custom_fonts/font = ExtResource( 4 )
 text = "
@@ -1379,16 +1383,6 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="Player2" parent="." instance=ExtResource( 8 )]
-position = Vector2( -467, 312 )
-script = null
-
-[node name="Player1" parent="." instance=ExtResource( 2 )]
-position = Vector2( -384.491, 310.059 )
-
-[node name="Ocarina Desire" parent="Player1" instance=ExtResource( 10 )]
-position = Vector2( 1023.72, -117.726 )
-
 [node name="Coins" type="Node" parent="."]
 
 [node name="Coin00" parent="Coins" instance=ExtResource( 3 )]
@@ -1399,3 +1393,6 @@ position = Vector2( 1406.26, 496.386 )
 
 [node name="Coin02" parent="Coins" instance=ExtResource( 3 )]
 position = Vector2( 1795.12, 492.871 )
+
+[node name="PositionSpawnPlayer" type="Position2D" parent="."]
+position = Vector2( 325.75, 595.023 )

@@ -4,7 +4,9 @@ const ScreenOverlay: PackedScene = preload("res://src/UI/FX/ScreenOverlay.tscn")
 const OverlayCameraLens: PackedScene = preload("res://src/UI/FX/OverlayCamera.tscn")
 const TouchControls: PackedScene = preload("res://src/UI/TouchControls.tscn")
 const START_SCREEN_PATH = "res://src/Screens/Start.tscn"
+enum PLAYERS { MM, JEK }
 
+var player_selected = PLAYERS.MM
 var current_scene_path := ""
 var score := 0
 
@@ -57,6 +59,8 @@ func fade_out_transition() -> void:
 
 func setup_camera_lens_overlay():
 	if current_scene_path == START_SCREEN_PATH:
+		return
+	if current_scene_path == "res://src/Game.tscn":
 		return
 	var so = OverlayCameraLens.instance()
 	so.set_name("OverlayCameraLens")

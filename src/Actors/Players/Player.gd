@@ -12,6 +12,7 @@ var direction_x := 0
 func _ready():
 	if not is_in_group("players"):
 		add_to_group("players")
+	$AnimatedSprite.playing = true
 
 
 func _process(delta):

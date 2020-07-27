@@ -1,6 +1,9 @@
 extends Node2D
 
 const Hud = preload("res://src/UI/Hud.tscn")
+const MM = preload("res://src/Actors/Players/PlayerModernongMonghe.tscn")
+const Jek = preload("res://src/Actors/Players/PlayerJekengkoy.tscn")
+
 var hud
 var score := 0 #for current level only
 
@@ -19,9 +22,17 @@ func setup_hud():
 
 
 func setup_players():
-	for player in Global.current_scene.get_tree().get_nodes_in_group("players"):
-		#player.print_tree_pretty()
-		player.connect("coin_collected", self, "_on_Player_coin_collected")
+	#set player to spawn
+	var anim_texture_path := ""
+	var p
+	match Global.player_selected:
+		Global.PLAYERS.JEK:
+			p = Jek.instance()
+		_:
+			p = MM.instance()
+	add_child(p)
+	p.global_position = $PositionSpawnPlayer.global_position
+	p.connect("coin_collected", self, "_on_Player_coin_collected")
 
 
 func setup_doors():
