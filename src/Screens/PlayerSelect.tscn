@@ -1,21 +1,78 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/Fonts/score.tres" type="DynamicFont" id=1]
 [ext_resource path="res://src/Screens/PlayerSelect.gd" type="Script" id=2]
 [ext_resource path="res://assets/Sounds/start.wav" type="AudioStream" id=3]
+[ext_resource path="res://src/UI/FX/OverlayCamera.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/UI/BG/Background.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/Sprites/MMSprite_150x150_Idle_0000.png" type="Texture" id=6]
+[ext_resource path="res://assets/Sprites/JexSprite_150x150_Idle_0000.png" type="Texture" id=7]
+[ext_resource path="res://assets/Sprites/MMSprite_150x150_Idle_0001.png" type="Texture" id=8]
+[ext_resource path="res://assets/Sprites/JexSprite_150x150_Idle_0001.png" type="Texture" id=9]
+
+[sub_resource type="Animation" id=1]
+resource_name = "New Anim"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("CanvasLayer/MMIdle1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1, 0.3, 0.5, 0.7, 0.9, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true, false, true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CanvasLayer/MMIdle2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.1, 0.3, 0.5, 0.7, 0.9, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false, true, false, true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("CanvasLayer/JEKIdle1:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.1, 0.3, 0.5, 0.7, 0.9, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true, false, true, false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("CanvasLayer/JekIdle2:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.1, 0.3, 0.5, 0.7, 0.9, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false, true, false, true ]
+}
 
 [node name="PlayerSelect" type="Node2D"]
 script = ExtResource( 2 )
-next_scene = "res://src/Levels/BossRoom.tscn"
+next_scene = "res://src/Levels/World1-0.tscn"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 3 )
+[node name="Background" parent="." instance=ExtResource( 5 )]
 
 [node name="ButtonMM" type="Button" parent="."]
-margin_left = 243.286
-margin_top = 299.225
-margin_right = 522.286
-margin_bottom = 460.225
+margin_left = 296.0
+margin_top = 288.0
+margin_right = 575.0
+margin_bottom = 449.0
 custom_fonts/font = ExtResource( 1 )
 text = "MM"
 __meta__ = {
@@ -23,14 +80,62 @@ __meta__ = {
 }
 
 [node name="ButtonJEK" type="Button" parent="."]
-margin_left = 787.187
-margin_top = 299.225
-margin_right = 1066.19
-margin_bottom = 460.225
+margin_left = 704.0
+margin_top = 288.0
+margin_right = 983.003
+margin_bottom = 449.0
 custom_fonts/font = ExtResource( 1 )
 text = "JEK"
 __meta__ = {
 "_edit_use_anchors_": false
+}
+
+[node name="OverlayCamera" parent="." instance=ExtResource( 4 )]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MMIdle1" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 303.094, 309.323 )
+scale = Vector2( 2.01459, 1.99098 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="MMIdle2" type="Sprite" parent="CanvasLayer"]
+visible = false
+position = Vector2( 303.094, 309.323 )
+scale = Vector2( 2.01459, 1.99098 )
+texture = ExtResource( 8 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="JEKIdle1" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 735.094, 309.323 )
+scale = Vector2( 2.01459, 1.99098 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="JekIdle2" type="Sprite" parent="CanvasLayer"]
+visible = false
+position = Vector2( 735.094, 309.323 )
+scale = Vector2( 2.01459, 1.99098 )
+texture = ExtResource( 9 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "New Anim"
+"anims/New Anim" = SubResource( 1 )
+__meta__ = {
+"_editor_description_": ""
 }
 [connection signal="button_up" from="ButtonMM" to="." method="_on_ButtonMM_button_up"]
 [connection signal="button_up" from="ButtonJEK" to="." method="_on_ButtonJEK_button_up"]

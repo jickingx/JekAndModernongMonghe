@@ -1,0 +1,7 @@
+[gd_scene format=2]
+
+[node name="PositionSpawnPlayer" type="Position2D"]
+position = Vector2( 988.254, 865.265 )
+__meta__ = {
+"_editor_description_": ""
+}

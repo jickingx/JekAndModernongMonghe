@@ -244,7 +244,7 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-next_scene = "res://src/Levels/World1-0.tscn"
+next_scene = "res://src/Screens/PlayerSelect.tscn"
 
 [node name="DemoPlayerSwitchButton" type="Button" parent="CanvasLayer"]
 visible = false
@@ -283,6 +283,5 @@ __meta__ = {
 
 [node name="BGM1" parent="." instance=ExtResource( 11 )]
 position = Vector2( 642.053, 321.026 )
-volume_db = 1.0
 [connection signal="button_up" from="CanvasLayer/StartButton" to="CanvasLayer/StartButton" method="_on_Button_button_up"]
 [connection signal="button_up" from="CanvasLayer/DemoPlayerSwitchButton" to="CanvasLayer/DemoPlayerSwitchButton" method="_on_Button_button_up"]

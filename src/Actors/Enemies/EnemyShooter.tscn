@@ -25,6 +25,7 @@ can_shoot = true
 
 [node name="AnimatedSprite" parent="." index="0"]
 frames = SubResource( 1 )
+playing = true
 
 [node name="CollisionShape2D" parent="." index="1"]
 position = Vector2( -1, 0 )

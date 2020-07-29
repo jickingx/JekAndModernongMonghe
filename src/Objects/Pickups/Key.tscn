@@ -5,7 +5,7 @@
 [ext_resource path="res://assets/Sprites/Key01.png" type="Texture" id=3]
 [ext_resource path="res://assets/Sprites/Key03.png" type="Texture" id=4]
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=123]
 animations = [ {
 "frames": [ ExtResource( 3 ), ExtResource( 1 ), ExtResource( 4 ) ],
 "loop": true,
@@ -13,7 +13,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=2]
+[sub_resource type="CapsuleShape2D" id=124]
 radius = 40.0
 height = 48.0
 
@@ -21,11 +21,11 @@ height = 48.0
 script = ExtResource( 2 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
-frames = SubResource( 1 )
-frame = 2
+frames = SubResource( 123 )
+frame = 1
 speed_scale = 0.8
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 2 )
+shape = SubResource( 124 )
 [connection signal="body_entered" from="." to="." method="_on_Key_body_entered"]
