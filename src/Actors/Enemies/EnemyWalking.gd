@@ -80,8 +80,6 @@ func _on_Detector_body_entered(body):
 	if can_shoot:
 		print_debug($PlayerDetector.position.x)
 		$PlayerDetector.position.x *= -1
-		print_debug($PlayerDetector.position.x)
-
 
 func _on_ShootTimer_timeout():
 	shoot()

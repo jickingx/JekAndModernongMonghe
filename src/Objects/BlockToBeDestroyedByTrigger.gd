@@ -44,3 +44,7 @@ func _on_DestroyerButton05_pressed():
 
 func _on_DestroyerButton06_pressed():
 	destroy_self()
+
+
+func _on_BossShooter_died():
+	destroy_self()
